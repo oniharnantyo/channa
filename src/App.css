@@ -1,3 +1,7 @@
+.d-flex {
+  display: flex;
+}
+
 /* Navigation */
 .navbar-link {
   color: #022855 !important;
@@ -37,6 +41,8 @@
 }
 
 /* Home */
+
+/* Banner */
 .banner-area {
   min-height: 680px;
   background-size: cover;
@@ -85,4 +91,72 @@
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.04em;
+}
+
+/* Latest Event */
+.latest-event-area {
+  background: #2870C3;
+  padding: 70px 0px;
+  color: #fff;
+}
+
+.latest-event-header {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.latest-event-detail {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.event-detail p {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.event-detail p svg {
+  padding-right: 12px;
+}
+
+.event-timer {
+  color: #fff;
+  text-align: center;
+}
+
+.event-timer .timer {
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 40px 0px;
+  opacity: 1;
+}
+
+.event-timer .timer .timer__section {
+  float: left;
+  overflow: hidden;
+  color: #fff;
+  width: calc(100% / 4);
+}
+
+.event-timer .timer .timer__section .timer_number {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.event-timer .timer .timer__section .timer_label {
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: capitalize;
+}
+
+/* Color */
+.color-primary {
+  color: #022855;
+}
+
+.color-secondary {
+  color: #2870C3;
 }
