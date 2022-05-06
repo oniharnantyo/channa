@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import { SectionTitle } from '@/components/Elements';
 import { formatDate } from '@/utils/format';
 import { tzToAbbreviation } from '@/utils/tz';
 
@@ -71,11 +72,7 @@ export const Event = () => {
 
     element = (
       <>
-        <Row className="mb-4">
-          <Col md={12} className="text-center">
-            <h2>Acara Terdekat</h2>
-          </Col>
-        </Row>
+        <SectionTitle title="Acara Terdekat" isPrimaryColor={false}></SectionTitle>
         <Row>
           <Col md={6} className="d-flex px-lg-5">
             <div className="event-detail flex">
@@ -100,7 +97,7 @@ export const Event = () => {
   }
 
   return (
-    <section className="latest-event-area">
+    <section className="section background-blue color-white">
       <Container>{element}</Container>
     </section>
   );
