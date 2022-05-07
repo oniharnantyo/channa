@@ -31,40 +31,42 @@ const ProgramCard = ({ faIcon, title, description }: programCardProps) => {
 
 export const Program = () => {
   return (
-    <Container className="section">
-      <SectionTitle title="Program" isPrimaryColor={true}></SectionTitle>
-      <Row>
-        <ProgramCard
-          faIcon={faDharmachakra}
-          title="Dhammaduta"
-          description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
-        />
-        <ProgramCard
-          faIcon={faDharmachakra}
-          title="Dhammaduta"
-          description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
-        />
-        <ProgramCard
-          faIcon={faDharmachakra}
-          title="Dhammaduta"
-          description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
-        />
-        <ProgramCard
-          faIcon={faDharmachakra}
-          title="Dhammaduta"
-          description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
-        />
-        <ProgramCard
-          faIcon={faDharmachakra}
-          title="Dhammaduta"
-          description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
-        />
-        <ProgramCard
-          faIcon={faDharmachakra}
-          title="Dhammaduta"
-          description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
-        />
-      </Row>
-    </Container>
+    <section className="section">
+      <Container>
+        <SectionTitle title="Program" isPrimaryColor={true}></SectionTitle>
+        <Row>
+          <ProgramCard
+            faIcon={faDharmachakra}
+            title="Dhammaduta"
+            description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
+          />
+          <ProgramCard
+            faIcon={faDharmachakra}
+            title="Dhammaduta"
+            description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
+          />
+          <ProgramCard
+            faIcon={faDharmachakra}
+            title="Dhammaduta"
+            description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
+          />
+          <ProgramCard
+            faIcon={faDharmachakra}
+            title="Dhammaduta"
+            description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
+          />
+          <ProgramCard
+            faIcon={faDharmachakra}
+            title="Dhammaduta"
+            description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
+          />
+          <ProgramCard
+            faIcon={faDharmachakra}
+            title="Dhammaduta"
+            description="Pelatihan sebanyak 12 pertemuan meliputi  teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya"
+          />
+        </Row>
+      </Container>
+    </section>
   );
 };

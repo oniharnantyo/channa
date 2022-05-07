@@ -6,9 +6,14 @@ import { ExtractFnReturnType, QueryConfig } from '@/lib/react-query';
 import { LatestEvent } from '../types';
 
 export const getLatestEvent = (): Promise<LatestEvent> => {
-  return axios.get('/latest-event').then((res) => {
-    return res.data;
-  });
+  return axios
+    .get('/latest-event')
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      return error;
+    });
 };
 
 type QueryFnType = typeof getLatestEvent;

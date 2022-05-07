@@ -171,6 +171,70 @@
   line-height: 160%;
 }
 
+/* Article */
+.article-card {
+  padding: 16px;
+}
+
+.article-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article-title {
+    margin: 16px 0px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.article-title a{
+  text-decoration: none;
+  color: #022855;
+}
+
+.article-title a:hover {
+  color: #2870C3;
+}
+
+.article-created-at {
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0px 4px;
+}
+
+.article-created-at svg {
+  padding-right: 8px;
+}
+
+.article-author {
+  font-size: 16px;
+  line-height: 160%;
+  margin: 0px 4px;
+}
+
+.article-author svg {
+  padding-right: 8px;
+}
+
+.article-description{
+  font-size: 16px;
+  line-height: 160%;
+  margin: 16px 0px;
+}
+
+.article-more a{
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+.article-more a:hover {
+  color: #022855;
+}
+
 /* Color */
 .color-primary {
   color: #022855;
@@ -193,7 +257,11 @@
   background: #2870C3;
 }
 
+.background-white {
+  background: #fff;
+}
+
 /* Section */
 .section {
-  padding: 70px 0px !important;
+  padding: 40px 0px 70px 0px !important;
 }
