@@ -1,3 +1,4 @@
+import { Footer } from './Footer';
 import { NavBar } from './Navbar';
 
 type MainLayoutProps = {
@@ -11,6 +12,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
         <NavBar></NavBar>
       </header>
       <main>{children}</main>
+      <Footer></Footer>
     </>
   );
 };

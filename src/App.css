@@ -235,7 +235,49 @@
   color: #022855;
 }
 
-/* Color */
+/* Footer */
+.footer {
+  padding: 50px 0px;
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+}
+
+.footer-quote {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.footer-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  margin: 0px 0px 4px 0px;
+}
+
+.footer-content {
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0px 0px 20px 0px;
+}
+
+.footer-social-media {
+  margin-bottom: 5px !important;
+}
+
+.footer-social-media img{
+  padding-right: 8px;
+}
+
+.footer-social-media a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #046ADF;
+}
+
+/* Color */ 
 .color-primary {
   color: #022855;
 }
@@ -250,6 +292,10 @@
 
 .color-white {
   color: #fff;
+}
+
+.color-grey {
+  color: #9A9DB2;
 }
 
 /* Background */
