@@ -9,7 +9,7 @@ import Style from './Footer.module.css';
 
 export const Footer = () => {
   return (
-    <section className="footer">
+    <section className={Style.footer}>
       <Container>
         <Row>
           <Col md={4} lg={4}>

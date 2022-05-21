@@ -10,10 +10,10 @@
 .button {
   background: #046ADF;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 30px;
-  padding: 8px 16px;
-  margin-top: 25px;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  padding: 0.5em 1em;
+  margin-top: 1.563em;
   border-radius: 0 !important;
 }
 
@@ -25,23 +25,23 @@
 
 .content h5 {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   letter-spacing: 0.04em;
 }
 
 .content h1 {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 3rem;
+  line-height: 3.625rem;
   letter-spacing: 0.02em;
 }
 
 .content p {
-  margin-top: 30px;
+  margin-top: 1.875em;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   text-align: center;
   letter-spacing: 0.04em;
 }

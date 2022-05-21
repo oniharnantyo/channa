@@ -1,5 +1,7 @@
 import { Col } from 'react-bootstrap';
 
+import ColorStyle from '@/styles/Color.module.css';
+
 import { StyledButton } from '../../Button';
 
 import Style from './FreebookCard.module.css';
@@ -23,11 +25,11 @@ export const FreebookCard = ({
 }: freebookCardProps) => {
   return (
     <Col md={6} className="py-sm-4">
-      <Col md={12} className="freebook-card ">
-        <img src={imageUrl} alt={imageAlt} className="freebook-image d-block mx-auto" />
-        <p className="freebook-title color-white">{title}</p>
-        <p className="freebook-author color-white">{author}</p>
-        <p className="freebook-description color-white">{description}</p>
+      <Col md={12} className={Style.card}>
+        <img src={imageUrl} alt={imageAlt} className={`${Style.image} d-block mx-auto`} />
+        <p className={`${Style.title} ${ColorStyle.white}`}>{title}</p>
+        <p className={`${Style.author} ${ColorStyle.white}`}>{author}</p>
+        <p className={`${Style.description} ${ColorStyle.white}`}>{description}</p>
         <a href={downloadUrl} className="d-flex justify-content-center">
           <StyledButton className={Style.button}>Download PDF</StyledButton>
         </a>

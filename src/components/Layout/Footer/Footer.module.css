@@ -1,40 +1,40 @@
 .footer {
-  padding: 50px 0px;
+  padding: 3.125em 0em;
 }
 
 .logo {
-  margin-bottom: 16px;
+  margin-bottom: 1em;
 }
 
 .quote {
   font-style: italic;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
 }
 
 .title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 150%;
-  margin: 0px 0px 4px 0px;
+  margin: 0em 0em 0.25em 0em;
 }
 
 .content {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 150%;
-  margin: 0px 0px 20px 0px;
+  margin: 0em 0em 1.25em 0em;
 }
 
 .socialMedia {
-  margin-bottom: 5px !important;
+  margin-bottom: 0.313em !important;
 }
 
 .socialMedia img {
-  padding-right: 8px;
+  padding-right: 0.5em;
 }
 
 .socialMedia a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   color: #046ADF;
 }
