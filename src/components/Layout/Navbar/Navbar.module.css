@@ -1,5 +1,5 @@
 .navbar {
-  height: 76px;
+  min-height: 76px;
 }
 
 .link {
