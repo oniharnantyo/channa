@@ -1,8 +1,12 @@
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Col } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 
+import BackgroundStyle from '@/styles/Background.module.css';
+import ColorStyle from '@/styles/Color.module.css';
 import { formatDate } from '@/utils/format';
+
+import Style from './ArticleCard.module.css';
 
 type articleCardProps = {
   title: string;
@@ -27,23 +31,23 @@ export const ArticleCard = ({
 
   return (
     <Col md={4}>
-      <Col md={12} className="mb-4 mb-lg-4 article-card background-white">
+      <Col md={12} className={`${Style.card} ${BackgroundStyle.white} mb-4 mb-lg-4`}>
         <div className="article-content d-block">
           <a href={url}>
-            <img src={imageUrl} alt={imageAlt} className="article-image" />
+            <Image src={imageUrl} alt={imageAlt} fluid={true} />
           </a>
-          <h5 className="article-title">
+          <h5 className={Style.title}>
             <a href={url}>{title}</a>
           </h5>
-          <p className="article-created-at color-primary">
+          <p className={`${Style.createdAt} ${ColorStyle.primary}`}>
             <FontAwesomeIcon icon={faCalendarAlt} />
             {createdAtDate}
           </p>
-          <p className="article-author color-primary">
+          <p className={`${Style.author} ${ColorStyle.primary}`}>
             <FontAwesomeIcon icon={faUser} />
             {author}
           </p>
-          <p className="article-description color-primary">{description}</p>
+          <p className={`${Style.description} ${ColorStyle.primary}`}>{description}</p>
         </div>
       </Col>
     </Col>

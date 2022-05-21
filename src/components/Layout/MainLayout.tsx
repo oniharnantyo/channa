@@ -1,3 +1,5 @@
+import HeaderStyle from '@/styles/Header.module.css';
+
 import { Footer } from './Footer';
 import { NavBar } from './Navbar';
 
@@ -8,10 +10,10 @@ type MainLayoutProps = {
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
-      <header>
+      <header className={HeaderStyle.header}>
         <NavBar></NavBar>
       </header>
-      <main>{children}</main>
+      {children}
       <Footer></Footer>
     </>
   );

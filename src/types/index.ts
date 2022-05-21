@@ -3,3 +3,7 @@ export type BaseEntity = {
   createdAt: Date;
   updatedAt: Date;
 };
+
+export type Children = {
+  children: React.ReactNode;
+};

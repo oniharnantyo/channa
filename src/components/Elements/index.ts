@@ -1,4 +1,3 @@
-export * from './SectionTitle';
+export * from './Section/SectionTitle';
 export * from './Button';
-export * from './ArticleCard';
-export * from './FreebookCard';
+export * from './Card';
