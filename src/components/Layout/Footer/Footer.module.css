@@ -1,0 +1,40 @@
+.footer {
+  padding: 50px 0px;
+}
+
+.logo {
+  margin-bottom: 16px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  margin: 0px 0px 4px 0px;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0px 0px 20px 0px;
+}
+
+.socialMedia {
+  margin-bottom: 5px !important;
+}
+
+.socialMedia img {
+  padding-right: 8px;
+}
+
+.socialMedia a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #046ADF;
+}

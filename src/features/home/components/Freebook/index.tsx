@@ -2,8 +2,13 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import { FreebookCard, SectionTitle } from '@/components/Elements';
+import BackgroundStyle from '@/styles/Background.module.css';
+import ColorStyle from '@/styles/Color.module.css';
+import SectionStyle from '@/styles/Section.module.css';
 
-import { useFreebooks } from '../apis/getFreebooks';
+import { useFreebooks } from '../../apis/getFreebooks';
+
+import Style from './Freebook.module.css';
 
 export const Freebook = () => {
   const perPage = 2;
@@ -20,9 +25,9 @@ export const Freebook = () => {
   }
 
   return (
-    <section className="section background-primary">
+    <section className={`${SectionStyle.section} ${BackgroundStyle.primary}`}>
       <Container>
-        <SectionTitle title="Freebook Terbaru" isPrimaryColor={false} />
+        <SectionTitle isPrimaryColor={false}>Freebook Terbaru</SectionTitle>
         <Row>
           {data.map((freebook) => (
             <FreebookCard
@@ -37,9 +42,9 @@ export const Freebook = () => {
           ))}
         </Row>
         <Row>
-          <Col md={12} className="freebook-more">
+          <Col md={12} className={Style.more}>
             <LinkContainer to="/freebook">
-              <a className="color-white float-end">Lihat freebook lainnya &gt;&gt;</a>
+              <a className={`${ColorStyle.white} float-end`}>Lihat freebook lainnya &gt;&gt;</a>
             </LinkContainer>
           </Col>
         </Row>

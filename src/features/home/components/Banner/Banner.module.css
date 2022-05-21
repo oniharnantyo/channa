@@ -1,0 +1,47 @@
+.banner {
+  min-height: calc(100vh - 76px - 300px);
+  background-size: cover;
+}
+
+.content {
+  color: white;
+}
+
+.button {
+  background: #046ADF;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 8px 16px;
+  margin-top: 25px;
+  border-radius: 0 !important;
+}
+
+.button:hover {
+  background: none;
+  color: #fff;
+  border-color: #fff;
+}
+
+.content h5 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.04em;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.02em;
+}
+
+.content p {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.04em;
+}

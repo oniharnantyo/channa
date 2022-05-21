@@ -2,9 +2,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import { SectionTitle } from '@/components/Elements';
-import { ArticleCard } from '@/components/Elements/ArticleCard';
+import { ArticleCard } from '@/components/Elements/Card/ArticleCard';
+import BackgroundStyle from '@/styles/Background.module.css';
+import ColorStyle from '@/styles/Color.module.css';
+import SectionStyle from '@/styles/Section.module.css';
 
-import { useArticles } from '../apis/getArticles';
+import { useArticles } from '../../apis/getArticles';
+
+import Style from './Article.module.css';
 
 export const Article = () => {
   const perPage = 3;
@@ -21,9 +26,9 @@ export const Article = () => {
   }
 
   return (
-    <section className="section background-blue">
+    <section className={`${SectionStyle.section} ${BackgroundStyle.blue}`}>
       <Container>
-        <SectionTitle title="Artikel Terbaru" isPrimaryColor={false}></SectionTitle>
+        <SectionTitle isPrimaryColor={false}>Artikel Terbaru</SectionTitle>
         <Row>
           {data.map((article) => (
             <ArticleCard
@@ -39,9 +44,9 @@ export const Article = () => {
           ))}
         </Row>
         <Row>
-          <Col md={12} className="article-more">
+          <Col md={12} className={Style.more}>
             <LinkContainer to="/artikel">
-              <a className="color-white float-end">Lihat artikel lainnya &gt;&gt;</a>
+              <a className={`${ColorStyle.white} float-end`}>Lihat artikel lainnya &gt;&gt;</a>
             </LinkContainer>
           </Col>
         </Row>

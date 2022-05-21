@@ -1,6 +1,8 @@
 import { Col } from 'react-bootstrap';
 
-import { ButtonWhite } from './Button';
+import { StyledButton } from '../../Button';
+
+import Style from './FreebookCard.module.css';
 
 export type freebookCardProps = {
   title: string;
@@ -27,7 +29,7 @@ export const FreebookCard = ({
         <p className="freebook-author color-white">{author}</p>
         <p className="freebook-description color-white">{description}</p>
         <a href={downloadUrl} className="d-flex justify-content-center">
-          <ButtonWhite text="Download PDF"></ButtonWhite>
+          <StyledButton className={Style.button}>Download PDF</StyledButton>
         </a>
       </Col>
     </Col>

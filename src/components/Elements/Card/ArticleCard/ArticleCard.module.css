@@ -1,0 +1,45 @@
+.card {
+  padding: 1em;
+}
+
+.title {
+  margin: 1em 0em;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+.title a {
+  text-decoration: none;
+  color: #022855;
+}
+
+.title a:hover {
+  color: #2870C3;
+}
+
+.createdAt {
+  font-size: 1rem;
+  line-height: 160%;
+  margin: 0em 0.25em;
+}
+
+.createdAt svg {
+  padding-right: 0.5em;
+}
+
+.author {
+  font-size: 1rem;
+  line-height: 160%;
+  margin: 0em 0.25em;
+}
+
+.author svg {
+  padding-right: 0.5em;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 160%;
+  margin: 1em 0em;
+}
