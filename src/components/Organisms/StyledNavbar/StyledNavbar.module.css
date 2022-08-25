@@ -1,0 +1,19 @@
+.navbar {
+  min-height: 76px;
+}
+
+.toggleMenu {
+  border: none !important;
+}
+
+.logo {
+  height: 3.125rem;
+}
+
+.logoText {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+}

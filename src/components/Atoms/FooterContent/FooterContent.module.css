@@ -1,0 +1,9 @@
+.content {
+  font-size: 1rem;
+  line-height: 150%;
+  margin: 0em 0em 1.25em 0em;
+}
+
+.wrapper {
+  white-space: pre-wrap;
+}

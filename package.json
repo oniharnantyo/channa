@@ -1,5 +1,5 @@
 {
-  "name": "channa-new",
+  "name": "channa",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,12 +9,63 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@next/bundle-analyzer": "^12.2.5",
+    "@types/react-bootstrap": "^0.32.30",
+    "bootstrap": "^5.2.0",
+    "classnames": "^2.3.1",
+    "moment": "^2.29.4",
     "next": "12.2.5",
     "react": "18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@types/classnames": "^2.3.1",
+    "@types/node": "^18.7.8",
+    "@types/react": "^18.0.17",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "12.2.5",
+    "eslint-import-resolver-typescript": "^3.4.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest-dom": "^4.0.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "prettier": "^2.7.1"
+  },
+  "eslintConfig": {
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "yarn lint"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

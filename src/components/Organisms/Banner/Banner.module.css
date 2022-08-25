@@ -1,0 +1,53 @@
+.banner {
+  min-height: calc(100vh - 76px);
+  background-size: cover;
+}
+
+.content {
+  color: white;
+}
+
+.button {
+  background: #046ADF;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.875rem;
+  padding: 0.5em 1em;
+  margin-top: 1.563em;
+  border-radius: 0 !important;
+}
+
+.button:hover {
+  background: none;
+  color: #fff;
+  border-color: #fff;
+}
+
+.content h5 {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.04em;
+}
+
+.content h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.625rem;
+  letter-spacing: 0.02em;
+}
+
+.content p {
+  margin-top: 1.875em;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width:641px) {
+  .banner {
+    min-height: calc(100vh - 76px - 300px);
+  }
+}
