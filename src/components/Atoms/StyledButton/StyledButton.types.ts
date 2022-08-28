@@ -12,6 +12,7 @@ export const sizes = {
 
 interface IStyledButtonProps {
   onClick?(...args: unknown[]): unknown;
+  href?: string;
   value: string;
   variant: keyof typeof variants;
   size: keyof typeof sizes;
