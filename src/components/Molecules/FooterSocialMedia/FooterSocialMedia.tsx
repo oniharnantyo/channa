@@ -4,7 +4,7 @@ import { LogoImage } from '@components/Atoms/Image';
 import Style from './FooterSocialMedia.module.css';
 import { FooterSocialMediaProps } from './FooterSocialMedia.types';
 
-export const FooterSocialMedia: FooterSocialMediaProps = ({ name, logo, logoAlt, link }) => {
+const FooterSocialMedia: FooterSocialMediaProps = ({ name, logo, logoAlt, link }) => {
   return (
     <>
       <p className={Style.socialMedia}>
@@ -16,3 +16,5 @@ export const FooterSocialMedia: FooterSocialMediaProps = ({ name, logo, logoAlt,
     </>
   );
 };
+
+export default FooterSocialMedia;

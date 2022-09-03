@@ -27,7 +27,8 @@
       "@utils": ["src/utils/index"],
       "@assets/*": ["src/assets/*"],
       "@mocks/*": ["src/mocks/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@lib/*": ["src/lib/*"]
     },
     "incremental": true
   },

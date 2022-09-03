@@ -1,0 +1,25 @@
+.timeCounter {
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  padding: 2.5em 0em;
+  opacity: 1;
+}
+
+.timeCounterSection {
+  float: left;
+  overflow: hidden;
+  color: #fff;
+  width: calc(100% / 4);
+}
+
+.timeCounterNumber {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2em;
+}
+
+.timeCounterLabel {
+  font-size: 1rem;
+  line-height: 1em;
+  text-transform: capitalize;
+}

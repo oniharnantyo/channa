@@ -3,10 +3,10 @@ import IGLogo from '@assets/image/ig-logo.svg';
 import VSLogo from '@assets/image/vs-logo.svg';
 import { FooterTitle } from '@components/Atoms/FooterTitle';
 import { LogoImage } from '@components/Atoms/Image';
-import FooterItem from '@components/Molecules/FooterItem/FooterItem';
-import { FooterSocialMedia } from '@components/Molecules/FooterSocialMedia/FooterSocialMedia';
+import { FooterItem } from '@components/Molecules/FooterItem';
+import { FooterSocialMedia } from '@components/Molecules/FooterSocialMedia';
 import ColorStyle from '@styles/Color.module.css';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import Style from './Footer.module.css';
@@ -18,7 +18,7 @@ const Footer = () => {
         <Row>
           <Col md={4} lg={4}>
             <LogoImage logo={VSLogo} alt="logo vidyasena" className={Style.logo} />
-            <p className={classNames(Style.quote, ColorStyle.grey)}>
+            <p className={clsx(Style.quote, ColorStyle.grey)}>
               &quot;Biarlah mengorbankan harta demi menyelamatkan anggota tubuh, Biarlah
               mengorbankan anggota tubuh demi menyelamatkan hidupnya, Biarlah mengorbankan harta,
               anggota tubuh dan segalanya, meskipun pula hidupnya, demi kebenaran Dhamma.&quot;

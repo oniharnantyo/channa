@@ -1,5 +1,5 @@
 import ColorStyle from '@styles/Color.module.css';
-import classNames from 'classnames';
+import clsx from 'clsx';
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 
@@ -8,7 +8,7 @@ import { NavLinkProps } from './NavLink.types';
 
 const NavLink: NavLinkProps = React.forwardRef(({ name, href }, ref) => {
   return (
-    <Nav.Link className={classNames(Style.link, ColorStyle.primary)} ref={ref} href={href}>
+    <Nav.Link className={clsx(Style.link, ColorStyle.primary)} ref={ref} href={href}>
       {name}
     </Nav.Link>
   );

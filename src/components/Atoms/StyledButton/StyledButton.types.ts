@@ -1,21 +1,14 @@
 import { FC } from 'react';
 
-export const variants = {
-  primary: 'primary',
-  outlinePrimary: 'outline-primary',
-};
-
-export const sizes = {
-  sm: 'sm',
-  lg: 'lg',
-};
+export declare type variants = 'primary' | 'white' | string;
+export declare type sizes = 'sm' | 'lg' | undefined;
 
 interface IStyledButtonProps {
   onClick?(...args: unknown[]): unknown;
   href?: string;
   value: string;
-  variant: keyof typeof variants;
-  size: keyof typeof sizes;
+  variant: variants;
+  size: sizes;
   rounded?: boolean;
 }
 
