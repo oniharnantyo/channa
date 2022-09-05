@@ -1,0 +1,9 @@
+.label {
+  font-size: 1rem;
+  line-height: 160%;
+  margin: 0em 0.25em;
+}
+
+.label svg {
+  padding-right: 0.5em;
+}

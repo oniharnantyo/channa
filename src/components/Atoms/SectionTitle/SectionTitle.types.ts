@@ -3,7 +3,7 @@ import { FC } from 'react';
 export declare type variants = 'primary' | 'white' | string;
 
 interface ISectionTitleProps {
-  variant: keyof typeof variants;
+  variant: variants;
   title: string;
 }
 

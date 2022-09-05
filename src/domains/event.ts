@@ -5,7 +5,8 @@ interface IEvent extends IEntity {
   slug: string;
   location: string;
   startAt: Date;
-  imageURL: string;
+  imageURL?: string;
+  thumbnailUrl?: string;
   imageDescription: string;
   content: string;
 }

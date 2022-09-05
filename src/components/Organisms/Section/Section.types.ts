@@ -9,3 +9,10 @@ interface ISectionProps {
 }
 
 export type SectionProps = FC<ISectionProps>;
+
+interface IMoreableSectionProps extends ISectionProps {
+  linkTitle: string;
+  link: string;
+}
+
+export type MoreableSectionProps = FC<IMoreableSectionProps>;

@@ -1,3 +1,14 @@
 .section {
   padding: 1.875rem 0px !important;
 }
+
+.more a {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-decoration: none;
+}
+
+.more a:hover {
+  color: #dcdcdc;
+}

@@ -1,4 +1,4 @@
-import { IEvent } from 'domain/event';
+import { IEvent } from '@domains/event';
 import { axios } from 'src/lib';
 
 export const getLatestEvent = async () => {
@@ -6,8 +6,6 @@ export const getLatestEvent = async () => {
     const { data } = await axios.get('/events/latest', {
       headers: { 'Content-Type': 'application/json' },
     });
-
-    console.log(data);
 
     if (data.status == '00') {
       return data.data as IEvent;

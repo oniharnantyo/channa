@@ -28,7 +28,8 @@
       "@assets/*": ["src/assets/*"],
       "@mocks/*": ["src/mocks/*"],
       "@services/*": ["src/services/*"],
-      "@lib/*": ["src/lib/*"]
+      "@lib/*": ["src/lib/*"],
+      "@domains/*": ["src/domains/*"]
     },
     "incremental": true
   },

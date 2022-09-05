@@ -1,14 +1,9 @@
-import { Banner } from '@components/Organisms/Banner';
-import { LatestEvent } from '@components/Organisms/LatestEvent';
-import { Layout } from '@components/Templates/Layout';
+import { Home as Thome } from '@components/Templates/Home';
 
 export default function Home() {
   return (
     <>
-      <Layout>
-        <Banner />
-        <LatestEvent />
-      </Layout>
+      <Thome />
     </>
   );
 }

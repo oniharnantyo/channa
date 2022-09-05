@@ -1,0 +1,15 @@
+.title {
+  margin: 1em 0em;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+.title a {
+  text-decoration: none;
+  color: #022855;
+}
+
+.title a:hover {
+  color: #2870C3;
+}

@@ -13,7 +13,7 @@ import Style from './LatestEvent.module.css';
 
 const LatestEvent = () => {
   const {
-    data: event,
+    data: latestEvent,
     error,
     refetch,
     isFetching,
@@ -21,11 +21,11 @@ const LatestEvent = () => {
     retry: false,
   });
 
-  const name = event?.title;
-  const startAt = event?.startAt;
-  const startAtDate = formatDate(startAt, 'dddd, DD MMMM YYYY');
+  const name = latestEvent?.title;
+  const startAt = latestEvent?.startAt;
+  const startAtDate = formatDate(startAt as Date, 'dddd, DD MMMM YYYY');
   const startAtTime =
-    formatDate(startAt, 'HH:mm') + ' ' + tzToAbbreviation(formatDate(startAt, 'Z'));
+    formatDate(startAt as Date, 'HH:mm') + ' ' + tzToAbbreviation(formatDate(startAt as Date, 'Z'));
 
   return (
     <Section title="Event Terdekat" variant="primary">
@@ -45,7 +45,7 @@ const LatestEvent = () => {
         </Col>
         <Col md={6} className={clsx(Style.timeCounter, 'px-lg-5')}>
           <h4>Akan dimulai dalam</h4>
-          <TimeCounter date={startAt} />
+          <TimeCounter date={startAt as Date} />
         </Col>
       </Row>
     </Section>
