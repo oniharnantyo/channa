@@ -1,6 +1,6 @@
 import { IEntity } from './entity';
 
-interface IArticle extends IEntity {
+interface IFreebook extends IEntity {
   title: string;
   slug: string;
   author: string;
@@ -8,7 +8,7 @@ interface IArticle extends IEntity {
   imageURL?: string;
   imageDescription: string;
   description: string;
-  content: string;
+  url: string;
 }
 
-export type { IArticle };
+export type { IFreebook };

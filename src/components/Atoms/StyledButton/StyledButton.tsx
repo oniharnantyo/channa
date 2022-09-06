@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import { StyledButtonProps, sizes, variants } from './StyledButton.types';
 
 const StyledButton: StyledButtonProps = React.forwardRef(
-  ({ onClick, href, value, variant, size, rounded }, ref) => {
+  ({ onClick, href, variant, size, rounded, children }, ref) => {
     return (
       <Button
         href={href}
@@ -15,7 +15,7 @@ const StyledButton: StyledButtonProps = React.forwardRef(
         onClick={onClick}
         ref={ref}
       >
-        <span>{value}</span>
+        <span>{children}</span>
       </Button>
     );
   }

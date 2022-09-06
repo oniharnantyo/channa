@@ -27,12 +27,9 @@ const Banner = () => {
                 Buddhis utama di bawah bimbingan Sangha Theravada Indonesia (STI).
               </p>
               <Link href="/tentang-kami" passHref>
-                <StyledButton
-                  value="Baca Selengkapnya"
-                  variant="primary"
-                  size="lg"
-                  rounded={false}
-                />
+                <StyledButton variant="primary" size="lg" rounded={false}>
+                  Baca Selengkapnya
+                </StyledButton>
               </Link>
             </div>
           </Col>
