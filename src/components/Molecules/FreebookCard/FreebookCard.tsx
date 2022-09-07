@@ -2,7 +2,7 @@ import { StyledButton } from '@components/Atoms/StyledButton';
 import ColorStyle from '@styles/Color.module.css';
 import { truncate } from '@utils/text';
 import clsx from 'clsx';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
 import Style from './FreebookCard.module.css';
 import { FreebookCardProps } from './FreebookCard.types';
