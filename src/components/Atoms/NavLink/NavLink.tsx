@@ -8,7 +8,7 @@ import { NavLinkProps } from './NavLink.types';
 
 const NavLink: NavLinkProps = React.forwardRef(({ name, href }, ref) => {
   return (
-    <Nav.Link className={clsx(Style.link, ColorStyle.primary)} ref={ref} href={href}>
+    <Nav.Link className={clsx(Style.link, ColorStyle.primary)} href={href}>
       {name}
     </Nav.Link>
   );

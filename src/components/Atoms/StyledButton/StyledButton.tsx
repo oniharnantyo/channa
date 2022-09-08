@@ -13,7 +13,6 @@ const StyledButton: StyledButtonProps = React.forwardRef(
         size={size}
         className={clsx({ 'rounded-0': !rounded }, 'px-3', 'py-2', 'fw-bolder')}
         onClick={onClick}
-        ref={ref}
       >
         <span>{children}</span>
       </Button>
