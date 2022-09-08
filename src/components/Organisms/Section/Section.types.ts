@@ -16,3 +16,10 @@ interface IMoreableSectionProps extends ISectionProps {
 }
 
 export type MoreableSectionProps = FC<IMoreableSectionProps>;
+
+interface ISectionNoTitleProps {
+  children?: ReactNode;
+  variant: variants;
+}
+
+export type SectionNoTitleProps = FC<ISectionNoTitleProps>;

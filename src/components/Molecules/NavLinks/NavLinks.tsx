@@ -17,8 +17,11 @@ const NavLinks = () => {
       <Link href="/artikel" passHref>
         <NavLink name="Artikel"></NavLink>
       </Link>
-      <Link href="/insight" passHref>
-        <NavLink name="Insight"></NavLink>
+      <Link href="/freebook" passHref>
+        <NavLink name="Freebook"></NavLink>
+      </Link>
+      <Link href="/dana" passHref>
+        <NavLink name="Dana"></NavLink>
       </Link>
       <Link href="/kontak" passHref>
         <NavLink name="Kontak"></NavLink>

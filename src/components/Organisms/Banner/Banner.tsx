@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import HomeBanner from '@assets/image/home-banner.jpg';
+import HomeBanner from '@assets/image/home-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { Col, Container, Row } from 'react-bootstrap';
 

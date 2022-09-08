@@ -6,11 +6,11 @@ import { programs } from './Programs.types';
 
 const Programs = () => {
   return (
-    <Section title={'Program'} variant={'white'}>
+    <Section title={'Program Kerja Unggulan'} variant={'white'}>
       <Row>
         {programs?.map((program) => (
           <ProgramCard
-            id={program.id}
+            key={program.id}
             faIcon={program.icon}
             title={program.title}
             description={program.description}

@@ -18,35 +18,35 @@ export const programs: IProgramProps[] = [
       'Pelatihan sebanyak 12 pertemuan meliputi teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya',
   },
   {
-    id: 1,
+    id: 2,
     icon: faDharmachakra,
     title: 'Dhammaduta',
     description:
       'Pelatihan sebanyak 12 pertemuan meliputi teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya',
   },
   {
-    id: 1,
+    id: 3,
     icon: faDharmachakra,
     title: 'Dhammaduta',
     description:
       'Pelatihan sebanyak 12 pertemuan meliputi teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya',
   },
   {
-    id: 1,
+    id: 4,
     icon: faDharmachakra,
     title: 'Dhammaduta',
     description:
       'Pelatihan sebanyak 12 pertemuan meliputi teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya',
   },
   {
-    id: 1,
+    id: 5,
     icon: faDharmachakra,
     title: 'Dhammaduta',
     description:
       'Pelatihan sebanyak 12 pertemuan meliputi teori Dhamma dan praktik public speaking untuk mencetak Dhammaduta terpercaya',
   },
   {
-    id: 1,
+    id: 6,
     icon: faDharmachakra,
     title: 'Dhammaduta',
     description:

@@ -16,7 +16,6 @@ const FreebookCard: FreebookCardProps = ({
   url,
 }) => {
   const desc = truncate(description, 400);
-
   return (
     <Col md={6} className="py-4">
       <Col md={12} className={Style.card}>

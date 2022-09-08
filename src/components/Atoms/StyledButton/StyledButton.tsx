@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import React from 'react';
 import { Button } from 'react-bootstrap';
 
-import { StyledButtonProps, sizes, variants } from './StyledButton.types';
+import { StyledButtonProps } from './StyledButton.types';
 
 const StyledButton: StyledButtonProps = React.forwardRef(
   ({ onClick, href, variant, size, rounded, children }, ref) => {

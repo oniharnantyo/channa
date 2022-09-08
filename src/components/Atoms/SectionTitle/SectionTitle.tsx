@@ -10,7 +10,7 @@ const SectionTitle: SectionTitleProps = ({ variant, title }) => {
   return (
     <Row className="mb-3">
       <Col md={12} className={clsx('text-center', _variant)}>
-        <h3>{title}</h3>
+        <h3 className="fw-bolder">{title}</h3>
       </Col>
     </Row>
   );

@@ -25,6 +25,7 @@ const HomeFreebooks = () => {
       <Row>
         {freebooksData?.map((freebook) => (
           <FreebookCard
+            key={freebook.id}
             title={freebook.title}
             imageUrl={freebook.thumbnailURL || ''}
             imageAlt={freebook.imageDescription}
