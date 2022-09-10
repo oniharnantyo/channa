@@ -1,0 +1,13 @@
+.item {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.item::before {
+  color: #fff !important;
+}
+
+.item a {
+  color: #fff;
+  text-decoration: none;
+}

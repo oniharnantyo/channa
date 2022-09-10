@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { CSSProperties, FC, ReactNode } from 'react';
 
 export declare type variants = 'primary' | 'white' | string;
 
@@ -19,7 +19,7 @@ export type MoreableSectionProps = FC<IMoreableSectionProps>;
 
 interface ISectionNoTitleProps {
   children?: ReactNode;
-  variant: variants;
+  variant?: variants;
 }
 
 export type SectionNoTitleProps = FC<ISectionNoTitleProps>;

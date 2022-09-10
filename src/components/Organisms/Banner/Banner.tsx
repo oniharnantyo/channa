@@ -2,19 +2,20 @@ import Link from 'next/link';
 
 import HomeBanner from '@assets/image/home-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
+import clsx from 'clsx';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import Style from './Banner.module.css';
 
 const Banner = () => {
-  const bannerBackground = {
+  const bannerBackgroundStyle = {
     backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${HomeBanner.src})`,
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 0px',
   };
 
   return (
-    <section className={`${Style.banner} d-flex text-center`} style={bannerBackground}>
+    <section className={clsx(Style.banner, 'd-flex', 'text-center')} style={bannerBackgroundStyle}>
       <Container className="align-self-center">
         <Row>
           <Col md={12}>
