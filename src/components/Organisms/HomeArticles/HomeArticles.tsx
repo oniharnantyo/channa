@@ -1,11 +1,15 @@
 import { ArticleCard } from '@components/Molecules/ArticleCard';
+import { IArticle } from '@domains/article';
 import { getArticles } from '@services/article/getArticles';
+import { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { MoreableSection } from '../Section';
 
 const HomeArticles = () => {
+  const [articles, setArticles] = useState([] as IArticle[]);
+
   const {
     data: articlesData,
     error,
@@ -15,6 +19,12 @@ const HomeArticles = () => {
     retry: false,
   });
 
+  useEffect(() => {
+    if (articlesData?.data) {
+      setArticles(articlesData?.data as IArticle[]);
+    }
+  }, [articlesData]);
+
   return (
     <MoreableSection
       title={'Artikel'}
@@ -23,7 +33,7 @@ const HomeArticles = () => {
       link={'/artikel'}
     >
       <Row>
-        {articlesData?.map((article) => (
+        {articles.map((article) => (
           <ArticleCard
             key={article.id}
             title={article.title}

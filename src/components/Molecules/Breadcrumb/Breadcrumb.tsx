@@ -7,7 +7,7 @@ import Style from './Breadcrumb.module.css';
 const Breadcrumb = () => {
   return (
     <Breadcrumbs
-      listClassName="breadcrumb"
+      listClassName="breadcrumb mb-0"
       inactiveItemClassName={clsx(Style.item, 'breadcrumb-item')}
       activeItemClassName={clsx(Style.item, 'breadcrumb-item active')}
       transformLabel={(title) => {

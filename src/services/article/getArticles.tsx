@@ -25,7 +25,7 @@ export const getArticles = async ({
     });
 
     if (data.status == '00') {
-      return data.data as Array<IArticle>;
+      return data;
     } else {
       throw new Error(data.message);
     }
