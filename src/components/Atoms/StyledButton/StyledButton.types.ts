@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
 
-export declare type variants = 'primary' | 'light' | string;
+export declare type variants = 'primary' | 'light' | 'outline-primary' | string;
 export declare type sizes = 'sm' | 'lg' | undefined;
 
 interface IStyledButtonProps {

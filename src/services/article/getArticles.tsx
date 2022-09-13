@@ -1,4 +1,3 @@
-import { IArticle } from '@domains/article';
 import { axios } from 'src/lib';
 
 import { getArticlesProps } from './getArticles.types';
@@ -8,7 +7,7 @@ export const getArticles = async ({
   perPage = 10,
   search = '',
   field = 'created_at',
-  direction = 'ASC',
+  direction = 'DESC',
 }: getArticlesProps) => {
   try {
     const params = {
