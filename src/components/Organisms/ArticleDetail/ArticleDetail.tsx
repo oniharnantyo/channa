@@ -41,8 +41,8 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
           <Image
             src={article.imageURL as string}
             alt={articleData?.imageDescription}
-            width="5"
-            height="3"
+            width="500"
+            height="300"
             layout="responsive"
             objectFit="contain"
           />
