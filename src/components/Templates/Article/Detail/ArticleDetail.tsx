@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { ArticleDetail as OArticleDetail } from '@components/Organisms/ArticleDetail';
 import { Header } from '@components/Organisms/Header';
@@ -15,9 +17,11 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
       <SectionNoTitle>
         <Row>
           <Col className="text-center">
-            <StyledButton variant="outline-primary" size="lg">
-              Baca Artikel Lainnya
-            </StyledButton>
+            <Link href={'/artikel'}>
+              <StyledButton variant="outline-primary" size="lg">
+                Baca Artikel Lainnya
+              </StyledButton>
+            </Link>
           </Col>
         </Row>
       </SectionNoTitle>

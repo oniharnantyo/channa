@@ -1,15 +1,15 @@
-import { IFreebook } from '@domains/freebook';
+import { IEvent } from '@domains/event';
 import { axios } from 'src/lib';
 
-import { getFreebooksProps } from './getFreebooks.types';
+import { getEventsProps } from './getEvents.types';
 
-export const getFreebooks = async ({
+export const getEvents = async ({
   page = 1,
   perPage = 10,
   search = '',
   field = 'created_at',
   direction = 'DESC',
-}: getFreebooksProps) => {
+}: getEventsProps) => {
   try {
     const params = {
       page: page,
@@ -19,13 +19,13 @@ export const getFreebooks = async ({
       direction: direction,
     };
 
-    const { data } = await axios.get('/freebooks', {
+    const { data } = await axios.get('/events', {
       headers: { 'Content-Type': 'application/json' },
       params: params,
     });
 
     if (data.status == '00') {
-      return data.data as Array<IFreebook>;
+      return data;
     } else {
       throw new Error(data.message);
     }

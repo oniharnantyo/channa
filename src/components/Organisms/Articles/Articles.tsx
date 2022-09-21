@@ -24,7 +24,7 @@ const Articles = () => {
 
   useEffect(() => {
     if (articlesData) {
-      setArticles(articlesData.data as IArticle[]);
+      setArticles(articlesData?.data as IArticle[]);
       setPageCount(articlesData?.meta?.totalPages);
     }
     window.scrollTo(0, 0);
