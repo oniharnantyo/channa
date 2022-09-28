@@ -1,9 +1,13 @@
+import type { NextPage } from 'next';
+
 import { Article } from '@components/Templates/Article';
 
-export default function Artikel() {
+const Artikel: NextPage = () => {
   return (
     <>
       <Article />
     </>
   );
-}
+};
+
+export default Artikel;
