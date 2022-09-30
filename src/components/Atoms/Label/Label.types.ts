@@ -8,7 +8,7 @@ export declare type size = 'sm' | 'lg' | string;
 interface ILabelProps {
   variant: variants;
   size?: size;
-  icon: IconProp;
+  icon?: IconProp;
   label: string;
 }
 

@@ -15,7 +15,7 @@ const Label: LabelProps = ({ icon, label, variant, size = 'sm' }) => {
         { [Style.large]: size === 'lg' }
       )}
     >
-      <FontAwesomeIcon icon={icon} />
+      {icon && <FontAwesomeIcon icon={icon} />}
       {label}
     </p>
   );

@@ -14,17 +14,6 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
     <Layout>
       <Header />
       <OArticleDetail slug={slug} />
-      <SectionNoTitle>
-        <Row>
-          <Col className="text-center">
-            <Link href={'/acara'}>
-              <StyledButton variant="outline-primary" size="lg">
-                Baca Artikel Lainnya
-              </StyledButton>
-            </Link>
-          </Col>
-        </Row>
-      </SectionNoTitle>
     </Layout>
   );
 };

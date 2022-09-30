@@ -3,7 +3,7 @@ import { Pagination } from '@components/Molecules/Pagination';
 import { IArticle } from '@domains/article';
 import { getArticles } from '@services/article/getArticles';
 import { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../Section';
@@ -36,16 +36,18 @@ const Articles = () => {
         <Row>
           {articles &&
             articles.map((article) => (
-              <ArticleCard
-                key={article.id}
-                title={article.title}
-                slug={article.slug}
-                imageUrl={article.thumbnailURL || ''}
-                imageAlt={article.imageDescription}
-                createdAt={article.createdAt}
-                author={article.author}
-                description={article.description}
-              />
+              <Col md={4}>
+                <ArticleCard
+                  key={article.id}
+                  title={article.title}
+                  slug={article.slug}
+                  imageUrl={article.thumbnailURL || ''}
+                  imageAlt={article.imageDescription}
+                  createdAt={article.createdAt}
+                  author={article.author}
+                  description={article.description}
+                />
+              </Col>
             ))}
         </Row>
       </SectionNoTitle>

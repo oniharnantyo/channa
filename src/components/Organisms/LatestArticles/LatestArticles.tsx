@@ -1,3 +1,4 @@
+import { Label } from '@components/Atoms/Label';
 import { ArticleCard } from '@components/Molecules/ArticleCard';
 import { IArticle } from '@domains/article';
 import { getArticles } from '@services/article/getArticles';
@@ -5,9 +6,7 @@ import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
-import { MoreableSection } from '../Section';
-
-const HomeArticles = () => {
+const LatestArticles = () => {
   const [articles, setArticles] = useState([] as IArticle[]);
 
   const {
@@ -15,26 +14,24 @@ const HomeArticles = () => {
     error,
     refetch,
     isFetching,
-  } = useQuery(['getArticles'], () => getArticles({ page: 1, perPage: 3 }), {
+  } = useQuery(['getArticles'], () => getArticles({ page: 1, perPage: 2 }), {
     retry: false,
   });
 
   useEffect(() => {
-    if (articlesData?.data) {
+    if (articlesData) {
       setArticles(articlesData?.data as IArticle[]);
     }
   }, [articlesData]);
 
   return (
-    <MoreableSection
-      title={'Artikel'}
-      variant={'primary'}
-      linkTitle={'Lihat artikel lainnya >>'}
-      link={'/artikel'}
-    >
-      <Row>
-        {articles.map((article) => (
-          <Col md={4}>
+    <Row>
+      <div className="pl-5">
+        <Label variant="primary" size="lg" label="Artikel Terbaru" />
+      </div>
+      {articles &&
+        articles.map((article) => (
+          <Col sm={6} md={6} lg={12}>
             <ArticleCard
               key={article.id}
               title={article.title}
@@ -43,13 +40,11 @@ const HomeArticles = () => {
               imageAlt={article.imageDescription}
               createdAt={article.createdAt}
               author={article.author}
-              description={article.description}
             />
           </Col>
         ))}
-      </Row>
-    </MoreableSection>
+    </Row>
   );
 };
 
-export default HomeArticles;
+export default LatestArticles;
