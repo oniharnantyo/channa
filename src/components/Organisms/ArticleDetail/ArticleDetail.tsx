@@ -49,8 +49,8 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
         </Col>
         <Col sm={12} md={6} lg={6}>
           <Title title={article.title}></Title>
-          <Label variant={'primary'} icon={faCalendarAlt} label={createdAtDate}></Label>
-          <Label variant={'primary'} icon={faUser} label={article?.author}></Label>
+          <Label variant={'primary'} size={'lg'} icon={faCalendarAlt} label={createdAtDate}></Label>
+          <Label variant={'primary'} size={'lg'} icon={faUser} label={article?.author}></Label>
         </Col>
       </Row>
       <Row>

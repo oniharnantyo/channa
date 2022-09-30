@@ -20,3 +20,9 @@
   text-align: center;
   min-height: 110px
 }
+
+@media (min-width:768px) {
+  .card {
+    height: 100%;
+  }
+}

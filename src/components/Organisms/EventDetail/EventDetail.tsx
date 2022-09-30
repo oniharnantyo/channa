@@ -50,9 +50,9 @@ const EventDetail: EventDetailProps = ({ slug }) => {
         </Col>
         <Col sm={12} md={6} lg={6}>
           <Title title={event.title}></Title>
-          <Label variant="primary" icon={faCalendarAlt} label={date}></Label>
-          <Label variant="primary" icon={faClock} label={time}></Label>
-          <Label variant="primary" icon={faMapMarkedAlt} label={event.location} />
+          <Label variant="primary" size="lg" icon={faCalendarAlt} label={date}></Label>
+          <Label variant="primary" size="lg" icon={faClock} label={time}></Label>
+          <Label variant="primary" size="lg" icon={faMapMarkedAlt} label={event.location} />
         </Col>
       </Row>
       <Row>

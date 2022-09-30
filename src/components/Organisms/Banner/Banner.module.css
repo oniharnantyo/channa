@@ -46,7 +46,7 @@
   letter-spacing: 0.04em;
 }
 
-@media (min-width:641px) {
+@media (min-width:1200px) {
   .banner {
     min-height: calc(100vh - 76px - 300px);
   }

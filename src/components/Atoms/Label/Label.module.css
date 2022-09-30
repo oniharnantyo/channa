@@ -4,6 +4,10 @@
   margin: 0em 0.25em;
 }
 
+.label.large {
+  font-size: 1.25rem;
+}
+
 .label svg {
   padding-right: 0.5em;
 }

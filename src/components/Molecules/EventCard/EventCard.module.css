@@ -1,3 +1,9 @@
 .card {
   padding: 1em;
 }
+
+@media (min-width:768px) {
+  .card {
+    height: 100%;
+  }
+}

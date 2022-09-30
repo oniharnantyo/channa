@@ -17,7 +17,7 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
       <SectionNoTitle>
         <Row>
           <Col className="text-center">
-            <Link href={'/artikel'}>
+            <Link href={'/acara'}>
               <StyledButton variant="outline-primary" size="lg">
                 Baca Artikel Lainnya
               </StyledButton>

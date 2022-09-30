@@ -5,13 +5,14 @@ import clsx from 'clsx';
 import Style from './Label.module.css';
 import { LabelProps } from './Label.types';
 
-const Label: LabelProps = ({ icon, label, variant }) => {
+const Label: LabelProps = ({ icon, label, variant, size = 'sm' }) => {
   return (
     <p
       className={clsx(
         Style.label,
         { [ColorStyle.primary]: variant === 'primary' },
-        { [ColorStyle.white]: variant === 'white' }
+        { [ColorStyle.white]: variant === 'white' },
+        { [Style.large]: size === 'lg' }
       )}
     >
       <FontAwesomeIcon icon={icon} />

@@ -13,15 +13,17 @@ const LinkImage: LinkImageProps = ({ imageUrl, imageAlt, url, width, height }) =
 
   return (
     <div className={clsx(Style.image, 'col-12')}>
-      <Link href={url}>
-        <Image
-          src={imageUrl}
-          alt={imageAlt}
-          width={width}
-          height={height}
-          layout="responsive"
-          objectFit="contain"
-        />
+      <Link href={url} passHref>
+        <a>
+          <Image
+            src={imageUrl}
+            alt={imageAlt}
+            width={width}
+            height={height}
+            layout="responsive"
+            objectFit="contain"
+          />
+        </a>
       </Link>
     </div>
   );

@@ -8,3 +8,9 @@
   margin: 1em 0em;
   min-height: 80px;
 }
+
+@media (min-width:768px) {
+  .card {
+    height: 100%;
+  }
+}
