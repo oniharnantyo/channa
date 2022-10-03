@@ -26,12 +26,12 @@ const LatestArticles = () => {
 
   return (
     <Row>
-      <div className="pl-5">
+      <div className="pl-5 mb-2">
         <Label variant="primary" size="lg" label="Artikel Terbaru" />
       </div>
       {articles &&
         articles.map((article) => (
-          <Col sm={6} md={6} lg={12}>
+          <Col key={article.id} sm={6} md={6} lg={12} className="mb-4">
             <ArticleCard
               key={article.id}
               title={article.title}

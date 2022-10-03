@@ -36,7 +36,7 @@ const Articles = () => {
         <Row>
           {articles &&
             articles.map((article) => (
-              <Col md={4}>
+              <Col key={article.id} md={4} className="mb-4">
                 <ArticleCard
                   key={article.id}
                   title={article.title}

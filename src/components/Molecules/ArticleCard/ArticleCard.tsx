@@ -7,7 +7,7 @@ import ColorStyle from '@styles/Color.module.css';
 import { formatDate } from '@utils/format';
 import { truncate } from '@utils/text';
 import clsx from 'clsx';
-import { Col } from 'react-bootstrap';
+import { Card, Col } from 'react-bootstrap';
 
 import Style from './ArticleCard.module.css';
 import { ArticleCardProps } from './ArticleCard.types';
@@ -26,17 +26,17 @@ const ArticleCard: ArticleCardProps = ({
   const truncatedDescription = truncate(description || '', 100);
 
   return (
-    <Col key={slug} md={12} className={clsx(Style.card, BackgroundStyle.white, 'mb-4', 'mb-lg-4')}>
-      <div className="d-block">
-        <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={'500'} height={'300'} />
+    <Card key={slug} className={clsx(Style.card, BackgroundStyle.white, 'h-100')}>
+      <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={'500'} height={'300'} />
+      <Card.Body>
         <LinkTitle url={url} title={title} />
         <Label variant="primary" icon={faCalendarAlt} label={createdAtDate} />
         <Label variant="primary" icon={faUser} label={author} />
         {truncatedDescription && (
           <p className={clsx(Style.description, ColorStyle.primary)}>{truncatedDescription}</p>
         )}
-      </div>
-    </Col>
+      </Card.Body>
+    </Card>
   );
 };
 

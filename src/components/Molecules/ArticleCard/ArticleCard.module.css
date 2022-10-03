@@ -1,5 +1,12 @@
 .card {
-  padding: 1em;
+  box-shadow: 0 5px 10px rgb(73 84 100 / 20%);
+  border-radius: 0.5em;
+  border-color: transparent;
+}
+
+.card img {
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
 }
 
 .description {
@@ -7,10 +14,4 @@
   line-height: 160%;
   margin: 1em 0em;
   min-height: 80px;
-}
-
-@media (min-width:768px) {
-  .card {
-    height: 100%;
-  }
 }
