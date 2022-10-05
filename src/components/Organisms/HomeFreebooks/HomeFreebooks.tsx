@@ -1,20 +1,10 @@
 import FreebookCard from '@components/Molecules/FreebookCard/FreebookCard';
-import { getFreebooks } from '@services/freebook/getFreebooks';
 import { Row } from 'react-bootstrap';
-import { useQuery } from 'react-query';
 
 import { MoreableSection } from '../Section';
+import { HomeFreebooksProps } from './HomeFreebooks.types';
 
-const HomeFreebooks = () => {
-  const {
-    data: freebooksData,
-    error,
-    refetch,
-    isFetching,
-  } = useQuery(['getFreebooks'], () => getFreebooks({ page: 1, perPage: 2 }), {
-    retry: false,
-  });
-
+const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
   return (
     <MoreableSection
       linkTitle={'Lihat freebook lainnya >>'}
@@ -23,7 +13,7 @@ const HomeFreebooks = () => {
       variant={'primary'}
     >
       <Row>
-        {freebooksData?.map((freebook) => (
+        {freebooks.map((freebook) => (
           <FreebookCard
             key={freebook.id}
             title={freebook.title}

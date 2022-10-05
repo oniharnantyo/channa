@@ -1,7 +1,8 @@
+import { IArticle } from '@domains/article';
 import { FC } from 'react';
 
 interface IArticleDetailProps {
-  slug: string;
+  article: IArticle;
 }
 
 export type ArticleDetailProps = FC<IArticleDetailProps>;

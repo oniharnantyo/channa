@@ -1,30 +1,10 @@
 import { ArticleCard } from '@components/Molecules/ArticleCard';
-import { IArticle } from '@domains/article';
-import { getArticles } from '@services/article/getArticles';
-import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { useQuery } from 'react-query';
 
 import { MoreableSection } from '../Section';
+import { HomeArticlesProps } from './HomeArticles.types';
 
-const HomeArticles = () => {
-  const [articles, setArticles] = useState([] as IArticle[]);
-
-  const {
-    data: articlesData,
-    error,
-    refetch,
-    isFetching,
-  } = useQuery(['getArticles'], () => getArticles({ page: 1, perPage: 3 }), {
-    retry: false,
-  });
-
-  useEffect(() => {
-    if (articlesData?.data) {
-      setArticles(articlesData?.data as IArticle[]);
-    }
-  }, [articlesData]);
-
+const HomeArticles: HomeArticlesProps = ({ articles }) => {
   return (
     <MoreableSection
       title={'Artikel'}

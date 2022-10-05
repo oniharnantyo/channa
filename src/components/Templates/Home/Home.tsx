@@ -6,16 +6,17 @@ import { LatestEvent } from '@components/Organisms/LatestEvent';
 import { Programs } from '@components/Organisms/Programs';
 
 import { Layout } from '../Layout';
+import { HomeProps } from './Home.types';
 
-const  Home = () => {
+const Home: HomeProps = ({ articles, freebooks }) => {
   return (
     <Layout>
       <Banner />
       <LatestEvent />
       <Programs />
-      <HomeFreebooks />
+      <HomeFreebooks freebooks={freebooks} />
       <HomeDonate />
-      <HomeArticles />
+      <HomeArticles articles={articles} />
     </Layout>
   );
 };

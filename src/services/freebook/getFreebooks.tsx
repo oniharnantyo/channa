@@ -1,5 +1,4 @@
-import { IFreebook } from '@domains/freebook';
-import { axios } from 'src/lib';
+import { axios, axiosSSR } from 'src/lib';
 
 import { getFreebooksProps } from './getFreebooks.types';
 
@@ -9,8 +8,11 @@ export const getFreebooks = async ({
   search = '',
   field = 'created_at',
   direction = 'DESC',
+  isSSR,
 }: getFreebooksProps) => {
   try {
+    let response;
+
     const params = {
       page: page,
       perPage: perPage,
@@ -19,13 +21,22 @@ export const getFreebooks = async ({
       direction: direction,
     };
 
-    const { data } = await axios.get('/freebooks', {
+    const endpoint = '/freebooks';
+    const conf = {
       headers: { 'Content-Type': 'application/json' },
       params: params,
-    });
+    };
+
+    if (isSSR) {
+      response = await axiosSSR.get(endpoint, conf);
+    } else {
+      response = await axios.get(endpoint, conf);
+    }
+
+    const { data } = response;
 
     if (data.status == '00') {
-      return data.data as Array<IFreebook>;
+      return { data: data.data, meta: data.meta };
     } else {
       throw new Error(data.message);
     }

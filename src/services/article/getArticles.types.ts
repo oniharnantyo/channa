@@ -4,4 +4,5 @@ export type getArticlesProps = {
   search?: string;
   field?: string;
   direction?: string;
+  isSSR?: boolean;
 };

@@ -5,36 +5,15 @@ import { Content } from '@components/Atoms/Content';
 import { Label } from '@components/Atoms/Label';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { Title } from '@components/Atoms/Title';
-import { IArticle } from '@domains/article';
 import { faCalendarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
-import { getArticleBySlug } from '@services/article/getArticleBySlug';
 import { formatDate } from '@utils/format';
-import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { useQuery } from 'react-query';
 
 import LatestArticles from '../LatestArticles/LatestArticles';
 import { SectionNoTitle } from '../Section';
 import { ArticleDetailProps } from './ArticleDetail.types';
 
-const ArticleDetail: ArticleDetailProps = ({ slug }) => {
-  const [article, setArticle] = useState({} as IArticle);
-
-  const {
-    data: articleData,
-    error,
-    refetch,
-    isFetching,
-  } = useQuery(['getArticleBySlug', slug], () => getArticleBySlug({ slug }), {
-    retry: false,
-  });
-
-  useEffect(() => {
-    if (articleData) {
-      setArticle(articleData);
-    }
-  }, [articleData]);
-
+const ArticleDetail: ArticleDetailProps = ({ article }) => {
   const createdAtDate = formatDate(article.createdAt, 'DD MMMM YYYY');
 
   return (
@@ -44,7 +23,7 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
           <Col sm={12} md={6} lg={6}>
             <Image
               src={article.imageURL as string}
-              alt={articleData?.imageDescription}
+              alt={article?.imageDescription}
               width="500"
               height="300"
               layout="responsive"
@@ -76,7 +55,7 @@ const ArticleDetail: ArticleDetailProps = ({ slug }) => {
       <SectionNoTitle>
         <Row>
           <Col className="text-center">
-            <Link href={'/acara'}>
+            <Link href={'/artikel'}>
               <StyledButton variant="outline-primary" size="lg">
                 Baca Artikel Lainnya
               </StyledButton>

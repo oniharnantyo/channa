@@ -7,7 +7,7 @@ import ColorStyle from '@styles/Color.module.css';
 import { formatDate } from '@utils/format';
 import { truncate } from '@utils/text';
 import clsx from 'clsx';
-import { Card, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 import Style from './ArticleCard.module.css';
 import { ArticleCardProps } from './ArticleCard.types';

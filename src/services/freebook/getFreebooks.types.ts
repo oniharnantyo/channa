@@ -4,4 +4,5 @@ export type getFreebooksProps = {
   search?: string;
   field?: string;
   direction?: string;
+  isSSR?: boolean;
 };
