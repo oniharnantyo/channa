@@ -26,9 +26,9 @@ const ArticleCard: ArticleCardProps = ({
   const truncatedDescription = truncate(description || '', 100);
 
   return (
-    <Card key={slug} className={clsx(Style.card, BackgroundStyle.white, 'h-100')}>
+    <Card key={slug} className={clsx(Style.card, BackgroundStyle.white, 'h-100', 'm-2')}>
       <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={'500'} height={'300'} />
-      <Card.Body>
+      <Card.Body className={Style.cardBody}>
         <LinkTitle url={url} title={title} />
         <Label variant="primary" icon={faCalendarAlt} label={createdAtDate} />
         <Label variant="primary" icon={faUser} label={author} />

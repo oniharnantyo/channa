@@ -1,5 +1,4 @@
 .card {
-  box-shadow: 0 5px 10px rgb(73 84 100 / 20%);
   border-radius: 0.5em;
   border-color: transparent;
 }
@@ -9,9 +8,13 @@
   border-top-right-radius: calc(0.5rem - 1px);
 }
 
+.cardBody {
+  padding: 0 !important;
+}
+
 .description {
   font-size: 1rem;
   line-height: 160%;
-  margin: 1em 0em;
+  margin: 0.5em 0em;
   min-height: 80px;
 }
