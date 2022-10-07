@@ -1,3 +1,4 @@
+import { ArticleLabel } from '@components/Atoms/ArticleLabel';
 import { Label } from '@components/Atoms/Label';
 import LinkImage from '@components/Atoms/LinkImage/LinkImage';
 import { LinkTitle } from '@components/Atoms/LinkTitle';
@@ -20,18 +21,17 @@ const ArticleCard: ArticleCardProps = ({
   imageUrl,
   imageAlt,
   createdAt,
+  isBodyMargin,
 }) => {
-  const createdAtDate = formatDate(createdAt, 'DD MMMM YYYY');
   const url = '/artikel/' + slug;
   const truncatedDescription = truncate(description || '', 100);
 
   return (
     <Card key={slug} className={clsx(Style.card, BackgroundStyle.white, 'h-100', 'm-2')}>
       <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={'500'} height={'300'} />
-      <Card.Body className={Style.cardBody}>
+      <Card.Body className={clsx(Style.cardBody, { ['mx-2']: isBodyMargin })}>
         <LinkTitle url={url} title={title} />
-        <Label variant="primary" icon={faCalendarAlt} label={createdAtDate} />
-        <Label variant="primary" icon={faUser} label={author} />
+        <ArticleLabel author={author} date={createdAt} />
         {truncatedDescription && (
           <p className={clsx(Style.description, ColorStyle.primary)}>{truncatedDescription}</p>
         )}

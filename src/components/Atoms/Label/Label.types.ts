@@ -9,6 +9,7 @@ interface ILabelProps {
   variant: variants;
   size?: size;
   icon?: IconProp;
+  isBolderText?: boolean;
   label: string;
 }
 

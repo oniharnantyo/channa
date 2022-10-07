@@ -24,6 +24,7 @@ const HomeArticles: HomeArticlesProps = ({ articles }) => {
               createdAt={article.createdAt}
               author={article.author}
               description={article.description}
+              isBodyMargin={true}
             />
           </Col>
         ))}

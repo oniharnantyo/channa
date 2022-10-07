@@ -8,6 +8,7 @@ interface IArticleCardProps {
   imageUrl: string;
   imageAlt: string;
   createdAt: Date;
+  isBodyMargin?: boolean;
 }
 
 export type ArticleCardProps = FC<IArticleCardProps>;

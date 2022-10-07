@@ -25,9 +25,9 @@ const LatestArticles = () => {
   }, [articlesData]);
 
   return (
-    <Row>
+    <Row className="px-xs-5">
       <div className="pl-5 mb-2">
-        <Label variant="primary" size="lg" label="Artikel Terbaru" />
+        <Label variant="primary" size="lg" label="Artikel Terbaru" isBolderText={true} />
       </div>
       {articles &&
         articles.map((article) => (
