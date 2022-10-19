@@ -7,7 +7,7 @@ import { StyledButton } from '@components/Atoms/StyledButton';
 import { Title } from '@components/Atoms/Title';
 import { Col, Row } from 'react-bootstrap';
 
-import LatestArticles from '../LatestArticles/LatestArticles';
+import { LatestArticles } from '../LatestArticles';
 import { SectionNoTitle } from '../Section';
 import { ArticleDetailProps } from './ArticleDetail.types';
 

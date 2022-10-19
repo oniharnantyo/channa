@@ -1,23 +1,23 @@
-const path = require("path");
-const n = "node_modules";
+const path = require('path');
+const n = 'node_modules';
 
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
 });
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en", // set <html lang="en">
+    locales: ['id'],
+    defaultLocale: 'id', // set <html lang="id">
   },
   images: {
-    domains: ["res.cloudinary.com"],
+    domains: ['res.cloudinary.com'],
   },
   webpack(config, { isServer, webpack, dev, buildId }) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      react: path.resolve(__dirname, ".", n, "react"),
+      react: path.resolve(__dirname, '.', n, 'react'),
     };
 
     return config;
@@ -25,7 +25,7 @@ module.exports = withBundleAnalyzer({
   async rewrites() {
     return [
       {
-        source: "/api/v1/:path*",
+        source: '/api/v1/:path*',
         destination: `${process.env.BASE_API}/:path*`,
       },
     ];
