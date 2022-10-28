@@ -12,3 +12,8 @@
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
+
+.active {
+  color: #046ADF !important;
+  font-weight: bold;
+}

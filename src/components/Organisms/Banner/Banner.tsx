@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 import HomeBanner from '@assets/image/home-banner.webp';
@@ -8,15 +9,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Style from './Banner.module.css';
 
 const Banner = () => {
-  const bannerBackgroundStyle = {
-    backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${HomeBanner.src})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: '50% 0px',
-  };
-
   return (
-    <section className={clsx(Style.banner, 'd-flex', 'text-center')} style={bannerBackgroundStyle}>
-      <Container className="align-self-center">
+    <section className={clsx(Style.banner, 'd-flex', 'text-center')}>
+      <div className={Style.backgroundImageWrapper}>
+        <Image src={HomeBanner} layout="fill" objectFit="cover" objectPosition="top" />
+      </div>
+      <Container className={clsx('align-self-center', Style.bannerContent)}>
         <Row>
           <Col md={12}>
             <div className={Style.content}>

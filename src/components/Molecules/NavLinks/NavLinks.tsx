@@ -1,31 +1,30 @@
 import Link from 'next/link';
+import { NextRouter, useRouter } from 'next/router';
 
 import { NavLink } from '@components/Atoms/NavLink';
 
+import { getRoutes } from './Navlinks.Routes';
+
+const getPathname = (router: NextRouter) => {
+  const path = router.pathname.split('/');
+  return path.length ? path[1] : '';
+};
+
 const NavLinks = () => {
+  const router = useRouter();
+
+  const pathname = getPathname(router);
+
+  const routes = getRoutes();
+
   return (
     <>
-      <Link href="/" passHref>
-        <NavLink name="Beranda"></NavLink>
-      </Link>
-      <Link href="/tentang-kami" passHref>
-        <NavLink name="Tentang Kami"></NavLink>
-      </Link>
-      <Link href="/acara" passHref>
-        <NavLink name="Acara"></NavLink>
-      </Link>
-      <Link href="/artikel" passHref>
-        <NavLink name="Artikel"></NavLink>
-      </Link>
-      <Link href="/freebook" passHref>
-        <NavLink name="Freebook"></NavLink>
-      </Link>
-      <Link href="/dana" passHref>
-        <NavLink name="Dana"></NavLink>
-      </Link>
-      <Link href="/kontak" passHref>
-        <NavLink name="Kontak"></NavLink>
-      </Link>
+      {routes &&
+        routes.map((route) => (
+          <Link href={route.path} passHref>
+            <NavLink name={route.name} active={route.key === pathname} />
+          </Link>
+        ))}
     </>
   );
 };

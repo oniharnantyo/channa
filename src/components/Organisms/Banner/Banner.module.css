@@ -1,26 +1,32 @@
 .banner {
   min-height: calc(100vh - 76px);
-  background-size: cover;
+}
+
+.backgroundImageWrapper {
+  z-index: 1;
+}
+
+.backgroundImageWrapper:before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.backgroundImageWrapper img {
+  margin-top: 4.75em !important;
+  z-index: -99;
+}
+
+.bannerContent {
+  position: relative;
+  z-index: 1;
 }
 
 .content {
   color: white;
-}
-
-.button {
-  background: #046ADF;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.875rem;
-  padding: 0.5em 1em;
-  margin-top: 1.563em;
-  border-radius: 0 !important;
-}
-
-.button:hover {
-  background: none;
-  color: #fff;
-  border-color: #fff;
 }
 
 .content h5 {
@@ -46,7 +52,7 @@
   letter-spacing: 0.04em;
 }
 
-@media (min-width:1200px) {
+@media (min-width:1700px) {
   .banner {
     min-height: calc(100vh - 76px - 300px);
   }

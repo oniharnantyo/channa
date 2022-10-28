@@ -6,9 +6,13 @@ import { Nav } from 'react-bootstrap';
 import Style from './NavLink.module.css';
 import { NavLinkProps } from './NavLink.types';
 
-const NavLink: NavLinkProps = React.forwardRef(({ name, href }, ref) => {
+const NavLink: NavLinkProps = React.forwardRef(({ name, href, active }, ref) => {
   return (
-    <Nav.Link className={clsx(Style.link, ColorStyle.primary)} href={href}>
+    <Nav.Link
+      className={clsx(Style.link, ColorStyle.primary, { [Style.active]: active })}
+      href={href}
+      active={active}
+    >
       {name}
     </Nav.Link>
   );
