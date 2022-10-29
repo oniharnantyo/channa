@@ -30,7 +30,7 @@ const StyledNavbar = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="navigationBar">
           <Nav className="ms-auto">
-            <NavLinks></NavLinks>
+            <NavLinks />
           </Nav>
         </Navbar.Collapse>
       </Container>

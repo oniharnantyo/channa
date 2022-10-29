@@ -14,15 +14,14 @@ const NavLinks = () => {
   const router = useRouter();
 
   const pathname = getPathname(router);
-
   const routes = getRoutes();
 
   return (
     <>
       {routes &&
         routes.map((route) => (
-          <Link href={route.path} passHref>
-            <NavLink name={route.name} active={route.key === pathname} />
+          <Link key={route.key} href={route.path} passHref>
+            <NavLink key={route.key} name={route.name} active={route.key === pathname} />
           </Link>
         ))}
     </>

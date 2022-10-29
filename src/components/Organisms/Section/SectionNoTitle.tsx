@@ -10,21 +10,23 @@ const SectionNoTitle: SectionNoTitleProps = ({ children, variant }) => {
   let backgroundColor = '';
   let color = '';
 
-  if (variant !== '') {
+  if (variant) {
     backgroundColor = variant === 'primary' ? BackgroundStyle.blue : BackgroundStyle.white;
     color = variant === 'primary' ? ColorStyle.white : ColorStyle.blue;
   }
 
   return (
-    <section
-      className={clsx(
-        Style.section,
-        [backgroundColor !== '', backgroundColor],
-        [color !== '', color]
-      )}
-    >
-      <Container>{children}</Container>
-    </section>
+    <>
+      <section
+        className={clsx(
+          Style.section,
+          [backgroundColor !== '', backgroundColor],
+          [color !== '', color]
+        )}
+      >
+        <Container>{children}</Container>
+      </section>
+    </>
   );
 };
 

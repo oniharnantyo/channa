@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import HomeBanner from '@assets/image/home-banner.webp';
+import HomeBannerImage from '@assets/image/home-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import clsx from 'clsx';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -12,7 +12,7 @@ const Banner = () => {
   return (
     <section className={clsx(Style.banner, 'd-flex', 'text-center')}>
       <div className={Style.backgroundImageWrapper}>
-        <Image src={HomeBanner} layout="fill" objectFit="cover" objectPosition="top" />
+        <Image src={HomeBannerImage} layout="fill" objectFit="cover" objectPosition="top" />
       </div>
       <Container className={clsx('align-self-center', Style.bannerContent)}>
         <Row>
