@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import DonateBannerImage from '@assets/image/donate-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
@@ -34,9 +35,11 @@ const HomeDonate = () => {
                 Seluruh dana yang dikumpulkan akan digunakan untuk program kerja Vidyasena dan
                 operasional Vihara Vidyaloka
               </p>
-              <StyledButton size="sm" variant={'primary'}>
-                Donasi
-              </StyledButton>
+              <Link href={'/dana'}>
+                <StyledButton size="sm" variant={'primary'}>
+                  Dana Sekarang
+                </StyledButton>
+              </Link>
             </Col>
           </Row>
         </SectionNoTitle>

@@ -13,7 +13,7 @@ import Style from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <section className={Style.footer}>
+    <footer className={Style.footer}>
       <Container>
         <Row>
           <Col md={4} lg={4}>
@@ -58,7 +58,7 @@ const Footer = () => {
           </Col>
         </Row>
       </Container>
-    </section>
+    </footer>
   );
 };
 

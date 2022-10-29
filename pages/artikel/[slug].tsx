@@ -1,4 +1,5 @@
 import { GetServerSideProps, NextPage } from 'next';
+import Head from 'next/head';
 
 import { ArticleDetail } from '@components/Templates/Article/Detail';
 import { IArticle } from '@domains/article';
@@ -9,7 +10,13 @@ type ArtikelDetailProps = {
 };
 
 const ArtikelDetail: NextPage<ArtikelDetailProps> = (props) => {
-  return <ArticleDetail article={props.article} />;
+  const article = props.article as IArticle;
+
+  return (
+    <>
+      <ArticleDetail article={article} />
+    </>
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {

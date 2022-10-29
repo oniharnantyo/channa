@@ -17,30 +17,32 @@ const ArticleDetail: ArticleDetailProps = ({ article }) => {
       <Col lg={2}></Col>
       <Col lg={8}>
         <SectionNoTitle>
-          <Row className="mb-3 text-center">
-            <Title title={article.title}></Title>
-            <ArticleLabel author={article.author} date={article.createdAt} />
-          </Row>
-          <Row className="mb-sm-2 mb-md-3 mb-lg-5">
-            <Col sm={12} md={12} lg={12} className="mx-auto">
-              <Image
-                src={article.imageURL as string}
-                alt={article?.imageDescription}
-                width="1000"
-                height="500"
-                layout="responsive"
-                objectFit="contain"
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col lg={9}>
-              <HtmlableContent content={article.content} />
-            </Col>
-            <Col lg={3}>
-              <LatestArticles />
-            </Col>
-          </Row>
+          <article>
+            <Row className="mb-3 text-center">
+              <Title title={article.title}></Title>
+              <ArticleLabel author={article.author} date={article.createdAt} />
+            </Row>
+            <Row className="mb-sm-2 mb-md-3 mb-lg-5">
+              <Col sm={12} md={12} lg={12} className="mx-auto">
+                <Image
+                  src={article.imageURL as string}
+                  alt={article?.imageDescription}
+                  width="1000"
+                  height="500"
+                  layout="responsive"
+                  objectFit="contain"
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={9}>
+                <HtmlableContent content={article.content} />
+              </Col>
+              <Col lg={3}>
+                <LatestArticles />
+              </Col>
+            </Row>
+          </article>
         </SectionNoTitle>
         <SectionNoTitle>
           <Row>
