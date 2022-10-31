@@ -6,9 +6,9 @@ import { Title } from '@components/Atoms/Title';
 import { faCalendar, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Col, Container, Row } from 'react-bootstrap';
 
-import { ContactItemProps } from './ContactItem.types';
+import { DonateItemProps } from './DonateItem.types';
 
-const ContactItem: ContactItemProps = ({
+const DonateItem: DonateItemProps = ({
   title,
   account,
   confirm,
@@ -71,4 +71,4 @@ const ContactItem: ContactItemProps = ({
   );
 };
 
-export default ContactItem;
+export default DonateItem;

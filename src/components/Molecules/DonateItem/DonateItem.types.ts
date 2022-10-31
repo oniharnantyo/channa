@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-interface IContactItemProps {
+interface IDonateItemProps {
   title: string;
   account: string;
   confirm: string;
@@ -10,4 +10,4 @@ interface IContactItemProps {
   isImageRight?: boolean;
 }
 
-export type ContactItemProps = FC<IContactItemProps>;
+export type DonateItemProps = FC<IDonateItemProps>;

@@ -1,4 +1,5 @@
 .banner {
+  position: relative !important;
   min-height: calc(100vh - 76px);
 }
 
@@ -16,7 +17,6 @@
 }
 
 .backgroundImageWrapper img {
-  margin-top: 4.75em !important;
   z-index: -99;
 }
 
@@ -54,6 +54,10 @@
 
 @media (min-width:1700px) {
   .banner {
+    min-height: calc(100vh - 76px - 300px);
+  }
+
+  .backgroundImageWrapper:before {
     min-height: calc(100vh - 76px - 300px);
   }
 }

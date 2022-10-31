@@ -11,12 +11,6 @@ import { SectionNoTitle } from '../Section';
 import Style from './HomeDonate.module.css';
 
 const HomeDonate = () => {
-  const background = (
-    <div className={Style.backgroundImageWrapper}>
-      <Image src={DonateBannerImage} layout="fill" objectFit="cover" objectPosition="" />
-    </div>
-  );
-
   return (
     <div className={clsx(Style.donate, 'd-flex')}>
       <div className={Style.backgroundImageWrapper}>

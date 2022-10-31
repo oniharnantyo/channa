@@ -1,16 +1,9 @@
-import Contact from '@components/Templates/Contact/Contact';
+import { Donate } from '@components/Templates/Donate';
 
 export default function Dana() {
   return (
     <>
-      <Contact
-        OperationalAccount={''}
-        OperationalConfirm={''}
-        DAAAccount={''}
-        DAAConfirm={''}
-        FreebookAccount={''}
-        FreebookConfirm={''}
-      />
+      <Donate />
     </>
   );
 }

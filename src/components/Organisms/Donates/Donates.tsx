@@ -1,12 +1,12 @@
 import HomeBanner from '@assets/image/home-banner.webp';
-import { ContactItem } from '@components/Molecules/ContactItem';
+import { DonateItem } from '@components/Molecules/DonateItem';
 
 import { SectionNoTitle } from '../Section';
 
-const Contacts = () => {
+const Donates = () => {
   return (
     <SectionNoTitle>
-      <ContactItem
+      <DonateItem
         title={'Operasional Vihara Vidyaloka'}
         account={'BCA 1234566 a.n Hery Nugroho (Rekening VS)'}
         confirm={'No HP Vidyasena untuk konfirmasi'}
@@ -16,7 +16,7 @@ const Contacts = () => {
         imageURL={HomeBanner.src}
         imageAlt={'test'}
       />
-      <ContactItem
+      <DonateItem
         title={'Dana Anak Asuh'}
         account={'BCA 1234566 a.n Hery Nugroho (Rekening Sosial)'}
         confirm={'No HP Sosial untuk konfirmasi'}
@@ -27,7 +27,7 @@ const Contacts = () => {
         imageAlt={'test'}
         isImageRight={true}
       />
-      <ContactItem
+      <DonateItem
         title={'Freebook'}
         account={'BCA 1234566 a.n Hery Nugroho (Rekening Usaha)'}
         confirm={'No HP Vidyasena untuk konfirmasi'}
@@ -41,4 +41,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default Donates;

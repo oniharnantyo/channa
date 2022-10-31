@@ -1,19 +1,11 @@
 import Head from 'next/head';
 
-import { Contacts } from '@components/Organisms/Contacts';
+import { Donates } from '@components/Organisms/Donates';
 import { Header } from '@components/Organisms/Header';
 
 import { Layout } from '../Layout';
-import { ContactProps } from './Contact.types';
 
-const Contact: ContactProps = ({
-  operationalAccount,
-  operationalConfirm,
-  daaAccount,
-  daaConfirm,
-  freebookAccount,
-  freebookConfirm,
-}) => {
+const Donate = () => {
   const title = 'Dana - Vidyāsenā Vihāra Vidyāloka';
   return (
     <Layout>
@@ -21,9 +13,9 @@ const Contact: ContactProps = ({
         <title>{title}</title>
       </Head>
       <Header />
-      <Contacts />
+      <Donates />
     </Layout>
   );
 };
 
-export default Contact;
+export default Donate;
