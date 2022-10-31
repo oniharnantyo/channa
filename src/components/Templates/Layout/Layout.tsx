@@ -19,7 +19,7 @@ const Layout: LayoutProps = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header className={Style.header}>
-        <StyledNavbar></StyledNavbar>
+        <StyledNavbar />
       </header>
       {children}
       <Footer />

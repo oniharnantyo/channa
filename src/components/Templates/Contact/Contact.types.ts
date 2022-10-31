@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
 interface IContactProps {
-  OperationalAccount: string;
-  OperationalConfirm: string;
-  DAAAccount: string;
-  DAAConfirm: string;
-  FreebookAccount: string;
-  FreebookConfirm: string;
+  operationalAccount: string;
+  operationalConfirm: string;
+  daaAccount: string;
+  daaConfirm: string;
+  freebookAccount: string;
+  freebookConfirm: string;
 }
 
 export type ContactProps = FC<IContactProps>;

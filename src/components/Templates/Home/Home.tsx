@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import { Banner } from '@components/Organisms/Banner';
 import { HomeArticles } from '@components/Organisms/HomeArticles';
 import { HomeDonate } from '@components/Organisms/HomeDonate';
@@ -9,8 +11,12 @@ import { Layout } from '../Layout';
 import { HomeProps } from './Home.types';
 
 const Home: HomeProps = ({ articles, freebooks }) => {
+  const title = 'Beranda - Vidyāsenā Vihāra Vidyāloka';
   return (
     <Layout>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <Banner />
       <LatestEvent />
       <Programs />
