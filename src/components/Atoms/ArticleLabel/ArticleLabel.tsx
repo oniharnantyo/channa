@@ -1,11 +1,10 @@
 import Color from '@styles/Color.module.css';
-import { formatDate } from '@utils/format';
+import { humanizeDate } from '@utils/format';
 
-import Style from './ArticleLabel.module.css';
 import { ArticleLabelProps } from './ArticleLabel.types';
 
 const ArticleLabel: ArticleLabelProps = ({ author, date }) => {
-  const createdAtDate = formatDate(date, 'DD MMMM YYYY');
+  const createdAtDate = humanizeDate(date);
 
   return (
     <span className={Color.grey}>

@@ -1,5 +1,10 @@
-import moment from 'moment';
-import 'moment/locale/id';
+import dayjs from 'dayjs';
+import localeId from 'dayjs/locale/id';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+dayjs.extend(relativeTime);
 
 export const formatDate = (date: Date, format: string) =>
-  moment(date).locale('id').local().format(format);
+  dayjs(date).locale(localeId).format(format);
+
+export const humanizeDate = (date: Date) => dayjs(date).locale(localeId).fromNow();
