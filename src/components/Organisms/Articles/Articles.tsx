@@ -3,7 +3,7 @@ import { Pagination } from '@components/Molecules/Pagination';
 import { IArticle } from '@domains/article';
 import { getArticles } from '@services/article/getArticles';
 import { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Col, Form, InputGroup, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../Section';
@@ -11,6 +11,8 @@ import { SectionNoTitle } from '../Section';
 const Articles = () => {
   const [page, setPage] = useState(1);
   const [pageCount, setPageCount] = useState(0);
+  const [searchTemp, setSearchTemp] = useState('');
+  const [search, setSearch] = useState('');
   const [articles, setArticles] = useState([] as IArticle[]);
 
   const {
@@ -18,9 +20,13 @@ const Articles = () => {
     error,
     refetch,
     isFetching,
-  } = useQuery(['getArticles', page], () => getArticles({ page: page, perPage: 9 }), {
-    retry: false,
-  });
+  } = useQuery(
+    ['getArticles', page, search],
+    () => getArticles({ page: page, perPage: 9, search: search }),
+    {
+      retry: false,
+    }
+  );
 
   useEffect(() => {
     if (articlesData) {
@@ -32,7 +38,25 @@ const Articles = () => {
 
   return (
     <>
-      <SectionNoTitle variant={'white'}>
+      <SectionNoTitle>
+        <Row>
+          <Col md={4} className="ms-auto">
+            <InputGroup>
+              <Form.Control
+                type="search"
+                placeholder="Masukkan kata pencarian"
+                aria-label="Search"
+                className="rounded-0"
+                onChange={(e: any) => setSearchTemp(e.target.value)}
+              />
+              <Button variant="primary" className="rounded-0" onClick={() => setSearch(searchTemp)}>
+                Cari
+              </Button>
+            </InputGroup>
+          </Col>
+        </Row>
+      </SectionNoTitle>
+      <SectionNoTitle>
         <Row>
           {articles &&
             articles.map((article) => (
