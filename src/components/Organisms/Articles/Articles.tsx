@@ -1,5 +1,6 @@
 import { ArticleCard } from '@components/Molecules/ArticleCard';
 import { Pagination } from '@components/Molecules/Pagination';
+import { Search } from '@components/Molecules/Search';
 import { IArticle } from '@domains/article';
 import { getArticles } from '@services/article/getArticles';
 import { useEffect, useState } from 'react';
@@ -41,18 +42,12 @@ const Articles = () => {
       <SectionNoTitle>
         <Row>
           <Col md={4} className="ms-auto">
-            <InputGroup>
-              <Form.Control
-                type="search"
-                placeholder="Masukkan kata pencarian"
-                aria-label="Search"
-                className="rounded-0"
-                onChange={(e: any) => setSearchTemp(e.target.value)}
-              />
-              <Button variant="primary" className="rounded-0" onClick={() => setSearch(searchTemp)}>
-                Cari
-              </Button>
-            </InputGroup>
+            <Search
+              placeholder="Masukkan kata pencarian"
+              onType={(e: any) => setSearchTemp(e.target.value)}
+              onFinish={() => setSearch(searchTemp)}
+              onEnter={() => setSearch(searchTemp)}
+            />
           </Col>
         </Row>
       </SectionNoTitle>
