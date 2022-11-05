@@ -1,4 +1,5 @@
 import { ArticleCard } from '@components/Molecules/ArticleCard';
+import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
 import { Pagination } from '@components/Molecules/Pagination';
 import { Search } from '@components/Molecules/Search';
 import { IArticle } from '@domains/article';
@@ -52,23 +53,27 @@ const Articles = () => {
         </Row>
       </SectionNoTitle>
       <SectionNoTitle>
-        <Row>
-          {articles &&
-            articles.map((article) => (
-              <Col key={article.id} md={4} className="mb-4">
-                <ArticleCard
-                  key={article.id}
-                  title={article.title}
-                  slug={article.slug}
-                  imageUrl={article.thumbnailURL || ''}
-                  imageAlt={article.imageDescription}
-                  createdAt={article.createdAt}
-                  author={article.author}
-                  description={article.description}
-                />
-              </Col>
-            ))}
-        </Row>
+        {isFetching ? (
+          <LoadingSpinner />
+        ) : (
+          <Row>
+            {articles &&
+              articles.map((article) => (
+                <Col key={article.id} md={4} className="mb-4">
+                  <ArticleCard
+                    key={article.id}
+                    title={article.title}
+                    slug={article.slug}
+                    imageUrl={article.thumbnailURL || ''}
+                    imageAlt={article.imageDescription}
+                    createdAt={article.createdAt}
+                    author={article.author}
+                    description={article.description}
+                  />
+                </Col>
+              ))}
+          </Row>
+        )}
       </SectionNoTitle>
       <SectionNoTitle>
         <Pagination

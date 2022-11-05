@@ -1,20 +1,21 @@
 import Head from 'next/head';
 
-import { Articles } from '@components/Organisms/Articles';
+import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
 import Header from '@components/Organisms/Header/Header';
+import { Suspense } from 'react';
 
-import { Layout } from '../Layout';
+import Articles from '../../Organisms/Articles/Articles';
 
 const Article = () => {
   const title = 'Artikel - Vidyāsenā Vihāra Vidyāloka';
   return (
-    <Layout>
+    <>
       <Head>
         <title>{title}</title>
       </Head>
       <Header />
       <Articles />
-    </Layout>
+    </>
   );
 };
 

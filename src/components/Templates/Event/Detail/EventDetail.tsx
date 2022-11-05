@@ -4,14 +4,13 @@ import { StyledButton } from '@components/Atoms/StyledButton';
 import { EventDetail as OEventDetail } from '@components/Organisms/EventDetail';
 import { Header } from '@components/Organisms/Header';
 import { SectionNoTitle } from '@components/Organisms/Section';
-import { Layout } from '@components/Templates/Layout';
 import { Col, Row } from 'react-bootstrap';
 
 import { EventDetailProps } from './EventDetail.types';
 
 const EventDetail: EventDetailProps = ({ slug }) => {
   return (
-    <Layout>
+    <>
       <Header />
       <OEventDetail slug={slug} />
       <SectionNoTitle>
@@ -25,7 +24,7 @@ const EventDetail: EventDetailProps = ({ slug }) => {
           </Col>
         </Row>
       </SectionNoTitle>
-    </Layout>
+    </>
   );
 };
 
