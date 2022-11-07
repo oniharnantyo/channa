@@ -1,6 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import { Header } from '@components/Organisms/Header';
+import { Layout } from '@components/Templates/Layout';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,9 +32,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <QueryClientProvider client={queryClient}>
-        <Component {...pageProps} />
-      </QueryClientProvider>
+      <Layout>
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
+      </Layout>
     </>
   );
 }

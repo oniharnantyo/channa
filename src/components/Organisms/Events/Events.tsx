@@ -1,4 +1,5 @@
 import { EventCard } from '@components/Molecules/EventCard';
+import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
 import { Pagination } from '@components/Molecules/Pagination';
 import { IEvent } from '@domains/event';
 import { getEvents } from '@services/event/getEvents';
@@ -33,19 +34,23 @@ const Events = () => {
   return (
     <>
       <SectionNoTitle variant="white">
-        <Row>
-          {events &&
-            events.map((event) => (
-              <EventCard
-                slug={event.slug}
-                title={event.title}
-                imageUrl={event.thumbnailURL as string}
-                imageAlt={event.imageDescription}
-                location={event.location}
-                createdAt={event.createdAt}
-              />
-            ))}
-        </Row>
+        {isFetching ? (
+          <LoadingSpinner />
+        ) : (
+          <Row>
+            {events &&
+              events.map((event) => (
+                <EventCard
+                  slug={event.slug}
+                  title={event.title}
+                  imageUrl={event.thumbnailURL as string}
+                  imageAlt={event.imageDescription}
+                  location={event.location}
+                  createdAt={event.createdAt}
+                />
+              ))}
+          </Row>
+        )}
       </SectionNoTitle>
       <SectionNoTitle>
         <Pagination
