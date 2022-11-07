@@ -14,7 +14,12 @@ const HomeDonate = () => {
   return (
     <div className={clsx(Style.donate, 'd-flex')}>
       <div className={Style.backgroundImageWrapper}>
-        <Image src={DonateBannerImage} layout="fill" objectFit="cover" objectPosition="" />
+        <Image
+          src={DonateBannerImage}
+          layout="fill"
+          objectFit="cover"
+          alt="vidyasena donate background"
+        />
       </div>
       <div className="align-self-center mx-auto">
         <SectionNoTitle>

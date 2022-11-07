@@ -12,7 +12,13 @@ const Banner = () => {
   return (
     <section className={clsx(Style.banner, 'd-flex', 'text-center')}>
       <div className={Style.backgroundImageWrapper}>
-        <Image src={HomeBannerImage} layout="fill" objectFit="cover" objectPosition="top" />
+        <Image
+          src={HomeBannerImage}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="top"
+          alt="altar vihara vidyaloka"
+        />
       </div>
       <Container className={clsx('align-self-center', Style.bannerContent)}>
         <Row>
