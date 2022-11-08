@@ -13,9 +13,9 @@ import { Col } from 'react-bootstrap';
 import Style from './EventCard.module.css';
 import { EventCardProps } from './EventCard.types';
 
-const EventCard: EventCardProps = ({ slug, title, imageUrl, imageAlt, location, createdAt }) => {
-  const date = formatDate(createdAt, 'DD MMMM YYYY');
-  const time = formatDate(createdAt, 'HH:MM');
+const EventCard: EventCardProps = ({ slug, title, imageUrl, imageAlt, location, startAt }) => {
+  const date = formatDate(startAt, 'DD MMMM YYYY');
+  const time = formatDate(startAt, 'HH:MM');
   const url = '/acara/' + slug;
 
   return (

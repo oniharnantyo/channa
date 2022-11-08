@@ -46,7 +46,7 @@ const Events = () => {
                   imageUrl={event.thumbnailURL as string}
                   imageAlt={event.imageDescription}
                   location={event.location}
-                  createdAt={event.createdAt}
+                  startAt={event.startAt}
                 />
               ))}
           </Row>

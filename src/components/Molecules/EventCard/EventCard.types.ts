@@ -6,7 +6,7 @@ interface IEventCardProps {
   imageUrl: string;
   imageAlt: string;
   location: string;
-  createdAt: Date;
+  startAt: Date;
 }
 
 export type EventCardProps = FC<IEventCardProps>;
