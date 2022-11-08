@@ -16,8 +16,6 @@ const Header = () => {
           src={HeaderBackgroundImage}
           layout="fill"
           objectFit="cover"
-          width={900}
-          height={100}
           alt="vidyasena header background"
         />
       </div>

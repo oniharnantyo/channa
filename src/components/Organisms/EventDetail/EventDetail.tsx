@@ -32,8 +32,8 @@ const EventDetail: EventDetailProps = ({ slug }) => {
     }
   }, [eventData]);
 
-  const date = formatDate(event.createdAt, 'DD MMMM YYYY');
-  const time = formatDate(event.createdAt, 'HH:MM');
+  const date = formatDate(event.startAt, 'DD MMMM YYYY');
+  const time = formatDate(event.startAt, 'HH:MM');
 
   return (
     <SectionNoTitle>
