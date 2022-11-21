@@ -1,11 +1,10 @@
-import ColorStyle from '@styles/Color.module.css';
 import clsx from 'clsx';
 import { Col, Row } from 'react-bootstrap';
 
 import { SectionTitleProps, variants } from './SectionTitle.types';
 
 const SectionTitle: SectionTitleProps = ({ variant, title }) => {
-  const _variant = variant === 'primary' ? ColorStyle.primary : ColorStyle.white;
+  const _variant = variant === 'primary' ? 'text-dark' : 'text-light';
 
   return (
     <Row className="mb-3">

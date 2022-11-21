@@ -4,7 +4,6 @@ import { Content } from '@components/Atoms/Content';
 import { Title } from '@components/Atoms/Title';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Color from '@styles/Color.module.css';
 import clsx from 'clsx';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
@@ -51,7 +50,7 @@ const History = () => {
                           )}
                           <Card.Body>
                             <p className="text-muted mb-2">
-                              <FontAwesomeIcon icon={faClock} className={Color.primary} />{' '}
+                              <FontAwesomeIcon icon={faClock} className={'text-primary'} />{' '}
                               {timeline.year}
                             </p>
                             {timeline.text}

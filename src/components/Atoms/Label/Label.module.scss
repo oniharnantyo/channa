@@ -1,7 +1,17 @@
+@import '@styles/colors.scss';
+
 .label {
   font-size: 1rem;
   line-height: 160%;
   margin: 0em 0.25em;
+}
+
+.label.primary {
+  color: $dark;
+}
+
+.label.white {
+  color: $light;
 }
 
 .label.large {

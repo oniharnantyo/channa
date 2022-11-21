@@ -1,4 +1,3 @@
-import ColorStyle from '@styles/Color.module.css';
 import clsx from 'clsx';
 import ReactPaginate from 'react-paginate';
 
@@ -8,7 +7,7 @@ const Pagination: PaginationProps = ({ pageCount, onPageChange }) => {
   return (
     <ReactPaginate
       pageCount={pageCount}
-      containerClassName={clsx(ColorStyle.primary, 'pagination', 'justify-content-center')}
+      containerClassName={clsx('text-primary', 'pagination', 'justify-content-center')}
       pageClassName="page-item"
       activeClassName="active"
       disabledClassName="disabled"

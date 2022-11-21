@@ -1,3 +1,5 @@
+@import '@styles/colors.scss';
+
 .link {
   font-style: normal;
   font-weight: 400;
@@ -5,15 +7,16 @@
   line-height: 1.18rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  color: $dark !important;
 }
 
 .link:hover {
-  color: #046ADF !important;
+  color: $primary !important;
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
 
 .active {
-  color: #046ADF !important;
+  color: $primary !important;
   font-weight: bold;
 }

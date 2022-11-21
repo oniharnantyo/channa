@@ -1,10 +1,8 @@
-import ColorStyle from '@styles/Color.module.css';
-
-import Style from './FooterTitle.module.css';
+import Style from './FooterTitle.module.scss';
 import { FooterTitleProps } from './FooterTitle.types';
 
 const FooterTitle: FooterTitleProps = ({ title }) => {
-  return <p className={`${Style.title} ${ColorStyle.primary}`}>{title}</p>;
+  return <span className={`${Style.title}`}>{title}</span>;
 };
 
 export default FooterTitle;

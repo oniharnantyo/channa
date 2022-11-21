@@ -1,6 +1,9 @@
+@import '@styles/colors.scss';
+
 .title {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 150%;
   margin: 0em 0em 0.25em 0em;
+  color: $dark;
 }

@@ -1,6 +1,8 @@
+@import '@styles/colors.scss';
+
 .card {
   padding: 1.5em;
-  background: #fff;
+  background: $light;
   box-shadow: 0 5px 10px rgb(73 84 100 / 20%);
   border-radius: 0.5em;
 }
@@ -8,15 +10,18 @@
 .icon svg {
   font-size: 2.5rem;
   border-radius: 2.938em;
+  color: $dark;
 }
 
 .content h3 {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
+  color: $dark;
 }
 
 .content p {
   font-size: 1rem;
   line-height: 160%;
+  color: $primary800;
 }

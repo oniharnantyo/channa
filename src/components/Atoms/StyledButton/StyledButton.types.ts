@@ -1,13 +1,15 @@
 import { FC, ReactNode } from 'react';
+import {ButtonVariant} from "react-bootstrap/types";
+// @ts-ignore
+import { Sizes } from "react-bootstrap/types";
 
-export declare type variants = 'primary' | 'light' | 'outline-primary' | string;
 export declare type sizes = 'sm' | 'lg' | undefined;
 
 interface IStyledButtonProps {
   onClick?(...args: unknown[]): unknown;
   href?: string;
-  variant: variants;
-  size: sizes;
+  variant: ButtonVariant;
+  size: Sizes;
   rounded?: boolean;
   children: ReactNode;
 }

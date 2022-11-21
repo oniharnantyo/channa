@@ -6,7 +6,7 @@ import { programs } from './Programs.types';
 
 const Programs = () => {
   return (
-    <Section title={'Program Kerja Unggulan'} variant={'white'}>
+    <Section title="Program Kerja Unggulan" variant="white">
       <Row>
         {programs?.map((program) => (
           <ProgramCard

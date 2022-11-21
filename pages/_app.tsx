@@ -1,14 +1,12 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Header } from '@components/Organisms/Header';
 import { Layout } from '@components/Templates/Layout';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import '../styles/globals.css';
+import '../styles/globals.scss';
 
 config.autoAddCss = false;
 
