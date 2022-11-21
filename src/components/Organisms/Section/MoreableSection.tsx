@@ -1,11 +1,10 @@
 import Link from 'next/link';
 
-import ColorStyle from '@styles/Color.module.css';
 import clsx from 'clsx';
 import { Col, Row } from 'react-bootstrap';
 
 import Section from './Section';
-import Style from './Section.module.css';
+import Style from './Section.module.scss';
 import { MoreableSectionProps } from './Section.types';
 
 const MoreableSection: MoreableSectionProps = ({ title, variant, children, link, linkTitle }) => {
@@ -15,7 +14,7 @@ const MoreableSection: MoreableSectionProps = ({ title, variant, children, link,
       <Row>
         <Col md={12} className={clsx(Style.more, 'mt-md-4')}>
           <Link href={link}>
-            <a className={`${ColorStyle.white} float-end`}>{linkTitle}</a>
+            <a className="float-end">{linkTitle}</a>
           </Link>
         </Col>
       </Row>

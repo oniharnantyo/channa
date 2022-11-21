@@ -1,6 +1,9 @@
+@import '@styles/colors.scss';
+
 .card {
   border-radius: 0.5em;
   border-color: transparent;
+  background: $light;
 }
 
 .card img {
@@ -17,4 +20,5 @@
   line-height: 160%;
   margin: 0.5em 0em;
   min-height: 80px;
+  color: $dark;
 }

@@ -1,27 +1,17 @@
-import BackgroundStyle from '@styles/Background.module.css';
-import ColorStyle from '@styles/Color.module.css';
 import clsx from 'clsx';
 import { Container } from 'react-bootstrap';
 
-import Style from './Section.module.css';
+import Style from './Section.module.scss';
 import { SectionNoTitleProps } from './Section.types';
 
 const SectionNoTitle: SectionNoTitleProps = ({ children, variant }) => {
-  let backgroundColor = '';
-  let color = '';
-
-  if (variant) {
-    backgroundColor = variant === 'primary' ? BackgroundStyle.blue : BackgroundStyle.white;
-    color = variant === 'primary' ? ColorStyle.white : ColorStyle.blue;
-  }
-
   return (
     <>
       <section
         className={clsx(
           Style.section,
-          [backgroundColor !== '', backgroundColor],
-          [color !== '', color]
+          { [Style.primary]: variant === 'primary' },
+          { [Style.white]: variant === 'white' }
         )}
       >
         <Container>{children}</Container>

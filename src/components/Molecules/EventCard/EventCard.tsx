@@ -5,12 +5,11 @@ import { LinkImage } from '@components/Atoms/LinkImage';
 import { LinkTitle } from '@components/Atoms/LinkTitle';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { faCalendarAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import BackgroundStyle from '@styles/Background.module.css';
 import { formatDate } from '@utils/format';
 import clsx from 'clsx';
 import { Col } from 'react-bootstrap';
 
-import Style from './EventCard.module.css';
+import Style from './EventCard.module.scss';
 import { EventCardProps } from './EventCard.types';
 
 const EventCard: EventCardProps = ({ slug, title, imageUrl, imageAlt, location, startAt }) => {
@@ -20,7 +19,7 @@ const EventCard: EventCardProps = ({ slug, title, imageUrl, imageAlt, location, 
 
   return (
     <Col md={4} key={slug}>
-      <Col md={12} className={clsx(Style.card, BackgroundStyle.white, 'mb-4', 'mb-lg-4')}>
+      <Col md={12} className={clsx(Style.card, 'mb-4', 'mb-lg-4')}>
         <div className="d-block">
           <LinkImage
             imageUrl={imageUrl}

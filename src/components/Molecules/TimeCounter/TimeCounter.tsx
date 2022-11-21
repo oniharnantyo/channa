@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { useEffect, useState } from 'react';
 
-import Style from './TimeCounter.module.css';
+import Style from './TimeCounter.module.scss';
 import { TimeCounterProps } from './TimeCounter.types';
 
 const TimeCounter: TimeCounterProps = ({ date }) => {
@@ -25,7 +25,7 @@ const TimeCounter: TimeCounterProps = ({ date }) => {
   const { days, hours, minutes, seconds } = parseCountdown(countDown);
 
   return (
-    <div id="timer" className={clsx(Style.timeCounter, 'mt-4')}>
+    <div className={clsx(Style.timeCounter, 'mt-4')}>
       <div className={Style.timeCounterSection}>
         <div className={Style.timeCounterNumber}>{days}</div>
         <div className={Style.timerLabel}>Hari</div>

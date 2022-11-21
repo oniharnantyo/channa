@@ -7,9 +7,20 @@
 
 .title a {
   text-decoration: none;
+}
+
+.primary a {
   color: #022855;
 }
 
-.title a:hover {
+.primary a:hover {
   color: #2870C3;
+}
+
+.white a {
+  color: #ffffff;
+}
+
+.white a:hover {
+  color: #e6e6e6;
 }

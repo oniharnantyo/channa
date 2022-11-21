@@ -1,0 +1,27 @@
+@import '@styles/colors.scss';
+
+.section {
+  padding: 1.875rem 0px !important;
+}
+
+.primary {
+  background: $primary;
+  color: $light;
+}
+
+.white {
+  background: $light;
+  color: $primary;
+}
+
+.more a {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-decoration: none;
+  color: $light;
+}
+
+.more a:hover {
+  color: $light700;
+}

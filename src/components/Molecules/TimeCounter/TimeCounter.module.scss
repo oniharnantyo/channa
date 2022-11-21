@@ -1,3 +1,5 @@
+@import '@styles/colors.scss';
+
 .timeCounter {
   background: rgba(255, 255, 255, 0.3);
   overflow: hidden;
@@ -8,7 +10,7 @@
 .timeCounterSection {
   float: left;
   overflow: hidden;
-  color: #fff;
+  color: $light;
   width: calc(100% / 4);
 }
 

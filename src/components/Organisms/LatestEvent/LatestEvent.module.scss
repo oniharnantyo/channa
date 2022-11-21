@@ -1,3 +1,5 @@
+@import '@styles/colors.scss';
+
 .title {
   font-weight: 700;
   font-size: 1.8rem;
@@ -14,6 +16,6 @@
 }
 
 .timeCounter {
-  color: #fff;
+  color: $light;
   text-align: center;
 }

@@ -21,7 +21,7 @@ const Home: NextPage<HomeProps> = (props) => {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const articles = await getArticles({ perPage: 3, isSSR: true });
-  const freebooks = await getFreebooks({ perPage: 2, isSSR: true });
+  const freebooks = await getFreebooks({ perPage: 10, isSSR: true });
 
   return {
     props: {

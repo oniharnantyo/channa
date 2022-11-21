@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ColorStyle from '@styles/Color.module.css';
 import clsx from 'clsx';
 import { Col } from 'react-bootstrap';
 
-import Style from './ProgramCard.module.css';
+import Style from './ProgramCard.module.scss';
 import { ProgramCardProps } from './ProgramCard.types';
 
 const ProgramCard: ProgramCardProps = ({ faIcon, title, description }) => {
@@ -12,11 +11,11 @@ const ProgramCard: ProgramCardProps = ({ faIcon, title, description }) => {
       <Col md={12} className={clsx(Style.card, 'mb-4', 'mb-lg-4')}>
         <div className={clsx(Style.content, 'd-block')}>
           <div className={clsx(Style.icon, 'mb-3')}>
-            <FontAwesomeIcon icon={faIcon} className={ColorStyle.primary}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faIcon}></FontAwesomeIcon>
           </div>
           <div>
-            <h3 className={ColorStyle.primary}>{title}</h3>
-            <p className={ColorStyle.primaryLighter}>{description}</p>
+            <h3>{title}</h3>
+            <p>{description}</p>
           </div>
         </div>
       </Col>

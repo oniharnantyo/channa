@@ -1,6 +1,8 @@
+@import '@styles/colors.scss';
+
 .footer {
   padding: 3.125em 0em;
-  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -11,4 +13,5 @@
   font-style: italic;
   font-size: 1rem;
   line-height: 150%;
+  color: $grey;
 }

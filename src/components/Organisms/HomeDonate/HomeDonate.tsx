@@ -3,12 +3,11 @@ import Link from 'next/link';
 
 import DonateBannerImage from '@assets/image/donate-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
-import ColorStyle from '@styles/Color.module.css';
 import clsx from 'clsx';
 import { Col, Row } from 'react-bootstrap';
 
 import { SectionNoTitle } from '../Section';
-import Style from './HomeDonate.module.css';
+import Style from './HomeDonate.module.scss';
 
 const HomeDonate = () => {
   return (
@@ -30,7 +29,7 @@ const HomeDonate = () => {
               </h2>
             </Col>
             <Col md={6}>
-              <p className={clsx(Style.description, ColorStyle.primary)}>
+              <p className={clsx(Style.description)}>
                 Seluruh dana yang dikumpulkan akan digunakan untuk program kerja Vidyasena dan
                 operasional Vihara Vidyaloka
               </p>
