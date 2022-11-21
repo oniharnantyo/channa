@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import { ArticleDetail as OArticleDetail } from '@components/Organisms/ArticleDetail';
+import { ArticleDetail as OArticleDetail } from '@components/Organisms/Articles/ArticleDetail';
 import { Header } from '@components/Organisms/Header';
 
 import { ArticleDetailProps } from './ArticleDetail.types';

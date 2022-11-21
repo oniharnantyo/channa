@@ -8,7 +8,7 @@ import { Title } from '@components/Atoms/Title';
 import { Col, Row } from 'react-bootstrap';
 
 import { LatestArticles } from '../LatestArticles';
-import { SectionNoTitle } from '../Section';
+import { SectionNoTitle } from '../../Section';
 import { ArticleDetailProps } from './ArticleDetail.types';
 
 const ArticleDetail: ArticleDetailProps = ({ article }) => {

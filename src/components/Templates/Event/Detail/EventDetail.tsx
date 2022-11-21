@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { StyledButton } from '@components/Atoms/StyledButton';
-import { EventDetail as OEventDetail } from '@components/Organisms/EventDetail';
+import { EventDetail as OEventDetail } from '@components/Organisms/Events/EventDetail';
 import { Header } from '@components/Organisms/Header';
 import { SectionNoTitle } from '@components/Organisms/Section';
 import { Col, Row } from 'react-bootstrap';

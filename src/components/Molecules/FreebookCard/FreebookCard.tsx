@@ -14,6 +14,7 @@ const FreebookCard: FreebookCardProps = ({
   imageUrl,
   imageAlt,
   url,
+  variant = 'primary',
 }) => {
   return (
     <Card className={clsx(Style.card, 'text-center')}>
@@ -26,8 +27,21 @@ const FreebookCard: FreebookCardProps = ({
         objectFit="contain"
       />
       <Card.Body>
-        <span className={clsx(Style.author)}>{author}</span>
-        <LinkTitle url={url} title={title} variant="white" />
+        <span
+          className={clsx(
+            Style.author,
+            { [variant === 'primary']: 'text-light' },
+            { [variant === 'white']: 'text-dark' }
+          )}
+        >
+          {author}
+        </span>
+        <LinkTitle
+          url={url}
+          title={title}
+          variant={variant === 'primary' ? 'white' : 'primary'}
+          isBlankTarget={true}
+        />
       </Card.Body>
     </Card>
   );

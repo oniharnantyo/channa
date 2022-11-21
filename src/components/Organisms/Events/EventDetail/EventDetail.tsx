@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
-import { SectionNoTitle } from '../Section';
+import { SectionNoTitle } from '../../Section';
 import { EventDetailProps } from './EventDetail.types';
 
 const EventDetail: EventDetailProps = ({ slug }) => {

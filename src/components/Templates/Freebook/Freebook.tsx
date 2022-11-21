@@ -2,19 +2,19 @@ import Head from 'next/head';
 
 import Header from '@components/Organisms/Header/Header';
 
-import Articles from '../../Organisms/Articles/Articles';
+import Freebooks from '../../Organisms/Freebooks/Freebooks';
 
-const Article = () => {
-  const title = 'Artikel - Vidyāsenā Vihāra Vidyāloka';
+const Freebook = () => {
+  const title = 'Freebook - Vidyāsenā Vihāra Vidyāloka';
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
       <Header />
-      <Articles />
+      <Freebooks />
     </>
   );
 };
 
-export default Article;
+export default Freebook;

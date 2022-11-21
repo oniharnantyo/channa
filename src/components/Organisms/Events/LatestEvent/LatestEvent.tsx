@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
-import { Section } from '../Section';
+import { Section } from '../../Section';
 import Style from './LatestEvent.module.scss';
 
 const LatestEvent = () => {
