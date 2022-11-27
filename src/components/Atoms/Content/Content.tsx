@@ -5,7 +5,7 @@ import Style from './Content.module.css';
 import { ContentProps } from './Content.types';
 
 const Content: ContentProps = ({ children }) => {
-  return <Container className={clsx(Style.content)}>{children}</Container>;
+  return <Container className={clsx(Style.content, 'text-dark')}>{children}</Container>;
 };
 
 export default Content;

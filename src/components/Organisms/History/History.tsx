@@ -49,11 +49,10 @@ const History = () => {
                             />
                           )}
                           <Card.Body>
-                            <p className="text-muted mb-2">
-                              <FontAwesomeIcon icon={faClock} className={'text-primary'} />{' '}
-                              {timeline.year}
+                            <p className="text-dark m-1 m-md-2">
+                              <FontAwesomeIcon icon={faClock} /> {timeline.year}
                             </p>
-                            {timeline.text}
+                            <p className="text-dark m-1 m-md-2">{timeline.text}</p>
                           </Card.Body>
                         </Card>
                       </div>

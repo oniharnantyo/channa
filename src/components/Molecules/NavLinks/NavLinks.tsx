@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { NextRouter, useRouter } from 'next/router';
 
+import { DropdownItem } from '@components/Atoms/DropdownItem';
 import { NavLink } from '@components/Atoms/NavLink';
+import clsx from 'clsx';
+import { NavDropdown } from 'react-bootstrap';
 
+import Style from './NavLinks.module.scss';
 import { getRoutes } from './Navlinks.Routes';
 
 const getPathname = (router: NextRouter) => {
@@ -19,11 +23,26 @@ const NavLinks = () => {
   return (
     <>
       {routes &&
-        routes.map((route) => (
-          <Link key={route.key} href={route.path} passHref>
-            <NavLink key={route.key} name={route.name} active={route.key === pathname} />
-          </Link>
-        ))}
+        routes.map((route) =>
+          route.isDropdown ? (
+            <NavDropdown key={route.key} title={route.name} className={clsx(Style.dropdown)}>
+              {route.dropdowns &&
+                route.dropdowns.map((dropdown) => (
+                  <Link key={dropdown.key} href={dropdown.path as string} passHref>
+                    <DropdownItem
+                      key={dropdown.key}
+                      name={dropdown.name}
+                      active={dropdown.key === pathname}
+                    />
+                  </Link>
+                ))}
+            </NavDropdown>
+          ) : (
+            <Link key={route.key} href={route.path as string} passHref>
+              <NavLink key={route.key} name={route.name} active={route.key === pathname} />
+            </Link>
+          )
+        )}
     </>
   );
 };
