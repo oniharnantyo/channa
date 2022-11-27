@@ -3,10 +3,6 @@ import Head from 'next/head';
 
 import { Banner } from '@components/Organisms/Banner';
 import { LatestEvent } from '@components/Organisms/Events/LatestEvent';
-// import { HomeArticles } from '@components/Organisms/HomeArticles';
-// import { HomeDonate } from '@components/Organisms/HomeDonate';
-// import { HomeFreebooks } from '@components/Organisms/HomeFreebooks';
-// import { Programs } from '@components/Organisms/Programs';
 import useOnScreen from '@hooks/useOnScreen';
 import { useEffect, useRef, useState } from 'react';
 
@@ -18,10 +14,10 @@ const Donate = dynamic(() => import('../../Organisms/HomeDonate/HomeDonate'));
 const Articles = dynamic(() => import('../../Organisms/HomeArticles/HomeArticles'));
 
 const Home: HomeProps = ({ articles, freebooks }) => {
-  const programsRef = useRef();
-  const freebooksRef = useRef();
-  const donateRef = useRef();
-  const articlesRef = useRef();
+  const programsRef = useRef<HTMLInputElement>(null);
+  const freebooksRef = useRef<HTMLInputElement>(null);
+  const donateRef = useRef<HTMLInputElement>(null);
+  const articlesRef = useRef<HTMLInputElement>(null);
 
   const programsRefValue = useOnScreen(programsRef);
   const freebooksRefValue = useOnScreen(freebooksRef);
