@@ -1,11 +1,6 @@
 export const getRoutes = () => {
   return [
     {
-      key: '',
-      path: '/',
-      name: 'Beranda',
-    },
-    {
       key: 'tentang-kami',
       path: '/tentang-kami',
       name: 'Tentang Kami',
@@ -29,11 +24,6 @@ export const getRoutes = () => {
       key: 'dana',
       path: '/dana',
       name: 'Dana',
-    },
-    {
-      key: 'kontak',
-      path: '/kontak',
-      name: 'Kontak',
     },
   ];
 };

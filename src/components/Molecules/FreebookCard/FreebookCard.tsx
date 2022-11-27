@@ -30,8 +30,8 @@ const FreebookCard: FreebookCardProps = ({
         <span
           className={clsx(
             Style.author,
-            { [variant === 'primary']: 'text-light' },
-            { [variant === 'white']: 'text-dark' }
+            { ['text-light']: variant === 'primary' },
+            { ['text-dark']: variant === 'white' }
           )}
         >
           {author}
