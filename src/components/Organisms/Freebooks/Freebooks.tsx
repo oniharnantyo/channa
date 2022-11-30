@@ -43,7 +43,7 @@ const Freebooks = () => {
     <>
       <SectionNoTitle>
         <Row>
-          <Col md={4} className="ms-auto">
+          <Col md={4} className="ms-auto px-3">
             <Search
               placeholder="Masukkan kata pencarian"
               onType={(e: any) => setSearchTemp(e.target.value)}

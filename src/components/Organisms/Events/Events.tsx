@@ -1,10 +1,11 @@
 import { EventCard } from '@components/Molecules/EventCard';
 import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
 import { Pagination } from '@components/Molecules/Pagination';
+import { Search } from '@components/Molecules/Search';
 import { IEvent } from '@domains/event';
 import { getEvents } from '@services/event/getEvents';
 import { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../Section';
@@ -13,15 +14,21 @@ const Events = () => {
   const [page, setPage] = useState(1);
   const [pageCount, setPageCount] = useState(0);
   const [events, setEvents] = useState([] as IEvent[]);
+  const [searchTemp, setSearchTemp] = useState('');
+  const [search, setSearch] = useState('');
 
   const {
     data: eventsData,
     error,
     refetch,
     isFetching,
-  } = useQuery(['getEvents', page], () => getEvents({ page: page, perPage: 9 }), {
-    retry: false,
-  });
+  } = useQuery(
+    ['getEvents', page, search],
+    () => getEvents({ page: page, perPage: 9, search: search }),
+    {
+      retry: false,
+    }
+  );
 
   useEffect(() => {
     if (eventsData) {
@@ -33,6 +40,18 @@ const Events = () => {
 
   return (
     <>
+      <SectionNoTitle>
+        <Row>
+          <Col md={4} className="ms-auto px-3">
+            <Search
+              placeholder="Masukkan kata pencarian"
+              onType={(e: any) => setSearchTemp(e.target.value)}
+              onFinish={() => setSearch(searchTemp)}
+              onEnter={() => setSearch(searchTemp)}
+            />
+          </Col>
+        </Row>
+      </SectionNoTitle>
       <SectionNoTitle variant="white">
         {isFetching ? (
           <LoadingSpinner />

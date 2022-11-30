@@ -29,8 +29,8 @@ const LatestEvent = () => {
 
   return (
     <Section title="Event Terdekat" variant="primary">
-      <Row>
-        <Col md={6} className="d-flex px-lg-5">
+      <Row className="px-3 px-lg-5">
+        <Col md={6} className="d-flex">
           <div>
             <h3 className={clsx(Style.title, 'mb-3')}>{name}</h3>
             <p className={Style.text}>
@@ -43,7 +43,7 @@ const LatestEvent = () => {
             </p>
           </div>
         </Col>
-        <Col md={6} className={clsx(Style.timeCounter, 'px-lg-5')}>
+        <Col md={6} className={clsx(Style.timeCounter)}>
           <h4>Akan dimulai dalam</h4>
           <TimeCounter date={startAt as Date} />
         </Col>

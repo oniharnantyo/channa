@@ -1,4 +1,4 @@
-.banner {
+.hero {
   position: relative !important;
   min-height: calc(100vh - 76px);
 }
@@ -20,7 +20,7 @@
   z-index: -99;
 }
 
-.bannerContent {
+.heroContent {
   position: relative;
   z-index: 1;
 }
@@ -53,7 +53,7 @@
 }
 
 @media (min-width:1700px) {
-  .banner {
+  .hero {
     min-height: calc(100vh - 76px - 300px);
   }
 

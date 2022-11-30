@@ -1,28 +1,29 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import HomeBannerImage from '@assets/image/home-banner.webp';
+import HomeHeroImage from '@assets/image/hero-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import clsx from 'clsx';
 import { Col, Container, Row } from 'react-bootstrap';
 
-import Style from './Banner.module.css';
+import Style from './Hero.module.css';
 
-const Banner = () => {
+const Hero = () => {
   return (
-    <section className={clsx(Style.banner, 'd-flex', 'text-center')}>
+    <section className={clsx(Style.hero, 'd-flex', 'text-center')}>
       <div className={Style.backgroundImageWrapper}>
         <Image
-          src={HomeBannerImage}
+          src={HomeHeroImage}
           layout="fill"
           objectFit="cover"
           objectPosition="top"
           alt="altar vihara vidyaloka"
         />
       </div>
-      <Container className={clsx('align-self-center', Style.bannerContent)}>
+      <Container className={clsx('align-self-center', Style.heroContent)}>
         <Row>
-          <Col md={12}>
+          <Col md={2} />
+          <Col md={8}>
             <div className={Style.content}>
               <h5>VIHĀRA VIDYĀLOKA</h5>
               <h1>VIDYĀSENĀ</h1>
@@ -38,10 +39,11 @@ const Banner = () => {
               </Link>
             </div>
           </Col>
+          <Col md={2} />
         </Row>
       </Container>
     </section>
   );
 };
 
-export default Banner;
+export default Hero;

@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import { Banner } from '@components/Organisms/Banner';
 import { LatestEvent } from '@components/Organisms/Events/LatestEvent';
+import { Hero } from '@components/Organisms/Hero';
 import useOnScreen from '@hooks/useOnScreen';
 import { useEffect, useRef, useState } from 'react';
 
@@ -42,7 +42,7 @@ const Home: HomeProps = ({ articles, freebooks }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <Banner />
+      <Hero />
       <LatestEvent />
       <div ref={programsRef}>{isProgramsRef && <Programs />}</div>
       <div ref={freebooksRef}>{isFreebooksRef && <Freebooks freebooks={freebooks} />}</div>

@@ -1,4 +1,4 @@
-import HomeBanner from '@assets/image/home-banner.webp';
+import HomeBanner from '@assets/image/hero-banner.webp';
 import { DonateItem } from '@components/Molecules/DonateItem';
 
 import { SectionNoTitle } from '../Section';

@@ -15,15 +15,22 @@ const Footer = () => {
     <footer className={Style.footer}>
       <Container>
         <Row>
-          <Col md={4} lg={4}>
+          <Col md={4}>
             <LogoImage logo={VSLogo} alt="logo vidyasena" className={Style.logo} />
             <p className={clsx(Style.quote)}>
               &quot;Biarlah mengorbankan harta demi menyelamatkan anggota tubuh, Biarlah
               mengorbankan anggota tubuh demi menyelamatkan hidupnya, Biarlah mengorbankan harta,
               anggota tubuh dan segalanya, meskipun pula hidupnya, demi kebenaran Dhamma.&quot;
             </p>
+            <div>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://maps.google.com/maps?width=800&amp;height=400&amp;hl=en&amp;q=Vihara Vidyaloka&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              />
+            </div>
           </Col>
-          <Col md={4} lg={4}>
+          <Col md={4}>
             <FooterItem
               title="Vidyāsenā Vihāra Vidyāloka"
               content="Jalan Kenari, Gang Tanjung 1 No.231, Muja Muju, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55165"
@@ -40,7 +47,7 @@ const Footer = () => {
               }
             />
           </Col>
-          <Col md={4} lg={4}>
+          <Col md={4}>
             <FooterTitle title={'Sosial Media Vidyāsenā'} />
             <FooterSocialMedia
               name="Facebook"

@@ -4,6 +4,7 @@ import { NextRouter, useRouter } from 'next/router';
 import { DropdownItem } from '@components/Atoms/DropdownItem';
 import { NavLink } from '@components/Atoms/NavLink';
 import clsx from 'clsx';
+import { useState } from 'react';
 import { NavDropdown } from 'react-bootstrap';
 
 import Style from './NavLinks.module.scss';
@@ -16,16 +17,31 @@ const getPathname = (router: NextRouter) => {
 
 const NavLinks = () => {
   const router = useRouter();
+  const [show, setShow] = useState(false);
 
   const pathname = getPathname(router);
   const routes = getRoutes();
+
+  const showDropdown = (e: any) => {
+    setShow(!show);
+  };
+  const hideDropdown = (e: any) => {
+    setShow(false);
+  };
 
   return (
     <>
       {routes &&
         routes.map((route) =>
           route.isDropdown ? (
-            <NavDropdown key={route.key} title={route.name} className={clsx(Style.dropdown)}>
+            <NavDropdown
+              key={route.key}
+              title={route.name}
+              show={show}
+              onMouseEnter={showDropdown}
+              onMouseLeave={hideDropdown}
+              className={clsx(Style.dropdown)}
+            >
               {route.dropdowns &&
                 route.dropdowns.map((dropdown) => (
                   <Link key={dropdown.key} href={dropdown.path as string} passHref>
