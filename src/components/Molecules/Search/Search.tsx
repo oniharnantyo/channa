@@ -1,10 +1,11 @@
-import { Button, Form, InputGroup } from 'react-bootstrap';
+import { StyledButton } from '@components/Atoms/StyledButton';
+import { Button, Form, InputGroup, Stack } from 'react-bootstrap';
 
 import { SearchProps } from './Search.types';
 
 const Search: SearchProps = ({ placeholder, onType, onFinish, onEnter }) => {
   return (
-    <InputGroup>
+    <Stack direction="horizontal" gap={3}>
       <Form.Control
         type="search"
         placeholder={placeholder}
@@ -15,10 +16,10 @@ const Search: SearchProps = ({ placeholder, onType, onFinish, onEnter }) => {
           if (event.key === 'Enter') onEnter();
         }}
       />
-      <Button variant="primary" className="rounded-0" onClick={onFinish}>
+      <StyledButton variant="primary" size="sm" onClick={onFinish}>
         Cari
-      </Button>
-    </InputGroup>
+      </StyledButton>
+    </Stack>
   );
 };
 

@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 
 import { SectionNoTitle } from '../Section';
-import Style from './History.module.css';
+import Style from './History.module.scss';
 import { histories } from './data';
 
 const History = () => {
@@ -52,7 +52,7 @@ const History = () => {
                             <p className="text-dark m-1 m-md-2">
                               <FontAwesomeIcon icon={faClock} /> {timeline.year}
                             </p>
-                            <p className="text-dark m-1 m-md-2">{timeline.text}</p>
+                            <div className="text-dark m-1 m-md-2">{timeline.text}</div>
                           </Card.Body>
                         </Card>
                       </div>

@@ -42,9 +42,9 @@ const Events = () => {
     <>
       <SectionNoTitle>
         <Row>
-          <Col md={4} className="ms-auto px-3">
+          <Col md={5} className="ms-auto px-3">
             <Search
-              placeholder="Masukkan kata pencarian"
+              placeholder="Cari judul acara"
               onType={(e: any) => setSearchTemp(e.target.value)}
               onFinish={() => setSearch(searchTemp)}
               onEnter={() => setSearch(searchTemp)}
@@ -60,6 +60,7 @@ const Events = () => {
             {events &&
               events.map((event) => (
                 <EventCard
+                  key={event.id}
                   slug={event.slug}
                   title={event.title}
                   imageUrl={event.thumbnailURL as string}

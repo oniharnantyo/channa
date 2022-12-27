@@ -42,9 +42,9 @@ const Articles = () => {
     <>
       <SectionNoTitle>
         <Row>
-          <Col md={4} className="ms-auto px-3">
+          <Col md={5} className="ms-auto px-3">
             <Search
-              placeholder="Masukkan kata pencarian"
+              placeholder="Cari judul artikel"
               onType={(e: any) => setSearchTemp(e.target.value)}
               onFinish={() => setSearch(searchTemp)}
               onEnter={() => setSearch(searchTemp)}

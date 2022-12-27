@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { LinkImage } from '@components/Atoms/LinkImage';
 import { LinkTitle } from '@components/Atoms/LinkTitle';
 import clsx from 'clsx';
 import { Card } from 'react-bootstrap';
@@ -18,14 +19,7 @@ const FreebookCard: FreebookCardProps = ({
 }) => {
   return (
     <Card className={clsx(Style.card, 'text-center')}>
-      <Image
-        src={imageUrl}
-        alt={imageAlt}
-        width={3}
-        height={4}
-        layout="responsive"
-        objectFit="contain"
-      />
+      <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={3} height={4} />
       <Card.Body>
         <span
           className={clsx(

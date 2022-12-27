@@ -21,4 +21,8 @@
   margin: 0.5em 0em;
   min-height: 80px;
   color: $dark;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

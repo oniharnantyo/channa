@@ -57,7 +57,6 @@ const EventDetail: EventDetailProps = ({ slug }) => {
       </Row>
       <Row>
         <Col>
-          <Title title="Deskripsi Acara"></Title>
           <Content>
             <div dangerouslySetInnerHTML={{ __html: event.content }} />
           </Content>

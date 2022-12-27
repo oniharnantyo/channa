@@ -4,7 +4,7 @@ import { NavLinks } from '@components/Molecules/NavLinks';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Nav, Navbar, Row, Stack } from 'react-bootstrap';
 
 import Style from './StyledNavbar.module.scss';
 
@@ -18,8 +18,10 @@ const StyledNavbar = () => {
               <LogoImage logo={Logo} alt="vidyasena logo" className={Style.logo} />
             </Col>
             <Col className="d-none d-lg-block d-xl-block d-xxl-block" md="auto">
-              <Row className={clsx(Style.logoText)}>Vidyāsenā </Row>
-              <Row className={clsx(Style.logoText)}>Vihāra Vidyāloka</Row>
+              <Stack>
+                <span className={clsx(Style.logoText, Style.largerText)}>Vidyāsenā</span>
+                <span className={clsx(Style.logoText)}>Vihāra Vidyāloka</span>
+              </Stack>
             </Col>
           </Row>
         </Navbar.Brand>

@@ -19,7 +19,6 @@ const ArticleCard: ArticleCardProps = ({
   isBodyMargin,
 }) => {
   const url = '/artikel/' + slug;
-  const truncatedDescription = truncate(description || '', 100);
 
   return (
     <Card key={slug} className={clsx(Style.card, 'h-100', 'm-2')}>
@@ -27,7 +26,7 @@ const ArticleCard: ArticleCardProps = ({
       <Card.Body className={clsx(Style.cardBody, { ['mx-2']: isBodyMargin })}>
         <LinkTitle url={url} title={title} variant="primary" />
         <ArticleLabel author={author} date={createdAt} />
-        {truncatedDescription && <p className={clsx(Style.description)}>{truncatedDescription}</p>}
+        {description && <p className={clsx(Style.description)}>{description}</p>}
       </Card.Body>
     </Card>
   );
