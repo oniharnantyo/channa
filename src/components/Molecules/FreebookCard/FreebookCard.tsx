@@ -19,7 +19,7 @@ const FreebookCard: FreebookCardProps = ({
 }) => {
   return (
     <Card className={clsx(Style.card, 'text-center')}>
-      <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={3} height={4} />
+      <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width="3" height="4" />
       <Card.Body>
         <span
           className={clsx(
