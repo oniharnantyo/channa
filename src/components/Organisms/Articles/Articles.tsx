@@ -1,3 +1,4 @@
+import { NoData } from '@components/Atoms/NoData';
 import { ArticleCard } from '@components/Molecules/ArticleCard';
 import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
 import { Pagination } from '@components/Molecules/Pagination';
@@ -52,6 +53,13 @@ const Articles = () => {
           </Col>
         </Row>
       </SectionNoTitle>
+      {articles.length === 0 ? (
+        search ? (
+          <NoData message="Artikel tidak ditemukan" />
+        ) : (
+          <NoData message="Tidak ada artikel" />
+        )
+      ) : null}
       <SectionNoTitle>
         {isFetching ? (
           <LoadingSpinner />
@@ -75,14 +83,16 @@ const Articles = () => {
           </Row>
         )}
       </SectionNoTitle>
-      <SectionNoTitle>
-        <Pagination
-          pageCount={pageCount}
-          onPageChange={(event) => {
-            setPage(event.selected + 1);
-          }}
-        />
-      </SectionNoTitle>
+      {pageCount > 1 && (
+        <SectionNoTitle>
+          <Pagination
+            pageCount={pageCount}
+            onPageChange={(event) => {
+              setPage(event.selected + 1);
+            }}
+          />
+        </SectionNoTitle>
+      )}
     </>
   );
 };

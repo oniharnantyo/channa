@@ -18,7 +18,7 @@ const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
       variant={'primary'}
     >
       <Row>
-        <Col>
+        <Col className="px-sm-3">
           <Swiper
             slidesPerView={1}
             spaceBetween={10}

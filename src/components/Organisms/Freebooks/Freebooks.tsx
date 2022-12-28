@@ -1,3 +1,4 @@
+import { NoData } from '@components/Atoms/NoData';
 import { ArticleCard } from '@components/Molecules/ArticleCard';
 import { FreebookCard } from '@components/Molecules/FreebookCard';
 import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
@@ -53,6 +54,13 @@ const Freebooks = () => {
           </Col>
         </Row>
       </SectionNoTitle>
+      {freebooks.length === 0 ? (
+        search ? (
+          <NoData message="Freebook tidak ditemukan" />
+        ) : (
+          <NoData message="Tidak ada freebook" />
+        )
+      ) : null}
       <SectionNoTitle>
         {isFetching ? (
           <LoadingSpinner />
@@ -76,12 +84,14 @@ const Freebooks = () => {
         )}
       </SectionNoTitle>
       <SectionNoTitle>
-        <Pagination
-          pageCount={pageCount}
-          onPageChange={(event: any) => {
-            setPage(event.selected + 1);
-          }}
-        />
+        {pageCount > 1 && (
+          <Pagination
+            pageCount={pageCount}
+            onPageChange={(event: any) => {
+              setPage(event.selected + 1);
+            }}
+          />
+        )}
       </SectionNoTitle>
     </>
   );

@@ -1,3 +1,4 @@
+import { NoData } from '@components/Atoms/NoData';
 import { TimeCounter } from '@components/Molecules/TimeCounter';
 import { faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -5,7 +6,7 @@ import { getLatestEvent } from '@services/event/getLatestEvent';
 import { formatDate } from '@utils/format';
 import { tzToAbbreviation } from '@utils/tz';
 import clsx from 'clsx';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { Section } from '../../Section';
@@ -26,6 +27,14 @@ const LatestEvent = () => {
   const startAtDate = formatDate(startAt as Date, 'dddd, DD MMMM YYYY');
   const startAtTime =
     formatDate(startAt as Date, 'HH:mm') + ' ' + tzToAbbreviation(formatDate(startAt as Date, 'Z'));
+
+  if (!latestEvent) {
+    return (
+      <Section title="Event Terdekat" variant="primary">
+        <NoData message="Tidak ada event terdekat" />
+      </Section>
+    );
+  }
 
   return (
     <Section title="Event Terdekat" variant="primary">

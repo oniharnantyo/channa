@@ -26,7 +26,7 @@ const StyledNavbar = () => {
           </Row>
         </Navbar.Brand>
         <Navbar.Toggle className={Style.toggleMenu} aria-controls="navigationBar">
-          <FontAwesomeIcon icon={faBars} className={clsx('fa-xl', 'dark-100')} />
+          <FontAwesomeIcon icon={faBars} className={clsx('fa-xl', 'text-dark')} />
         </Navbar.Toggle>
         <Navbar.Collapse id="navigationBar">
           <Nav className="ms-auto">
