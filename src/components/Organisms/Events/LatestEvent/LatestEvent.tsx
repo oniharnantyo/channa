@@ -6,7 +6,8 @@ import { getLatestEvent } from '@services/event/getLatestEvent';
 import { formatDate } from '@utils/format';
 import { tzToAbbreviation } from '@utils/tz';
 import clsx from 'clsx';
-import { Col, Container, Row } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { Section } from '../../Section';
@@ -38,25 +39,36 @@ const LatestEvent = () => {
 
   return (
     <Section title="Event Terdekat" variant="primary">
-      <Row className="px-3 px-lg-5">
-        <Col md={6} className="d-flex">
-          <div>
-            <h3 className={clsx(Style.title, 'mb-3')}>{name}</h3>
-            <p className={Style.text}>
-              <FontAwesomeIcon icon={faCalendarAlt} className={Style.icon} />
-              {startAtDate}
-            </p>
-            <p className={Style.text}>
-              <FontAwesomeIcon icon={faClock} className={Style.icon} />
-              {startAtTime}
-            </p>
-          </div>
-        </Col>
-        <Col md={6} className={clsx(Style.timeCounter)}>
-          <h4>Akan dimulai dalam</h4>
-          <TimeCounter date={startAt as Date} />
-        </Col>
-      </Row>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
+        <Row className="px-3 px-lg-5">
+          <Col md={6} className="d-flex">
+            <div>
+              <h3 className={clsx(Style.title, 'mb-3')}>{name}</h3>
+              <p className={Style.text}>
+                <FontAwesomeIcon icon={faCalendarAlt} className={Style.icon} />
+                {startAtDate}
+              </p>
+              <p className={Style.text}>
+                <FontAwesomeIcon icon={faClock} className={Style.icon} />
+                {startAtTime}
+              </p>
+            </div>
+          </Col>
+          <Col md={6} className={clsx(Style.timeCounter)}>
+            <h4>Akan dimulai dalam</h4>
+            <TimeCounter date={startAt as Date} />
+          </Col>
+        </Row>
+      </motion.div>
     </Section>
   );
 };
