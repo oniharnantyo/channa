@@ -1,4 +1,5 @@
 import { ArticleCard } from '@components/Molecules/ArticleCard';
+import { motion } from 'framer-motion';
 import { Col, Row } from 'react-bootstrap';
 
 import { MoreableSection } from '../Section';
@@ -12,7 +13,17 @@ const HomeArticles: HomeArticlesProps = ({ articles }) => {
       linkTitle={'Lihat artikel lainnya >>'}
       link={'/artikel'}
     >
-      <Row>
+      <motion.div
+        className="row"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+      >
         {articles.map((article) => (
           <Col key={article.id} md={4} className="mb-4">
             <ArticleCard
@@ -28,7 +39,7 @@ const HomeArticles: HomeArticlesProps = ({ articles }) => {
             />
           </Col>
         ))}
-      </Row>
+      </motion.div>
     </MoreableSection>
   );
 };
