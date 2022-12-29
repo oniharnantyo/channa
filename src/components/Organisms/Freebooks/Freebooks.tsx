@@ -54,11 +54,11 @@ const Freebooks = () => {
           </Col>
         </Row>
       </SectionNoTitle>
-      {freebooks.length === 0 ? (
-        search ? (
-          <NoData message="Freebook tidak ditemukan" />
-        ) : (
+      {freebooks.length === 0 && !isFetching ? (
+        !search ? (
           <NoData message="Tidak ada freebook" />
+        ) : (
+          <NoData message="Freebook tidak ditemukan" />
         )
       ) : null}
       <SectionNoTitle>

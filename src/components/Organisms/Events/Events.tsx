@@ -53,11 +53,11 @@ const Events = () => {
           </Col>
         </Row>
       </SectionNoTitle>
-      {events.length === 0 ? (
-        search ? (
-          <NoData message="Acara tidak ditemukan" />
-        ) : (
+      {events.length === 0 && !isFetching ? (
+        !search ? (
           <NoData message="Tidak ada acara" />
+        ) : (
+          <NoData message="Acara tidak ditemukan" />
         )
       ) : null}
       <SectionNoTitle variant="white">

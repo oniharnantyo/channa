@@ -53,11 +53,11 @@ const Articles = () => {
           </Col>
         </Row>
       </SectionNoTitle>
-      {articles.length === 0 ? (
-        search ? (
-          <NoData message="Artikel tidak ditemukan" />
-        ) : (
+      {articles.length === 0 && !isFetching ? (
+        !search ? (
           <NoData message="Tidak ada artikel" />
+        ) : (
+          <NoData message="Artikel tidak ditemukan" />
         )
       ) : null}
       <SectionNoTitle>
