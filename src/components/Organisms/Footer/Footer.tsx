@@ -1,6 +1,6 @@
 import FBLogo from '@assets/image/fb-logo.svg';
 import IGLogo from '@assets/image/ig-logo.svg';
-import VSLogo from '@assets/image/vs-logo.svg';
+import VSLogo from '@assets/image/vs-logo.webp';
 import { FooterTitle } from '@components/Atoms/FooterTitle';
 import { LogoImage } from '@components/Atoms/Image';
 import { FooterItem } from '@components/Molecules/FooterItem';
@@ -16,7 +16,13 @@ const Footer = () => {
       <Container>
         <Row>
           <Col md={4}>
-            <LogoImage logo={VSLogo} alt="logo vidyasena" className={Style.logo} />
+            <LogoImage
+              logo={VSLogo.src}
+              alt="logo vidyasena"
+              height={120}
+              width={70}
+              className={Style.logo}
+            />
             <p className={clsx(Style.quote)}>
               &quot;Biarlah mengorbankan harta demi menyelamatkan anggota tubuh, Biarlah
               mengorbankan anggota tubuh demi menyelamatkan hidupnya, Biarlah mengorbankan harta,

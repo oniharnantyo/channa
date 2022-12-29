@@ -9,8 +9,8 @@
   border: none !important;
 }
 
-.logo {
-  height: 3.125rem;
+.logoWrapper {
+  min-width: 2rem;
 }
 
 .logoText {
@@ -24,4 +24,10 @@
 
 .logoText.largerText {
   font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .logoWrapper {
+    padding: 0 !important;
+  }
 }

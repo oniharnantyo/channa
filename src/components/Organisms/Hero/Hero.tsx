@@ -32,7 +32,7 @@ const Hero = () => {
                 Didirikan pada tanggal 1 Februari 1987, telah menjadi salah satu organisasi pemuda
                 Buddhis utama di bawah bimbingan Sangha Theravada Indonesia (STI).
               </p>
-              <Link href="/tentang-kami" passHref>
+              <Link href="/profil" passHref>
                 <StyledButton variant="primary" size="lg" rounded={false}>
                   Baca Selengkapnya
                 </StyledButton>

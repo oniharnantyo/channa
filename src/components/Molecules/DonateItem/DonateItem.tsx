@@ -22,7 +22,7 @@ const DonateItem: DonateItemProps = ({
       src={imageURL}
       alt={imageAlt}
       width="500"
-      height={'300'}
+      height="300"
       layout="responsive"
       objectFit="contain"
     />
