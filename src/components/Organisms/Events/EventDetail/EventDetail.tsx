@@ -7,6 +7,7 @@ import { IEvent } from '@domains/event';
 import { faCalendarAlt, faClock, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 import { getEventBySlug } from '@services/event/getEventBySlug';
 import { formatDate } from '@utils/format';
+import { tzToAbbreviation } from '@utils/tz';
 import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
@@ -33,12 +34,16 @@ const EventDetail: EventDetailProps = ({ slug }) => {
   }, [eventData]);
 
   const date = formatDate(event.startAt, 'DD MMMM YYYY');
-  const time = formatDate(event.startAt, 'HH:MM');
+  const time =
+    formatDate(event.startAt as Date, 'HH:mm') +
+    ' ' +
+    tzToAbbreviation(formatDate(event.startAt as Date, 'Z'));
 
   return (
     <SectionNoTitle>
       <Row className="mb-4">
-        <Col sm={12} md={6} lg={6}>
+        <Col lg={2} />
+        <Col sm={12} md={6} lg={5}>
           <Image
             src={event.imageURL as string}
             alt={event?.imageDescription}
@@ -48,19 +53,22 @@ const EventDetail: EventDetailProps = ({ slug }) => {
             objectFit="contain"
           />
         </Col>
-        <Col sm={12} md={6} lg={6}>
+        <Col sm={12} md={6} lg={3}>
           <Title title={event.title}></Title>
           <Label variant="primary" size="lg" icon={faCalendarAlt} label={date}></Label>
           <Label variant="primary" size="lg" icon={faClock} label={time}></Label>
           <Label variant="primary" size="lg" icon={faMapMarkedAlt} label={event.location} />
         </Col>
+        <Col lg={2} />
       </Row>
       <Row>
-        <Col>
+        <Col md={2} />
+        <Col md={8}>
           <Content>
             <div dangerouslySetInnerHTML={{ __html: event.content }} />
           </Content>
         </Col>
+        <Col md={2} />
       </Row>
     </SectionNoTitle>
   );

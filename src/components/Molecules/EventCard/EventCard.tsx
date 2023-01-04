@@ -6,6 +6,7 @@ import { LinkTitle } from '@components/Atoms/LinkTitle';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { faCalendarAlt, faClock, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { formatDate } from '@utils/format';
+import { tzToAbbreviation } from '@utils/tz';
 import clsx from 'clsx';
 import { Col } from 'react-bootstrap';
 
@@ -14,7 +15,8 @@ import { EventCardProps } from './EventCard.types';
 
 const EventCard: EventCardProps = ({ slug, title, imageUrl, imageAlt, location, startAt }) => {
   const date = formatDate(startAt, 'DD MMMM YYYY');
-  const time = formatDate(startAt, 'HH:MM');
+  const time =
+    formatDate(startAt as Date, 'HH:mm') + ' ' + tzToAbbreviation(formatDate(startAt as Date, 'Z'));
   const url = '/acara/' + slug;
 
   return (
