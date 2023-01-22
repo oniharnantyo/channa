@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import { Header } from '@components/Organisms/Header';
+import { Profile as OProfile } from '@components/Organisms/Profile';
 
-const OProfile = dynamic(() => import('../../../Organisms/Profile/Profile'), { ssr: false });
+const Header = dynamic(() => import('../../../Organisms/Header/Header'));
 
 const Profile = () => {
   return (

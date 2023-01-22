@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
-import {ButtonVariant} from "react-bootstrap/types";
+import { ButtonVariant } from 'react-bootstrap/types';
 // @ts-ignore
-import { Sizes } from "react-bootstrap/types";
+import { Sizes } from 'react-bootstrap/types';
 
 export declare type sizes = 'sm' | 'lg' | undefined;
 
@@ -11,6 +11,7 @@ interface IStyledButtonProps {
   variant: ButtonVariant;
   size: Sizes;
   rounded?: boolean;
+  className?: string;
   children: ReactNode;
 }
 

@@ -1,10 +1,11 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-
-import { Footer } from '@components/Organisms/Footer';
-import { StyledNavbar } from '@components/Organisms/StyledNavbar';
 
 import Style from './Layout.module.css';
 import { LayoutProps } from './Layout.types';
+
+const Footer = dynamic(() => import('../../Organisms/Footer/Footer'));
+const StyledNavbar = dynamic(() => import('../../Organisms/StyledNavbar/StyledNavbar'));
 
 const Layout: LayoutProps = ({ children }) => {
   return (
@@ -21,7 +22,7 @@ const Layout: LayoutProps = ({ children }) => {
       <header className={Style.header}>
         <StyledNavbar />
       </header>
-      {children}
+      <main>{children}</main>
       <Footer />
     </>
   );

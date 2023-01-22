@@ -1,10 +1,9 @@
-import clsx from 'clsx';
 import { Col, Row, Spinner } from 'react-bootstrap';
 
 const LoadingSpinner = () => {
   return (
     <Row>
-      <Col sm={12} className={clsx('text-center', 'text-primary')}>
+      <Col sm={12} className="d-flex align-items-center justify-content-center text-dark">
         <Spinner animation="border" />
       </Col>
     </Row>

@@ -1,9 +1,8 @@
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { FC } from 'react';
 
 interface IProgramCardProps {
-  key: number;
-  faIcon: IconProp;
+  id: number;
+  icon: string;
   title: string;
   description: string;
 }

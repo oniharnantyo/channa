@@ -8,6 +8,7 @@ interface IDonateItemProps {
   imageURL: string;
   imageAlt: string;
   isImageRight?: boolean;
+  confirmUrl: string;
 }
 
 export type DonateItemProps = FC<IDonateItemProps>;

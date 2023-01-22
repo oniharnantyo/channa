@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic';
+
+import { CenteredDiv } from '@components/Atoms/CenteredDiv';
 import { NoData } from '@components/Atoms/NoData';
-import { ArticleCard } from '@components/Molecules/ArticleCard';
 import { FreebookCard } from '@components/Molecules/FreebookCard';
 import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
-import { Pagination } from '@components/Molecules/Pagination';
 import { Search } from '@components/Molecules/Search';
 import { IFreebook } from '@domains/freebook';
 import { getFreebooks } from '@services/freebook/getFreebooks';
@@ -11,6 +12,8 @@ import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../Section';
+
+const Pagination = dynamic(import('../../Molecules/Pagination/Pagination'));
 
 const Freebooks = () => {
   const [page, setPage] = useState(1);
@@ -26,7 +29,7 @@ const Freebooks = () => {
     isFetching,
   } = useQuery(
     ['getFreebooks', page, search],
-    () => getFreebooks({ page: page, perPage: 12, search: search }),
+    () => getFreebooks({ page: page, perPage: 8, search: search }),
     {
       retry: false,
     }
@@ -44,7 +47,7 @@ const Freebooks = () => {
     <>
       <SectionNoTitle>
         <Row>
-          <Col md={5} className="ms-auto px-3">
+          <Col md={8} className="px-3">
             <Search
               placeholder="Cari judul freebook"
               onType={(e: any) => setSearchTemp(e.target.value)}
@@ -54,16 +57,19 @@ const Freebooks = () => {
           </Col>
         </Row>
       </SectionNoTitle>
-      {freebooks.length === 0 && !isFetching ? (
-        !search ? (
-          <NoData message="Tidak ada freebook" />
-        ) : (
-          <NoData message="Freebook tidak ditemukan" />
-        )
-      ) : null}
       <SectionNoTitle>
-        {isFetching ? (
-          <LoadingSpinner />
+        {freebooks.length === 0 && !isFetching ? (
+          <CenteredDiv minHeight="55vh">
+            {!search ? (
+              <NoData message="Tidak ada freebook" />
+            ) : (
+              <NoData message="Freebook tidak ditemukan" />
+            )}
+          </CenteredDiv>
+        ) : isFetching ? (
+          <CenteredDiv minHeight="55vh">
+            <LoadingSpinner />
+          </CenteredDiv>
         ) : (
           <Row>
             {freebooks &&

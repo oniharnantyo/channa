@@ -19,6 +19,7 @@ const Hero = () => {
           objectFit="cover"
           objectPosition="top"
           alt="altar vihara vidyaloka"
+          priority
         />
       </div>
       <Container className={clsx('align-self-center', Style.heroContent)}>
@@ -50,9 +51,10 @@ const Hero = () => {
                 }}
               >
                 <p className="px-md-14">
-                  Organisasi sosial pemuda Buddha yang bermarkas di Vihara Vidyaloka Yogyakarta.
-                  Didirikan pada tanggal 1 Februari 1987, telah menjadi salah satu organisasi pemuda
-                  Buddhis utama di bawah bimbingan Sangha Theravada Indonesia (STI).
+                  Vidyāsenā merupakan salah satu organisasi mahasiswa dan pelajar Buddhis Indonesia
+                  yang berada di Vihāra Vidyāloka Yogyakarta. "Vidya" berarti pengetahuan Dhamma dan
+                  "Sena" berarti prajurit atau tentara penjaga, sehingga Vidyāsenā berarti Prajurit
+                  pengetahuan Dhamma.
                 </p>
               </motion.div>
               <motion.div

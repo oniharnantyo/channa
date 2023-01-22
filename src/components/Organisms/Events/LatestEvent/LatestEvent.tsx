@@ -1,3 +1,4 @@
+import { CenteredDiv } from '@components/Atoms/CenteredDiv';
 import { NoData } from '@components/Atoms/NoData';
 import { TimeCounter } from '@components/Molecules/TimeCounter';
 import { faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
@@ -29,10 +30,12 @@ const LatestEvent = () => {
   const startAtTime =
     formatDate(startAt as Date, 'HH:mm') + ' ' + tzToAbbreviation(formatDate(startAt as Date, 'Z'));
 
-  if (!latestEvent) {
+  if (!latestEvent && !isFetching) {
     return (
       <Section title="Event Terdekat" variant="primary">
-        <NoData message="Tidak ada event terdekat" />
+        <CenteredDiv minHeight="200px">
+          <NoData className="text-white" message="Tidak ada event terdekat" />
+        </CenteredDiv>
       </Section>
     );
   }

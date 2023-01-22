@@ -1,9 +1,12 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import { ArticleDetail as OArticleDetail } from '@components/Organisms/Articles/ArticleDetail';
-import { Header } from '@components/Organisms/Header';
-
 import { ArticleDetailProps } from './ArticleDetail.types';
+
+const Header = dynamic(() => import('../../../Organisms/Header/Header'));
+const OArticleDetail = dynamic(
+  () => import('../../../Organisms/Articles/ArticleDetail/ArticleDetail')
+);
 
 const ArticleDetail: ArticleDetailProps = ({ article }) => {
   return (

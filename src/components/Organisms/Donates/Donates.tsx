@@ -1,4 +1,6 @@
-import HomeBanner from '@assets/image/hero-banner.webp';
+import DaaImage from '@assets/image/donate/daa.webp';
+import FreebokImage from '@assets/image/donate/freebook.webp';
+import OperasionalImage from '@assets/image/donate/operasional.webp';
 import { DonateItem } from '@components/Molecules/DonateItem';
 
 import { SectionNoTitle } from '../Section';
@@ -7,35 +9,36 @@ const Donates = () => {
   return (
     <SectionNoTitle>
       <DonateItem
-        title={'Operasional Vihara Vidyaloka'}
-        account={'BCA 1234566 a.n Hery Nugroho (Rekening VS)'}
-        confirm={'No HP Vidyasena untuk konfirmasi'}
+        title={'Dana Paramita Vihāra Vidyāloka'}
+        account={'Bank BCA 0600679147 (a.n Hery Nugroho)'}
+        confirm={'Konfirmasi ke +62 815-6866-543'}
         description={
-          'Komunitas Pemuda Buddhis Kecamatan Panggang bekerjasama dengan Sanggar Mustika Budaya menyelenggarakan pergelaran seni rakyat di Dukuh Nglaos, Dusun Wiloso, Desa Girikarto, Kecamatan Panggang, Gunung Kidul, Sabtu (27/8). '
+          'Melatih kemurahan hati dengan menyisihkan sebagian materi untuk diberikan. Dana akan digunakan untuk pelayanan dan pembinaan umat Buddha di Vihāra Vidyāloka.'
         }
-        imageURL={HomeBanner.src}
-        imageAlt={'test'}
+        imageURL={OperasionalImage.src}
+        imageAlt={'bangunan vihara vidyaloka'}
+        confirmUrl="http://wa.me/+628156866543"
       />
       <DonateItem
         title={'Dana Anak Asuh'}
-        account={'BCA 1234566 a.n Hery Nugroho (Rekening Sosial)'}
-        confirm={'No HP Sosial untuk konfirmasi'}
-        description={
-          'Komunitas Pemuda Buddhis Kecamatan Panggang bekerjasama dengan Sanggar Mustika Budaya menyelenggarakan pergelaran seni rakyat di Dukuh Nglaos, Dusun Wiloso, Desa Girikarto, Kecamatan Panggang, Gunung Kidul, Sabtu (27/8). '
-        }
-        imageURL={HomeBanner.src}
-        imageAlt={'test'}
+        account={'Bank BCA 0600679198 (a.n Hery Nugroho)'}
+        confirm={'Konfirmasi ke  +62 823-9126-4822 (Josephine)'}
+        description={`Dana Anak Asuh (DAA) adalah program yang bertujuan untuk membantu siswa/i Buddhis di desa sekitar Yogyakarta dan Jawa Tengah dengan memberikan bantuan penunjang keperluan pendidikan.`}
+        imageURL={DaaImage.src}
+        imageAlt={'dana anak asuh vidyasena'}
         isImageRight={true}
+        confirmUrl="http://wa.me/+6282391264822"
       />
       <DonateItem
         title={'Freebook'}
-        account={'BCA 1234566 a.n Hery Nugroho (Rekening Usaha)'}
-        confirm={'No HP Vidyasena untuk konfirmasi'}
+        account={'Bank BCA 0600679210 (a.n Hery Nugroho)'}
+        confirm={'Konfirmasi ke +62 899-506-6277'}
         description={
-          'Komunitas Pemuda Buddhis Kecamatan Panggang bekerjasama dengan Sanggar Mustika Budaya menyelenggarakan pergelaran seni rakyat di Dukuh Nglaos, Dusun Wiloso, Desa Girikarto, Kecamatan Panggang, Gunung Kidul, Sabtu (27/8). '
+          'Lebih dari 80 judul buku telah diterbitkan Vidyāsenā dan dikirim ke seluruh vihāra di Indonesia. Dengan berdana freebook, anda turut serta membantu penerbitan buku dan menyebarkan Buddha Dhamma.'
         }
-        imageURL={HomeBanner.src}
-        imageAlt={'test'}
+        imageURL={FreebokImage.src}
+        imageAlt={'freebook vidyasena'}
+        confirmUrl="http://wa.me/+628995066277"
       />
     </SectionNoTitle>
   );

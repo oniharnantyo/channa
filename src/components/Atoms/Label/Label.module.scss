@@ -21,3 +21,11 @@
 .label svg {
   padding-right: 0.5em;
 }
+
+.label a {
+  text-decoration: none;
+}
+
+.label a:hover {
+  color: $primary900 !important;
+}

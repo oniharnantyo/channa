@@ -1,12 +1,14 @@
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { EventDetail as OEventDetail } from '@components/Organisms/Events/EventDetail';
-import { Header } from '@components/Organisms/Header';
 import { SectionNoTitle } from '@components/Organisms/Section';
 import { Col, Row } from 'react-bootstrap';
 
 import { EventDetailProps } from './EventDetail.types';
+
+const Header = dynamic(() => import('../../../Organisms/Header/Header'));
 
 const EventDetail: EventDetailProps = ({ slug }) => {
   return (

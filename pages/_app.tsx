@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Vidyāsenā Vihāra Vidyāloka" />
         <meta
           name="description"
-          content="Organisasi sosial pemuda Buddha yang bermarkas di Vihara Vidyaloka Yogyakarta. Didirikan pada tanggal 1 Februari 1987, telah menjadi salah satu organisasi pemuda Buddhis utama di bawah bimbingan Sangha Theravada Indonesia (STI)."
+          content="Vidyāsenā berarti Prajurit pengetahuan Dhamma.Sejak didirikan pada tanggal 1 Februari 1987, Vidyāsenā telah menjadi salah satu organisasi pemuda Buddhis yang aktif mengembangkan Buddha Dhamma."
         ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
@@ -44,6 +44,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" />
+        <link rel="dns-prefetch" href="https://maps.gstatic.com" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       </Head>

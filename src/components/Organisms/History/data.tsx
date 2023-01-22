@@ -8,7 +8,7 @@ export const histories = {
     <>
       <h5 className="fw-bolder">Vidyasena dan BDSGY</h5>
       <p>
-        Vidyasena, dilihat dari sejarah pendiriannya, mempunyai hubungan yang sangat erat dengan
+        Vidyāsenaā, dilihat dari sejarah pendiriannya, mempunyai hubungan yang sangat erat dengan
         keberadan organisasi sebelumnya yaitu Buddha Dhamma Study Group Yogyakarta (BDSGY). BDSGY,
         yang berdiri pada tahun 1984, merupakan organisasi pemuda Buddhis di Yogyakarta yang
         bertujuan mengkaji, mempelajari Buddha Dhamma dalam bentuk teori dan terapan. Anggota BDSGY,
@@ -16,27 +16,26 @@ export const histories = {
         mengikuti tradisi yang berlainan.
       </p>
       <p>
-        BDSGY berawal dari ide Upasaka Pandita Ananda Aris Munandar (sekarang dosen agama Buddha
-        STIE, AA YKPN) yang ditanggapi secara positif oleh para mahasiswa buddhis seperti Bambang
-        Pratignyo (sekarang Bhikkhu Uttamo), Budiain, Sunaryo, Iskandar Wanagiri, Cahyadi, Wahyuni,
-        dan lain-lain. Dalam kegiatannya, BDSGY didukung dan dibina oleh UP. Aris Munandar dan Alm.
-        Bp. Agus Swanoto serta Bp. Anwar Santoso. Para Mahasiswa tersebut melihat dan merasakan
-        kebenaran Buddha Dhamma dan memandang untuk perlu melestarikan Buddha Dhamma. Dengan adanya
-        organisasi ini mereka dapat dengan lebih leluasa dan bebas sebagai seorang intelektual dalam
-        mempelajari dan menggali Buddha Dhamma secara nyata dan obyektif. Serta tak ketinggalan
-        mempraktekkannya dalam kehidupan sehari-hari sebagai warga negara dalam melaksanakan
-        pembangunan manusia seutuhnya, material dan spiritual, seperti tercantum dalam arah
-        pembangunan bangsa Indonesia Yaitu GBHN.
+        BDSGY berawal dari ide Upasaka Pandita Ananda Aris Munandar yang ditanggapi secara positif
+        oleh para mahasiswa buddhis seperti Bambang Pratignyo (sekarang Bhikkhu Uttamo), Budiain,
+        Sunaryo, Iskandar Wanagiri, Cahyadi, Wahyuni, dan lain-lain. Dalam kegiatannya, BDSGY
+        didukung dan dibina oleh UP. Aris Munandar dan Alm. Bp. Agus Swanoto serta Bp. Anwar
+        Santoso. Para Mahasiswa tersebut melihat dan merasakan kebenaran Buddha Dhamma dan memandang
+        untuk perlu melestarikan Buddha Dhamma. Dengan adanya organisasi ini mereka dapat dengan
+        lebih leluasa dan bebas sebagai seorang intelektual dalam mempelajari dan menggali Buddha
+        Dhamma secara nyata dan obyektif. Serta tak ketinggalan mempraktekkannya dalam kehidupan
+        sehari-hari sebagai warga negara dalam melaksanakan pembangunan manusia seutuhnya, material
+        dan spiritual, seperti tercantum dalam arah pembangunan bangsa Indonesia Yaitu GBHN.
       </p>
       <p>
         Kemudian seiringan dengan waktu dan memasuki periode kepengurusan kedua(1986-1988) BDSGY
         membuat pertemuan untuk mahasiswa, pelajar, dan kawula muda Buddhis di Kaliurang yang
         bertemakan "Kita Bersaudara dalam Dhamma". Saat itu ketua panitianya adalah Dharmanadi
-        Chandra (sekarang Ketua Umum Pemuda Buddha Dhamma Indonesia). Yang mengisi acara tersebut
-        adalah Samanera Uttamo. Kegiatan ini banyak mendapat tanggapan dan respon yang positif,
-        terlihat dari umpan baliknya yang berupa kuesioner. Sebagian besar dari forum menghendaki
-        adanya suatu wadah yang tepat dan cocok sehingga dapat membantu atau memperlancar usaha
-        mempelajari Buddha Dhamma secara nyata.
+        Chandra (sekarang Ketua Magabudhi). Yang mengisi acara tersebut adalah Samanera Uttamo.
+        Kegiatan ini banyak mendapat tanggapan dan respon yang positif, terlihat dari umpan baliknya
+        yang berupa kuesioner. Sebagian besar dari forum menghendaki adanya suatu wadah yang tepat
+        dan cocok sehingga dapat membantu atau memperlancar usaha mempelajari Buddha Dhamma secara
+        nyata.
       </p>
       <p>
         Namun sayang, organisasi BDSGY yang pada awalnya berjalan dengan baik, mulai menampakkan
@@ -51,7 +50,7 @@ export const histories = {
       </p>
       <p>
         Melihat organisasi BDSGY yang sudah tidak dapat diharapkan lagi, maka hasil evaluasi
-        kegiatan di kaliurang pada tahun 1986 tersebut dipelajari oleh Dharmanadi Chandra dan
+        kegiatan di Kaliurang pada tahun 1986 tersebut dipelajari oleh Dharmanadi Chandra dan
         kawan-kawan. Mereka mempertanyakan apakah generasi muda Buddhis harus mengalami
         ketidakpastian dalam mengembangkan Buddha Dhamma? Apakah generasi Buddhis harus menerima
         warisan konflik yang berkepanjangan dari pendahulu mereka? Kapan generasi muda Buddhis
@@ -79,13 +78,13 @@ export const histories = {
         dengan baik dan mencapai suatu tujuan yang telah ditetapkan.
       </p>
       <p>
-        Mereka bersepakat untuk mengadakan kegiatan di Vihara Vidyaloka Yogyakarta. Apa lagi
-        dukungan telah ditegaskan langsung oleh Upasaka Pandita Soepomo, yang membina Vihara
-        Vidyaloka, bahwa vihara ini adalah untuk umum dan digunakan unutuk memajukan perkembangan
+        Mereka bersepakat untuk mengadakan kegiatan di Vihāra Vidyāloka Yogyakarta. Apa lagi
+        dukungan telah ditegaskan langsung oleh Upasaka Pandita Soepomo, yang membina Vihāra
+        Vidyāloka, bahwa vihara ini adalah untuk umum dan digunakan unutuk memajukan perkembangan
         Buddha Dhamma. Dukungan moral dan bimbingan Buddha Dhamma datang dari beberapa anggota
-        Sangha Theravada Indonesia pada waktu itu, yaitu Sekretaris Jenderal Sangha Theravada
-        Indonesia, Y.M. Pannavaro Thera (sekarang Sangha Nayaka STI), Samanera Jotidhammo (sekarang
-        Bhikkhu), dan Samanera Uttamo (sekarang Bhikkhu) dan beberapa anggota sangha yang lain.
+        Sangha Theravada Indonesia pada waktu itu, yaitu Y.M. Paññavaro Mahathera, Samanera
+        Jotidhammo (sekarang Y.M Jotidhammo Mahathera dan Penasehat Vidyāsenā), dan Samanera Uttamo
+        (sekarang Bhikkhu Uttamo Mahathera) dan beberapa anggota sangha yang lain.
       </p>
       <p>
         Pada tanggal 1 Februari 1987 pukul 13.00 WIB, maka resmilah dibentuk organisasi persaudaraan
@@ -93,10 +92,10 @@ export const histories = {
         "Sena" berarti prajurit atau tentara penjaga, sehingga Vidyasena berarti Prajurit
         pengetahuan Dhamma. Vidyasena mendapat pembinaan moral dan bimbingan Dhamma dari Sangha
         Theravada Indonesia dan majelis Pandita Buddha Dhamma Indonesia. Jadi Sungguh tepat
-        organisasi Vidyasena berkiprah di vihara Vidyaloka (yang berarti Tempat Pengetahuan Dhamma).
+        organisasi Vidyāsenā berkiprah di Vihāra Vidyāloka (yang berarti Tempat Pengetahuan Dhamma).
       </p>
       <p>
-        Periode kepengurusan Vidyasena sengaja dirancang demikian singkat, hanya satu tahun untuk
+        Periode kepengurusan Vidyāsenā sengaja dirancang demikian singkat, hanya satu tahun untuk
         setiap periode. Hal ini disebabkan tingkat kelulusan para mahasiswa cukup tinggi dan untuk
         memimpin organisasi mereka harus telah duduk di bangku perguruan tinggi, idealnya setelah
         kuliah di tahun ketiga. Pemimpin Vidyasena setidaknya mempunyai pengetahuan serta praktek
@@ -115,7 +114,7 @@ export const histories = {
           Berawal dari ide Ibu R. Supangat Prawirokusumo, lahan seluas 5 x 7 m<sup>2</sup> di
           Miliran UH II No. 144 untuk dijadikan <i>cetiya</i>. Namun karena umat semakin banyak,
           status ditingkatkan dari <i>cetiya</i> menjadi <i>vihara</i> oleh Bhikkhu Pannavaro
-          (sekarang Y.M Bhikkhu Sri Pannavaro Mahathera) kemudian diberi nama Vihara Vidyaloka.
+          (sekarang Y.M Sri Paññavaro Mahathera) kemudian diberi nama Vihara Vidyaloka.
         </p>
       ),
     },

@@ -1,6 +1,6 @@
 import FreebookCard from '@components/Molecules/FreebookCard/FreebookCard';
 import { motion } from 'framer-motion';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -19,7 +19,7 @@ const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
       variant={'primary'}
     >
       <motion.div
-        className="row"
+        className="row px-3 px-md-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -46,10 +46,6 @@ const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
               1024: {
                 slidesPerView: 4,
                 spaceBetween: 40,
-              },
-              1200: {
-                slidesPerView: 5,
-                spaceBetween: 50,
               },
             }}
             modules={[Pagination, Navigation]}

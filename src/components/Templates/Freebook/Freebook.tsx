@@ -1,8 +1,8 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import Header from '@components/Organisms/Header/Header';
-
-import Freebooks from '../../Organisms/Freebooks/Freebooks';
+const Header = dynamic(() => import('../../Organisms/Header/Header'));
+const Freebooks = dynamic(() => import('../../Organisms/Freebooks/Freebooks'));
 
 const Freebook = () => {
   const title = 'Freebook - Vidyāsenā Vihāra Vidyāloka';

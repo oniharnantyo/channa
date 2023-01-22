@@ -9,10 +9,6 @@
   border: none !important;
 }
 
-.logoWrapper {
-  min-width: 2rem;
-}
-
 .logoText {
   font-family: 'Merriweather';
   font-style: normal;
@@ -24,10 +20,4 @@
 
 .logoText.largerText {
   font-size: 1.25rem;
-}
-
-@media (min-width: 768px) {
-  .logoWrapper {
-    padding: 0 !important;
-  }
 }

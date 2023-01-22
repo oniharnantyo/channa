@@ -16,11 +16,11 @@ const Profile = () => {
           <Content>
             <p>
               Vidyāsenā merupakan salah satu organisasi mahasiswa dan pelajar Buddhis Indonesia yang
-              berada di Vihāra Vidyaāloka Yogyakarta. <b>"Vidya"</b> berarti pengetahuan Dhamma dan{' '}
+              berada di Vihāra Vidyāloka Yogyakarta. <b>"Vidya"</b> berarti pengetahuan Dhamma dan{' '}
               <b>"Sena"</b> berarti prajurit atau tentara penjaga, sehingga Vidyāsenā berarti
               Prajurit pengetahuan Dhamma.
             </p>
-            <h2>Tujuan</h2>
+            <h3 className="fw-bold text-center">Tujuan</h3>
             <ul>
               <li>
                 Menggali dan Memelihara Buddha Dhamma berdasarkan kitab suci Tipitaka Pali, serta

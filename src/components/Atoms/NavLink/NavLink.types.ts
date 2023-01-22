@@ -5,6 +5,7 @@ interface INavLinkProps {
   href?: string;
   name?: string;
   active?: boolean;
+  isBlankTarget?: boolean;
 }
 
 export type NavLinkProps = FC<INavLinkProps>;

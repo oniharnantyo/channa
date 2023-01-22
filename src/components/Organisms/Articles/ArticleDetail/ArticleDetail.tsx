@@ -5,13 +5,17 @@ import { ArticleLabel } from '@components/Atoms/ArticleLabel';
 import { HtmlableContent } from '@components/Atoms/Content';
 import { StyledButton } from '@components/Atoms/StyledButton';
 import { Title } from '@components/Atoms/Title';
+import clsx from 'clsx';
+import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 
-import { LatestArticles } from '../LatestArticles';
 import { SectionNoTitle } from '../../Section';
+import { LatestArticles } from '../LatestArticles';
 import { ArticleDetailProps } from './ArticleDetail.types';
 
 const ArticleDetail: ArticleDetailProps = ({ article }) => {
+  const [isImageLoading, setImageLoading] = useState(true);
+
   return (
     <Row>
       <Col lg={2}></Col>
@@ -31,6 +35,10 @@ const ArticleDetail: ArticleDetailProps = ({ article }) => {
                   height="500"
                   layout="responsive"
                   objectFit="contain"
+                  onLoadingComplete={() => setImageLoading(false)}
+                  className={clsx({
+                    ['placeholder bg-muted placeholder-glow']: isImageLoading,
+                  })}
                 />
               </Col>
             </Row>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Content } from '@components/Atoms/Content';
 import { Label } from '@components/Atoms/Label';
@@ -16,6 +17,7 @@ const DonateItem: DonateItemProps = ({
   imageURL,
   imageAlt,
   isImageRight = false,
+  confirmUrl,
 }) => {
   const image = (
     <Image
@@ -24,19 +26,19 @@ const DonateItem: DonateItemProps = ({
       width="500"
       height="300"
       layout="responsive"
-      objectFit="contain"
+      objectFit="cover"
     />
   );
 
   const content = (
     <>
       <div className="mb-2">
-        <Title title={title} />
-        <div className="p-1">
+        <Title title={title} className="" />
+        <div className="">
           <Label variant={'primary'} icon={faCalendar} label={account} />
         </div>
-        <div className="p-1">
-          <Label variant={'primary'} icon={faUser} label={confirm} />
+        <div>
+          <Label variant={'primary'} icon={faUser} label={confirm} url={confirmUrl} />
         </div>
       </div>
       <Content>{description}</Content>
@@ -66,7 +68,7 @@ const DonateItem: DonateItemProps = ({
 
   return (
     <Container>
-      <Row className="p-2 p-sm-3 p-md-5">{item}</Row>
+      <Row className="p-2 p-sm-3 p-md-5 me-3">{item}</Row>
     </Container>
   );
 };

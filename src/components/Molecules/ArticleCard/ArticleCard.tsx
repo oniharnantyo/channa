@@ -24,7 +24,7 @@ const ArticleCard: ArticleCardProps = ({
     <Card key={slug} className={clsx(Style.card, 'h-100', 'm-2')}>
       <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width={'500'} height={'300'} />
       <Card.Body className={clsx(Style.cardBody, { ['mx-2']: isBodyMargin })}>
-        <LinkTitle url={url} title={title} variant="primary" />
+        <LinkTitle url={url} title={title} variant="primary"/>
         <ArticleLabel author={author} date={createdAt} />
         {description && <p className={clsx(Style.description)}>{description}</p>}
       </Card.Body>

@@ -19,8 +19,21 @@ const FreebookCard: FreebookCardProps = ({
 }) => {
   return (
     <Card className={clsx(Style.card, 'text-center')}>
-      <LinkImage imageUrl={imageUrl} imageAlt={imageAlt} url={url} width="3" height="4" />
+      <LinkImage
+        imageUrl={imageUrl}
+        imageAlt={imageAlt}
+        url={url}
+        width="3"
+        height="4"
+        isBlankTarget
+      />
       <Card.Body>
+        <LinkTitle
+          url={url}
+          title={title}
+          variant={variant === 'primary' ? 'white' : 'primary'}
+          isBlankTarget={true}
+        />
         <span
           className={clsx(
             Style.author,
@@ -30,12 +43,6 @@ const FreebookCard: FreebookCardProps = ({
         >
           {author}
         </span>
-        <LinkTitle
-          url={url}
-          title={title}
-          variant={variant === 'primary' ? 'white' : 'primary'}
-          isBlankTarget={true}
-        />
       </Card.Body>
     </Card>
   );

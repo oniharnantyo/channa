@@ -1,8 +1,8 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import Header from '@components/Organisms/Header/Header';
-
-import Articles from '../../Organisms/Articles/Articles';
+const Header = dynamic(() => import('../../Organisms/Header/Header'));
+const Articles = dynamic(() => import('../../Organisms/Articles/Articles'));
 
 const Article = () => {
   const title = 'Artikel - Vidyāsenā Vihāra Vidyāloka';

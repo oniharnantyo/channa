@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 import Style from './Section.module.scss';
 import { SectionProps } from './Section.types';
 
-const Section: SectionProps = ({ children, title, variant }) => {
+const Section: SectionProps = ({ children, title, variant, minHeight }) => {
   const titleVariant = variant === 'primary' ? 'white' : 'primary';
 
   return (
@@ -15,6 +15,7 @@ const Section: SectionProps = ({ children, title, variant }) => {
         { [Style.primary]: variant === 'primary' },
         { [Style.white]: variant === 'white' }
       )}
+      style={{ minHeight: minHeight }}
     >
       <Container>
         <SectionTitle variant={titleVariant} title={title}></SectionTitle>

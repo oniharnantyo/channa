@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic';
+
+import { CenteredDiv } from '@components/Atoms/CenteredDiv';
 import { NoData } from '@components/Atoms/NoData';
 import { ArticleCard } from '@components/Molecules/ArticleCard';
 import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
-import { Pagination } from '@components/Molecules/Pagination';
 import { Search } from '@components/Molecules/Search';
 import { IArticle } from '@domains/article';
 import { getArticles } from '@services/article/getArticles';
@@ -10,6 +12,8 @@ import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../Section';
+
+const Pagination = dynamic(import('../../Molecules/Pagination/Pagination'));
 
 const Articles = () => {
   const [page, setPage] = useState(1);
@@ -43,7 +47,7 @@ const Articles = () => {
     <>
       <SectionNoTitle>
         <Row>
-          <Col md={5} className="ms-auto px-3">
+          <Col md={8} className="px-3">
             <Search
               placeholder="Cari judul artikel"
               onType={(e: any) => setSearchTemp(e.target.value)}
@@ -53,16 +57,19 @@ const Articles = () => {
           </Col>
         </Row>
       </SectionNoTitle>
-      {articles.length === 0 && !isFetching ? (
-        !search ? (
-          <NoData message="Tidak ada artikel" />
-        ) : (
-          <NoData message="Artikel tidak ditemukan" />
-        )
-      ) : null}
       <SectionNoTitle>
-        {isFetching ? (
-          <LoadingSpinner />
+        {articles.length === 0 && !isFetching ? (
+          <CenteredDiv minHeight="55vh">
+            {!search ? (
+              <NoData message="Tidak ada artikel" />
+            ) : (
+              <NoData message="Artikel tidak ditemukan" />
+            )}
+          </CenteredDiv>
+        ) : isFetching ? (
+          <CenteredDiv minHeight="55vh">
+            <LoadingSpinner />
+          </CenteredDiv>
         ) : (
           <Row>
             {articles &&

@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic';
+
+import { CenteredDiv } from '@components/Atoms/CenteredDiv';
 import { NoData } from '@components/Atoms/NoData';
 import { EventCard } from '@components/Molecules/EventCard';
 import { LoadingSpinner } from '@components/Molecules/LoadingSpinner';
-import { Pagination } from '@components/Molecules/Pagination';
 import { Search } from '@components/Molecules/Search';
 import { IEvent } from '@domains/event';
 import { getEvents } from '@services/event/getEvents';
@@ -10,6 +12,8 @@ import { Col, Row } from 'react-bootstrap';
 import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../Section';
+
+const Pagination = dynamic(import('../../Molecules/Pagination/Pagination'));
 
 const Events = () => {
   const [page, setPage] = useState(1);
@@ -43,7 +47,7 @@ const Events = () => {
     <>
       <SectionNoTitle>
         <Row>
-          <Col md={5} className="ms-auto px-3">
+          <Col md={8} className="px-3">
             <Search
               placeholder="Cari judul acara"
               onType={(e: any) => setSearchTemp(e.target.value)}
@@ -53,16 +57,19 @@ const Events = () => {
           </Col>
         </Row>
       </SectionNoTitle>
-      {events.length === 0 && !isFetching ? (
-        !search ? (
-          <NoData message="Tidak ada acara" />
-        ) : (
-          <NoData message="Acara tidak ditemukan" />
-        )
-      ) : null}
       <SectionNoTitle variant="white">
-        {isFetching ? (
-          <LoadingSpinner />
+        {events.length === 0 && !isFetching ? (
+          <CenteredDiv minHeight="20vh">
+            {!search ? (
+              <NoData message="Tidak ada acara" />
+            ) : (
+              <NoData message="Acara tidak ditemukan" />
+            )}
+          </CenteredDiv>
+        ) : isFetching ? (
+          <CenteredDiv minHeight="20vh">
+            <LoadingSpinner />
+          </CenteredDiv>
         ) : (
           <Row>
             {events &&

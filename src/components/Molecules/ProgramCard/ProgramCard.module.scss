@@ -1,19 +1,22 @@
 @import '@styles/colors.scss';
 
 .card {
-  padding: 1.5em;
   background: $light;
+  border: none;
   box-shadow: 0 5px 10px rgb(73 84 100 / 20%);
   border-radius: 0.5em;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.03);
 }
 
-.icon svg {
+.icon img {
   font-size: 2.5rem;
-  border-radius: 2.938em;
   color: $dark;
 }
 
-.content h3 {
+.content h4 {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;

@@ -1,36 +1,21 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import LogoImage from '@components/Atoms/Image/LogoImage';
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
-import { Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 import Style from './ProgramCard.module.scss';
 import { ProgramCardProps } from './ProgramCard.types';
 
-const ProgramCard: ProgramCardProps = ({ key, faIcon, title, description }) => {
+const ProgramCard: ProgramCardProps = ({ id, icon, title, description }) => {
   return (
-    <motion.div
-      className="col-md-6 col-lg-4"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ delay: key * 0.1, duration: 0.5 }}
-      variants={{
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-      }}
-    >
-      <Col md={12} className={clsx(Style.card, 'mb-4', 'mb-lg-4')}>
-        <div className={clsx(Style.content, 'd-block')}>
-          <div className={clsx(Style.icon, 'mb-3')}>
-            <FontAwesomeIcon icon={faIcon}></FontAwesomeIcon>
-          </div>
-          <div>
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </div>
-        </div>
-      </Col>
-    </motion.div>
+    <Card className={clsx(Style.card, 'h-100', 'p-2')}>
+      <div className={clsx(Style.icon, 'px-3', 'pt-2')}>
+        <LogoImage logo={icon} width={40} height={40} />
+      </div>
+      <Card.Body className={Style.content}>
+        <h4 className="text-dark fw-bold">{title}</h4>
+        <p className="text-dark">{description}</p>
+      </Card.Body>
+    </Card>
   );
 };
 

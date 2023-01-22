@@ -55,7 +55,12 @@ const NavLinks = () => {
             </NavDropdown>
           ) : (
             <Link key={route.key} href={route.path as string} passHref>
-              <NavLink key={route.key} name={route.name} active={route.key === pathname} />
+              <NavLink
+                key={route.key}
+                name={route.name}
+                active={route.key === pathname}
+                isBlankTarget={route.isBlankTarget as boolean}
+              />
             </Link>
           )
         )}

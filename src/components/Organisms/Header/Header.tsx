@@ -17,6 +17,7 @@ const Header = () => {
           layout="fill"
           objectFit="cover"
           alt="vidyasena header background"
+          priority
         />
       </div>
       <div className="align-self-center mx-auto">

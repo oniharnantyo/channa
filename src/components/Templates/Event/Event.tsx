@@ -1,8 +1,9 @@
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-import { Events } from '@components/Organisms/Events';
-import { LatestEvent } from '@components/Organisms/Events/LatestEvent';
-import { Header } from '@components/Organisms/Header';
+const LatestEvent = dynamic(() => import('../../Organisms/Events/LatestEvent/LatestEvent'));
+const Header = dynamic(() => import('../../Organisms/Header/Header'));
+const Events = dynamic(() => import('../../Organisms/Events/Events'));
 
 const Event = () => {
   const title = 'Acara - Vidyāsenā Vihāra Vidyāloka';

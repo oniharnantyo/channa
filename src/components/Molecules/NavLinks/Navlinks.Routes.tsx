@@ -38,6 +38,13 @@ export const getRoutes = () => {
       isDropdown: false,
     },
     {
+      key: 'insight',
+      path: 'https://www.insightvidyasena.com',
+      name: 'Insight',
+      isDropdown: false,
+      isBlankTarget: true,
+    },
+    {
       key: 'dana',
       path: '/dana',
       name: 'Dana',

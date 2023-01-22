@@ -11,6 +11,7 @@ interface ILabelProps {
   icon?: IconProp;
   isBolderText?: boolean;
   label: string;
+  url?: string;
 }
 
 export type LabelProps = FC<ILabelProps>;

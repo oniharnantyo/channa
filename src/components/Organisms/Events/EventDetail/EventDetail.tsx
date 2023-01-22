@@ -53,13 +53,13 @@ const EventDetail: EventDetailProps = ({ slug }) => {
             objectFit="contain"
           />
         </Col>
-        <Col sm={12} md={6} lg={3}>
+        <Col sm={12} md={6} lg={4}>
           <Title title={event.title}></Title>
           <Label variant="primary" size="lg" icon={faCalendarAlt} label={date}></Label>
           <Label variant="primary" size="lg" icon={faClock} label={time}></Label>
           <Label variant="primary" size="lg" icon={faMapMarkedAlt} label={event.location} />
         </Col>
-        <Col lg={2} />
+        <Col lg={1} />
       </Row>
       <Row>
         <Col md={2} />

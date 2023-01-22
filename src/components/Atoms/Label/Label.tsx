@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import Style from './Label.module.scss';
 import { LabelProps } from './Label.types';
 
-const Label: LabelProps = ({ icon, label, variant, size = 'sm', isBolderText }) => {
+const Label: LabelProps = ({ icon, label, variant, size = 'sm', isBolderText, url }) => {
   return (
     <p
       className={clsx(
@@ -16,7 +16,13 @@ const Label: LabelProps = ({ icon, label, variant, size = 'sm', isBolderText }) 
       )}
     >
       {icon && <FontAwesomeIcon icon={icon} />}
-      {label}
+      {url ? (
+        <a href={url} target="_blank" rel="noreferrer" className="text-primary">
+          {label}
+        </a>
+      ) : (
+        label
+      )}
     </p>
   );
 };

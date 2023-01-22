@@ -13,19 +13,20 @@ const HomeArticles: HomeArticlesProps = ({ articles }) => {
       linkTitle={'Lihat artikel lainnya >>'}
       link={'/artikel'}
     >
-      <motion.div
-        className="row"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-        transition={{ duration: 0.5 }}
-        variants={{
-          hidden: { opacity: 0, x: -50 },
-          visible: { opacity: 1, x: 0 },
-        }}
-      >
-        {articles.map((article) => (
-          <Col key={article.id} md={4} className="mb-4">
+      <Row className="px-3 px-md-0">
+        {articles.map((article, index) => (
+          <motion.div
+            key={article.id}
+            className="col-md-4 mb-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
             <ArticleCard
               key={article.id}
               title={article.title}
@@ -37,9 +38,9 @@ const HomeArticles: HomeArticlesProps = ({ articles }) => {
               description={article.description}
               isBodyMargin={true}
             />
-          </Col>
+          </motion.div>
         ))}
-      </motion.div>
+      </Row>
     </MoreableSection>
   );
 };

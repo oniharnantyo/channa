@@ -6,6 +6,7 @@ interface ILinkImageProps {
   url: string;
   width: string;
   height: string;
+  isBlankTarget?: boolean;
 }
 
 export type LinkImageProps = FC<ILinkImageProps>;
