@@ -3,16 +3,17 @@ import Image1998 from '@assets/image/history/1998.webp';
 import Image2006 from '@assets/image/history/2006.webp';
 import ImageSekarang from '@assets/image/history/sekarang.webp';
 
+
 export const histories = {
   intro: (
     <>
-      <h5 className="fw-bolder">Vidyasena dan BDSGY</h5>
+      <h5 className="fw-bolder">Vidyāsenā dan BDSGY</h5>
       <p>
-        Vidyāsenaā, dilihat dari sejarah pendiriannya, mempunyai hubungan yang sangat erat dengan
-        keberadan organisasi sebelumnya yaitu Buddha Dhamma Study Group Yogyakarta (BDSGY). BDSGY,
-        yang berdiri pada tahun 1984, merupakan organisasi pemuda Buddhis di Yogyakarta yang
-        bertujuan mengkaji, mempelajari Buddha Dhamma dalam bentuk teori dan terapan. Anggota BDSGY,
-        yang sebagian besar mahasiswa, terdiri atas utusan berbagai vihara di Yogyakarta yang
+        Vidyāsenā dilihat dari sejarah pendiriannya mempunyai hubungan yang sangat erat dengan
+        keberadan organisasi sebelumnya yaitu Buddha Dhamma Study Group Yogyakarta (BDSGY). BDSGY
+        yang berdiri pada tahun 1984 merupakan organisasi pemuda Buddhis di Yogyakarta yang
+        bertujuan mengkaji, mempelajari Buddha Dhamma dalam bentuk teori dan terapan. Anggota BDSGY
+        yang sebagian besar mahasiswa terdiri atas utusan berbagai vihāra di Yogyakarta yang
         mengikuti tradisi yang berlainan.
       </p>
       <p>
@@ -28,11 +29,11 @@ export const histories = {
         dan spiritual, seperti tercantum dalam arah pembangunan bangsa Indonesia Yaitu GBHN.
       </p>
       <p>
-        Kemudian seiringan dengan waktu dan memasuki periode kepengurusan kedua(1986-1988) BDSGY
+        Kemudian seiring dengan waktu dan memasuki periode kepengurusan kedua(1986-1988), BDSGY
         membuat pertemuan untuk mahasiswa, pelajar, dan kawula muda Buddhis di Kaliurang yang
         bertemakan "Kita Bersaudara dalam Dhamma". Saat itu ketua panitianya adalah Dharmanadi
         Chandra (sekarang Ketua Magabudhi). Yang mengisi acara tersebut adalah Samanera Uttamo.
-        Kegiatan ini banyak mendapat tanggapan dan respon yang positif, terlihat dari umpan baliknya
+        Kegiatan ini banyak mendapat tanggapan dan respon yang positif terlihat dari umpan baliknya
         yang berupa kuesioner. Sebagian besar dari forum menghendaki adanya suatu wadah yang tepat
         dan cocok sehingga dapat membantu atau memperlancar usaha mempelajari Buddha Dhamma secara
         nyata.
@@ -65,14 +66,14 @@ export const histories = {
         sesuai dengan kitab suci Tipitaka Pali. Karena itu diputuskan bahwa kita harus memiliki
         suatu wadah yang tepat sebagai organisasi persaudaraan kawula muda Buddhis.
       </p>
-      <h5 className="fw-bolder">Lahirnya Vidyasena</h5>
+      <h5 className="fw-bolder">Lahirnya Vidyāsenā</h5>
       <p>
         Pada akhir tahun 1986 Dharmanadi Chandra mengumpulkan beberapa mahasiswa maupun pelajar
         antara lain, Johny Chandra, Yenawati, Liliaswari, Ratna Sari, Erly, Luh Summedani, Cinho,
         Molly, Benny Wibowo, Murtini, Andikha, dan banyak lagi kawula muda Buddhis. Jatuhnya pilihan
         sdr. Dharmanadi Chandra pada mereka didasarkan atas latar belakang mereka masing-masing,
         baik asal-usul dari vihara mana mereka datang, siapa yang membimbing Dhamma pada mereka,
-        tingkat pendidikan yang mereka peroleh, tradisi yang mereka ikuti (Theravada), dan ini
+        tingkat pendidikan yang mereka peroleh, tradisi yang mereka ikuti (Theravāda), dan ini
         merupakan suatu cara untuk membangun organisasi agar nantinya anggotanya mempunyai persepsi
         yang sama, pandangan yang sama, tujuan yang sama, sehingga organisasi ini dapat berkembang
         dengan baik dan mencapai suatu tujuan yang telah ditetapkan.
@@ -80,17 +81,17 @@ export const histories = {
       <p>
         Mereka bersepakat untuk mengadakan kegiatan di Vihāra Vidyāloka Yogyakarta. Apa lagi
         dukungan telah ditegaskan langsung oleh Upasaka Pandita Soepomo, yang membina Vihāra
-        Vidyāloka, bahwa vihara ini adalah untuk umum dan digunakan unutuk memajukan perkembangan
+        Vidyāloka, bahwa vihāra ini adalah untuk umum dan digunakan unutuk memajukan perkembangan
         Buddha Dhamma. Dukungan moral dan bimbingan Buddha Dhamma datang dari beberapa anggota
         Sangha Theravada Indonesia pada waktu itu, yaitu Y.M. Paññavaro Mahathera, Samanera
         Jotidhammo (sekarang Y.M Jotidhammo Mahathera dan Penasehat Vidyāsenā), dan Samanera Uttamo
-        (sekarang Bhikkhu Uttamo Mahathera) dan beberapa anggota sangha yang lain.
+        (sekarang Bhikkhu Uttamo Mahathera) dan beberapa anggota saṅgha yang lain.
       </p>
       <p>
         Pada tanggal 1 Februari 1987 pukul 13.00 WIB, maka resmilah dibentuk organisasi persaudaraan
         kawula muda Vidyasena. Dalam bahasa sansekerta, "Vidya" berarti pengetahuan Dhamma dan
         "Sena" berarti prajurit atau tentara penjaga, sehingga Vidyasena berarti Prajurit
-        pengetahuan Dhamma. Vidyasena mendapat pembinaan moral dan bimbingan Dhamma dari Sangha
+        pengetahuan Dhamma. Vidyāsena mendapat pembinaan moral dan bimbingan Dhamma dari Saṅgha
         Theravada Indonesia dan majelis Pandita Buddha Dhamma Indonesia. Jadi Sungguh tepat
         organisasi Vidyāsenā berkiprah di Vihāra Vidyāloka (yang berarti Tempat Pengetahuan Dhamma).
       </p>
@@ -113,7 +114,7 @@ export const histories = {
         <p>
           Berawal dari ide Ibu R. Supangat Prawirokusumo, lahan seluas 5 x 7 m<sup>2</sup> di
           Miliran UH II No. 144 untuk dijadikan <i>cetiya</i>. Namun karena umat semakin banyak,
-          status ditingkatkan dari <i>cetiya</i> menjadi <i>vihara</i> oleh Bhikkhu Pannavaro
+          status ditingkatkan dari <i>cetiya</i> menjadi <i>vihāra</i> oleh Bhikkhu Paññavaro
           (sekarang Y.M Sri Paññavaro Mahathera) kemudian diberi nama Vihara Vidyaloka.
         </p>
       ),
@@ -145,8 +146,8 @@ export const histories = {
       image: '',
       text: (
         <p>
-          Pada 01 Februari 1987 pukul 13.00 WIB Vidyasena <b>resmi</b> terbentuk. Turut membidani
-          lahirnya Vidyasena adalah Bhikkhu Pannavaro (sekarang Y.M Bhikkhu Sri Pannavaro
+          Pada 01 Februari 1987 pukul 13.00 WIB Vidyāsenā <b>resmi</b> terbentuk. Turut membidani
+          lahirnya Vidyāsenā adalah Bhikkhu Paññavaro (sekarang Y.M Bhikkhu Sri Paññavaro
           Mahathera), samanera Jotidhammo (sekarang Y.M Jotidhammo Mahathera), dan Samanera Uttamo
           (sekarang Y.M Uttamo Mahathera).
         </p>
@@ -155,14 +156,14 @@ export const histories = {
     {
       year: '1998',
       image: Image1998.src,
-      text: <p>Vihara Vidyaloka mengalami kebakaran sehingga dilakukan renovasi.</p>,
+      text: <p>Vihāra Vidyāloka mengalami kebakaran sehingga dilakukan renovasi.</p>,
     },
     {
       year: '2006',
       image: Image2006.src,
       text: (
         <p>
-          Terjadi gempa bumi di Yogyakarta yang menyebabkan bangunan Vihara Vidyaloka sehingga perlu
+          Terjadi gempa bumi di Yogyakarta yang menyebabkan bangunan Vihāra Vidyāloka sehingga perlu
           dilakukan renovasi kembali.
         </p>
       ),
@@ -172,7 +173,7 @@ export const histories = {
       image: ImageSekarang.src,
       text: (
         <p>
-          Hingga saat ini Vidyasena merupakan <i>Dayaka Sabha</i> Vihara Vidyaloka dan masih aktif
+          Hingga saat ini Vidyāsenā merupakan <i>Dayaka Sabha</i> Vihāra Vidyāloka dan masih aktif
           mengembangkan Buddha Dhamma.
         </p>
       ),

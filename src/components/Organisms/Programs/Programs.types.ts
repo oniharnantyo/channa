@@ -23,7 +23,7 @@ export const programs: IProgramProps[] = [
   {
     id: 2,
     icon: faceSmileLogo.src,
-    title: 'Dana Anak Asuk',
+    title: 'Dana Anak Asuh',
     description:
       'Memberikan bantuan penunjang keperluan pendidikan kepada anak-anak Buddhis di sekitar Yogyakarta dan Jawa Tengah',
   },

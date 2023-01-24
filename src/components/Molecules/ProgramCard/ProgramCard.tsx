@@ -7,7 +7,7 @@ import { ProgramCardProps } from './ProgramCard.types';
 
 const ProgramCard: ProgramCardProps = ({ id, icon, title, description }) => {
   return (
-    <Card className={clsx(Style.card, 'h-100', 'p-2')}>
+    <Card key={id} className={clsx(Style.card, 'h-100', 'p-2')}>
       <div className={clsx(Style.icon, 'px-3', 'pt-2')}>
         <LogoImage logo={icon} width={40} height={40} />
       </div>

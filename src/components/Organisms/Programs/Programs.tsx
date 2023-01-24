@@ -11,6 +11,7 @@ const Programs = () => {
       <Row className="gy-3 px-3 px-md-0">
         {programs?.map((program, i) => (
           <motion.div
+            key={program.id}
             className="col-md-4"
             initial="hidden"
             whileInView="visible"
@@ -22,7 +23,6 @@ const Programs = () => {
             }}
           >
             <ProgramCard
-              key={program.id}
               id={program.id}
               icon={program.icon}
               title={program.title}
