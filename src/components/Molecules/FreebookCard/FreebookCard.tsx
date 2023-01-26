@@ -23,8 +23,8 @@ const FreebookCard: FreebookCardProps = ({
         imageUrl={imageUrl}
         imageAlt={imageAlt}
         url={url}
-        width="3"
-        height="4"
+        width="300"
+        height="400"
         isBlankTarget
       />
       <Card.Body>
