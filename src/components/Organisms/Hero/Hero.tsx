@@ -37,7 +37,7 @@ const Hero = () => {
                   visible: { opacity: 1, x: 0 },
                 }}
               >
-                <h5>VIHĀRA VIDYĀLOKA</h5>
+                <h2>VIHĀRA VIDYĀLOKA</h2>
                 <h1>VIDYĀSENĀ</h1>
               </motion.div>
               <motion.div

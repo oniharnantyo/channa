@@ -7,7 +7,7 @@ import { LinkTitleProps } from './LinkTitle.types';
 
 const LinkTitle: LinkTitleProps = ({ url, title, isBlankTarget, variant = 'primary' }) => {
   return (
-    <h5
+    <h4
       className={clsx(
         Style.title,
         { [Style.primary]: variant === 'primary' },
@@ -23,7 +23,7 @@ const LinkTitle: LinkTitleProps = ({ url, title, isBlankTarget, variant = 'prima
           {title}
         </Link>
       )}
-    </h5>
+    </h4>
   );
 };
 

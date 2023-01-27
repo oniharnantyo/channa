@@ -7,7 +7,11 @@ const History = () => {
   return (
     <>
       <Head>
-        <title>Sejarah</title>
+        <title>Sejarah - Vidyāsenā Vihāra Vidyāloka</title>
+        <meta
+          name="description"
+          content="Vidyāsenā dilihat dari sejarah pendiriannya mempunyai hubungan yang sangat erat dengan keberadan organisasi sebelumnya yaitu Buddha Dhamma Study Group Yogyakarta (BDSGY)."
+        ></meta>
       </Head>
       <Header />
       <OHistory />

@@ -38,7 +38,7 @@ const HomeDonate = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h2 className={clsx(Style.title)}>Mari Berdana</h2>
+          <h3 className={clsx(Style.title)}>Mari Berdana</h3>
           <p className={clsx(Style.description)}>
             Berdana yang benar dapat membawa pada kebebasan dari penderitaan. Berdana dengan tujuan
             melatih diri untuk melepas, tidak mengharapkan imbalan, buah karma, pahala, balasan, dan

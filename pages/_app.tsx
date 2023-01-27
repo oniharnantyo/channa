@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="author" content="Vidyāsenā Vihāra Vidyāloka" />
         <meta
           name="description"
-          content="Vidyāsenā berarti Prajurit pengetahuan Dhamma.Sejak didirikan pada tanggal 1 Februari 1987, Vidyāsenā telah menjadi salah satu organisasi pemuda Buddhis yang aktif mengembangkan Buddha Dhamma."
+          content="Vidyāsenā merupakan salah satu organisasi mahasiswa dan pelajar Buddhis Indonesia yang berada di Vihāra Vidyāloka Yogyakarta. Vidya berarti pengetahuan Dhamma dan Sena berarti prajurit atau tentara penjaga, sehingga Vidyāsenā berarti Prajurit pengetahuan Dhamma"
         ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />

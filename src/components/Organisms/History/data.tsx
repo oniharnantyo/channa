@@ -3,11 +3,12 @@ import Image1998 from '@assets/image/history/1998.webp';
 import Image2006 from '@assets/image/history/2006.webp';
 import ImageSekarang from '@assets/image/history/sekarang.webp';
 
-
 export const histories = {
   intro: (
     <>
-      <h5 className="fw-bolder">Vidyāsenā dan BDSGY</h5>
+      <h2 className="fw-bolder" style={{ fontSize: '1.25rem' }}>
+        Vidyāsenā dan BDSGY
+      </h2>
       <p>
         Vidyāsenā dilihat dari sejarah pendiriannya mempunyai hubungan yang sangat erat dengan
         keberadan organisasi sebelumnya yaitu Buddha Dhamma Study Group Yogyakarta (BDSGY). BDSGY
@@ -66,7 +67,9 @@ export const histories = {
         sesuai dengan kitab suci Tipitaka Pali. Karena itu diputuskan bahwa kita harus memiliki
         suatu wadah yang tepat sebagai organisasi persaudaraan kawula muda Buddhis.
       </p>
-      <h5 className="fw-bolder">Lahirnya Vidyāsenā</h5>
+      <h2 className="fw-bolder" style={{ fontSize: '1.25rem' }}>
+        Lahirnya Vidyāsenā
+      </h2>
       <p>
         Pada akhir tahun 1986 Dharmanadi Chandra mengumpulkan beberapa mahasiswa maupun pelajar
         antara lain, Johny Chandra, Yenawati, Liliaswari, Ratna Sari, Erly, Luh Summedani, Cinho,

@@ -9,7 +9,11 @@ const Profile = () => {
   return (
     <>
       <Head>
-        <title>Profil</title>
+        <title>Profil - Vidyāsenā Vihāra Vidyāloka</title>
+        <meta
+          name="description"
+          content="Vidyāsenā merupakan salah satu organisasi mahasiswa dan pelajar Buddhis Indonesia yang berada di Vihāra Vidyāloka Yogyakarta. Vidya berarti pengetahuan Dhamma dan Sena berarti prajurit atau tentara penjaga, sehingga Vidyāsenā berarti Prajurit pengetahuan Dhamma."
+        ></meta>
       </Head>
       <Header />
       <OProfile />

@@ -20,7 +20,9 @@ const Profile = () => {
               <b>"Sena"</b> berarti prajurit atau tentara penjaga, sehingga Vidyāsenā berarti
               Prajurit pengetahuan Dhamma.
             </p>
-            <h3 className="fw-bold text-center">Tujuan</h3>
+            <h2 className="fw-bold text-center" style={{ fontSize: '1.75rem' }}>
+              Tujuan
+            </h2>
             <ul>
               <li>
                 Menggali dan Memelihara Buddha Dhamma berdasarkan kitab suci Tipitaka Pali, serta
