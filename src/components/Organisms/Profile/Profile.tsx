@@ -31,7 +31,7 @@ const Profile = () => {
               </li>
               <li>Membentuk Dhammaduta yang mempunyai kompetensi dalam pembabaran Dhamma</li>
               <li>
-                Membina, meningkatkan, dan mengembangkan kepribadain sera kemampuan anggota dalam
+                Membina, meningkatkan, dan mengembangkan kepribadian serta kemampuan anggota dalam
                 berorganisasi
               </li>
               <li>Memberikan sumbangsih dalam meningkatkan moral dan kesejahteraan masyarakat</li>

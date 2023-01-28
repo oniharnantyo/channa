@@ -30,6 +30,8 @@ const Footer = () => {
               &quot;Biarlah mengorbankan harta demi menyelamatkan anggota tubuh, Biarlah
               mengorbankan anggota tubuh demi menyelamatkan hidupnya, Biarlah mengorbankan harta,
               anggota tubuh dan segalanya, meskipun pula hidupnya, demi kebenaran Dhamma.&quot;
+              <br />
+              Khuddaka Nikaya, Jataka 28/147
             </p>
           </Col>
           <Col md={4}>
@@ -47,7 +49,7 @@ const Footer = () => {
             <FooterItem
               title="Perpustakaan Vidyāsenā"
               content={
-                'Setiap Sabtu Pukul 13.00 - 15.00 WIB\nSetiap Minggu Pukul 11.00 - 13.00 WIB'
+                'Setiap Sabtu Pukul 14.00 - 17.00 WIB\nSetiap Minggu Pukul 11.00 - 13.00 WIB'
               }
             />
           </Col>

@@ -19,7 +19,7 @@ export const histories = {
       </p>
       <p>
         BDSGY berawal dari ide Upasaka Pandita Ananda Aris Munandar yang ditanggapi secara positif
-        oleh para mahasiswa buddhis seperti Bambang Pratignyo (sekarang Bhikkhu Uttamo), Budiain,
+        oleh para mahasiswa buddhis seperti Bambang Pratignyo (sekarang Y.M. Uttamo Mahathera), Budiain,
         Sunaryo, Iskandar Wanagiri, Cahyadi, Wahyuni, dan lain-lain. Dalam kegiatannya, BDSGY
         didukung dan dibina oleh UP. Aris Munandar dan Alm. Bp. Agus Swanoto serta Bp. Anwar
         Santoso. Para Mahasiswa tersebut melihat dan merasakan kebenaran Buddha Dhamma dan memandang
@@ -88,7 +88,7 @@ export const histories = {
         Buddha Dhamma. Dukungan moral dan bimbingan Buddha Dhamma datang dari beberapa anggota
         Sangha Theravada Indonesia pada waktu itu, yaitu Y.M. Paññavaro Mahathera, Samanera
         Jotidhammo (sekarang Y.M Jotidhammo Mahathera dan Penasehat Vidyāsenā), dan Samanera Uttamo
-        (sekarang Bhikkhu Uttamo Mahathera) dan beberapa anggota saṅgha yang lain.
+        (sekarang Y.M. Uttamo Mahathera) dan beberapa anggota saṅgha yang lain.
       </p>
       <p>
         Pada tanggal 1 Februari 1987 pukul 13.00 WIB, maka resmilah dibentuk organisasi persaudaraan
@@ -118,7 +118,7 @@ export const histories = {
           Berawal dari ide Ibu R. Supangat Prawirokusumo, lahan seluas 5 x 7 m<sup>2</sup> di
           Miliran UH II No. 144 untuk dijadikan <i>cetiya</i>. Namun karena umat semakin banyak,
           status ditingkatkan dari <i>cetiya</i> menjadi <i>vihāra</i> oleh Bhikkhu Paññavaro
-          (sekarang Y.M Sri Paññavaro Mahathera) kemudian diberi nama Vihara Vidyaloka.
+          (sekarang Y.M.Sri Paññavaro Mahathera) kemudian diberi nama Vihāra Vidyāloka.
         </p>
       ),
     },
@@ -129,7 +129,7 @@ export const histories = {
         <p>
           Buddha Dhamma Study Group Yogyakarta (BDSGY) terbentuk yang bertujuan mengkaji dan
           mempelajari Buddha Dhamma dalam bentuk teori dan terapan serta bersifat non-sekte. Salah
-          satu tokoh yang BDSGY adalah Bambang Pratigno (sekarang Y.M Uttamo Mahathera) dan
+          satu tokoh yang BDSGY adalah Bambang Pratigno (sekarang Y.M. Uttamo Mahathera) dan
           Dharmanadi Chandra. Namun akhirnya organisasi ini bubar karena terdapat masalah internal.
         </p>
       ),
@@ -140,7 +140,7 @@ export const histories = {
       text: (
         <p>
           Dharmanadi Chandra mengumpulkan rekan mahasiswa untuk mengadakan kegiatan di Vihara
-          Vidyaloka.
+          Vidyāloka.
         </p>
       ),
     },
@@ -150,9 +150,9 @@ export const histories = {
       text: (
         <p>
           Pada 01 Februari 1987 pukul 13.00 WIB Vidyāsenā <b>resmi</b> terbentuk. Turut membidani
-          lahirnya Vidyāsenā adalah Bhikkhu Paññavaro (sekarang Y.M Bhikkhu Sri Paññavaro
-          Mahathera), samanera Jotidhammo (sekarang Y.M Jotidhammo Mahathera), dan Samanera Uttamo
-          (sekarang Y.M Uttamo Mahathera).
+          lahirnya Vidyāsenā adalah Bhikkhu Paññavaro (sekarang Y.M. Bhikkhu Sri Paññavaro
+          Mahathera), samanera Jotidhammo (sekarang Y.M. Jotidhammo Mahathera), dan Samanera Uttamo
+          (sekarang Y.M. Uttamo Mahathera).
         </p>
       ),
     },
@@ -166,7 +166,7 @@ export const histories = {
       image: Image2006.src,
       text: (
         <p>
-          Terjadi gempa bumi di Yogyakarta yang menyebabkan bangunan Vihāra Vidyāloka sehingga perlu
+          Terjadi gempa bumi di Yogyakarta yang menyebabkan bangunan Vihāra Vidyāloka rusak sehingga perlu
           dilakukan renovasi kembali.
         </p>
       ),
