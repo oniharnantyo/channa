@@ -9,7 +9,7 @@ const ProgramCard: ProgramCardProps = ({ id, icon, title, description }) => {
   return (
     <Card key={id} className={clsx(Style.card, 'h-100', 'p-2')}>
       <div className={clsx(Style.icon, 'px-3', 'pt-2')}>
-        <LogoImage logo={icon} width={40} height={40} />
+        <LogoImage logo={icon} alt={'icon ' + title} width={40} height={40} />
       </div>
       <Card.Body className={Style.content}>
         <h3 className="text-dark fw-bold" style={{ fontSize: '1.5rem' }}>

@@ -1,3 +1,5 @@
+import dynamic from 'next/dynamic';
+
 import FBLogo from '@assets/image/fb-logo.svg';
 import IGLogo from '@assets/image/ig-logo.svg';
 import VSLogo from '@assets/image/vs-logo.webp';
@@ -7,11 +9,12 @@ import { FooterTitle } from '@components/Atoms/FooterTitle';
 import { LogoImage } from '@components/Atoms/Image';
 import { FooterItem } from '@components/Molecules/FooterItem';
 import { FooterSocialMedia } from '@components/Molecules/FooterSocialMedia';
-import Maps from '@components/Molecules/Maps/Maps';
 import clsx from 'clsx';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import Style from './Footer.module.scss';
+
+const Maps = dynamic(() => import('../../Molecules/Maps/Maps'), { ssr: false });
 
 const Footer = () => {
   return (
