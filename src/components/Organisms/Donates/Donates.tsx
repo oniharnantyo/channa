@@ -1,6 +1,7 @@
 import DaaImage from '@assets/image/donate/daa.webp';
 import FreebokImage from '@assets/image/donate/freebook.webp';
 import OperasionalImage from '@assets/image/donate/operasional.webp';
+import { Title } from '@components/Atoms/Title';
 import { DonateItem } from '@components/Molecules/DonateItem';
 
 import { SectionNoTitle } from '../Section';
@@ -8,6 +9,7 @@ import { SectionNoTitle } from '../Section';
 const Donates = () => {
   return (
     <SectionNoTitle>
+      <Title title="Mari Berdana" isCenterAlign />
       <DonateItem
         title={'Dana Paramita Vihāra Vidyāloka'}
         account={'Bank BCA 0600679147 (a.n Hery Nugroho)'}

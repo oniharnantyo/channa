@@ -12,7 +12,9 @@ const ProgramCard: ProgramCardProps = ({ id, icon, title, description }) => {
         <LogoImage logo={icon} width={40} height={40} />
       </div>
       <Card.Body className={Style.content}>
-        <h4 className="text-dark fw-bold">{title}</h4>
+        <h3 className="text-dark fw-bold" style={{ fontSize: '1.5rem' }}>
+          {title}
+        </h3>
         <p className="text-dark">{description}</p>
       </Card.Body>
     </Card>

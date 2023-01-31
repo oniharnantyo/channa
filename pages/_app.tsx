@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta name="keywords" content="vidyāsenā, vihāra vidyāloka, buddha" />
+        <meta name="keywords" content="vidyāsenā, vidyasena, vihāra vidyāloka, vihara, vidyaloka, buddha, jogja, yogyakarta" />
         <meta name="author" content="Vidyāsenā Vihāra Vidyāloka" />
         <meta
           name="description"

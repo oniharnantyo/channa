@@ -21,7 +21,7 @@ const LinkImage: LinkImageProps = ({ imageUrl, imageAlt, url, width, height, isB
       width={width}
       height={height}
       layout="responsive"
-      objectFit="contain"
+      objectFit="cover"
       onLoadingComplete={() => setLoading(false)}
       className={clsx({ ['placeholder bg-muted placeholder-glow']: isLoading })}
     />

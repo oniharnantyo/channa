@@ -19,7 +19,6 @@ const Hero = () => {
           objectFit="cover"
           objectPosition="top"
           alt="altar vihara vidyaloka"
-          priority
         />
       </div>
       <Container className={clsx('align-self-center', Style.heroContent)}>

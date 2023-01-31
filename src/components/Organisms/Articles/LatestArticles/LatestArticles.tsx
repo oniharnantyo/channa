@@ -27,7 +27,9 @@ const LatestArticles = () => {
   return (
     <Row className="px-xs-5">
       <div className="pl-5 mb-2">
-        <Label variant="primary" size="lg" label="Artikel Terbaru" isBolderText={true} />
+        <h2 className="text-dark fw-bold" style={{ fontSize: '1.5rem' }}>
+          Artikel Terbaru
+        </h2>
       </div>
       {articles &&
         articles.map((article) => (

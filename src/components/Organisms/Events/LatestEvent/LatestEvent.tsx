@@ -55,7 +55,7 @@ const LatestEvent = () => {
         <Row className="px-3 px-lg-5">
           <Col md={6} className="d-flex">
             <div>
-              <h4 className={clsx(Style.title, 'mb-3')}>{name}</h4>
+              <h3 className={clsx(Style.title, 'mb-3')}>{name}</h3>
               <p className={Style.text}>
                 <FontAwesomeIcon icon={faCalendarAlt} className={Style.icon} />
                 {startAtDate}

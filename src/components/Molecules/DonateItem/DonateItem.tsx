@@ -33,7 +33,7 @@ const DonateItem: DonateItemProps = ({
   const content = (
     <>
       <div className="mb-2">
-        <Title title={title} className="" />
+        <h2 className="text-dark fw-bolder">{title}</h2>
         <div className="">
           <Label variant={'primary'} icon={faCalendar} label={account} />
         </div>
