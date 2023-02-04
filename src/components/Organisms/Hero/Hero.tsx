@@ -1,10 +1,8 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import HomeHeroImage from '@assets/image/hero-banner.webp';
 import { StyledButton } from '@components/Atoms/StyledButton';
-import LazyMotionDomAnimation from '@lib/framer';
 import clsx from 'clsx';
 import { Col, Container, Row } from 'react-bootstrap';
 

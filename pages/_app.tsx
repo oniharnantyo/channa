@@ -6,12 +6,15 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { SSRProvider } from 'react-bootstrap';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import sal from 'sal.js';
 
 import '../styles/globals.scss';
 
 config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }: AppProps) {
+  sal();
+
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {

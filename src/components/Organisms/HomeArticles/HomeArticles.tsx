@@ -1,12 +1,16 @@
 import { ArticleCard } from '@components/Molecules/ArticleCard';
-import { m } from 'framer-motion';
-import { Col, Row } from 'react-bootstrap';
+import { useEffect } from 'react';
+import { Row } from 'react-bootstrap';
+import sal from 'sal.js';
 
 import { MoreableSection } from '../Section';
 import { HomeArticlesProps } from './HomeArticles.types';
-import LazyMotionDomAnimation from '@lib/framer';
 
 const HomeArticles: HomeArticlesProps = ({ articles }) => {
+  useEffect(() => {
+    sal();
+  }, []);
+
   return (
     <MoreableSection
       title={'Artikel'}
@@ -15,34 +19,28 @@ const HomeArticles: HomeArticlesProps = ({ articles }) => {
       link={'/artikel'}
     >
       <Row className="px-3 px-md-0">
-        <LazyMotionDomAnimation>
-          {articles.map((article, index) => (
-            <m.div
+        {articles.map((article, i) => (
+          <div
+            key={article.id}
+            className="col-md-4 mb-4"
+            data-sal="slide-right"
+            data-sal-delay={i + 1 * 100}
+            data-sal-duration={700}
+            data-sal-easing="ease-in-out-quad"
+          >
+            <ArticleCard
               key={article.id}
-              className="col-md-4 mb-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, x: -50 },
-                visible: { opacity: 1, x: 0 },
-              }}
-            >
-              <ArticleCard
-                key={article.id}
-                title={article.title}
-                slug={article.slug}
-                imageUrl={article.thumbnailURL || ''}
-                imageAlt={article.imageDescription}
-                createdAt={article.createdAt}
-                author={article.author}
-                description={article.description}
-                isBodyMargin={true}
-              />
-            </m.div>
-          ))}
-        </LazyMotionDomAnimation>
+              title={article.title}
+              slug={article.slug}
+              imageUrl={article.thumbnailURL || ''}
+              imageAlt={article.imageDescription}
+              createdAt={article.createdAt}
+              author={article.author}
+              description={article.description}
+              isBodyMargin={true}
+            />
+          </div>
+        ))}
       </Row>
     </MoreableSection>
   );

@@ -1,16 +1,18 @@
 import FreebookCard from '@components/Molecules/FreebookCard/FreebookCard';
-import LazyMotionDomAnimation from '@lib/framer';
-import { m } from 'framer-motion';
+import 'glider-js/glider.min.css';
+import { useEffect } from 'react';
 import { Col } from 'react-bootstrap';
-import { Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Glider from 'react-glider';
+import sal from 'sal.js';
 
 import { MoreableSection } from '../Section';
 import { HomeFreebooksProps } from './HomeFreebooks.types';
 
 const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
+  useEffect(() => {
+    sal();
+  }, []);
+
   return (
     <MoreableSection
       linkTitle={'Lihat freebook lainnya >>'}
@@ -18,56 +20,41 @@ const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
       title={'Freebook Terbaru'}
       variant={'primary'}
     >
-      <LazyMotionDomAnimation>
-        <m.div
-          className="row px-3 px-md-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
-          <Col className="px-sm-3">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={10}
-              navigation={true}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-                1024: {
-                  slidesPerView: 4,
-                  spaceBetween: 40,
-                },
-              }}
-              modules={[Pagination, Navigation]}
-            >
-              {freebooks.map((freebook) => (
-                <SwiperSlide key={freebook.id}>
-                  <FreebookCard
-                    key={freebook.id}
-                    title={freebook.title}
-                    imageUrl={freebook.thumbnailURL || ''}
-                    imageAlt={freebook.imageDescription}
-                    author={freebook.author}
-                    description={freebook.description}
-                    url={freebook.url}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Col>
-        </m.div>
-      </LazyMotionDomAnimation>
+      <div
+        className="row px-3 px-md-0"
+        data-sal="slide-right"
+        data-sal-duration={700}
+        data-sal-easing="ease-in-out-quad"
+      >
+        <Col className="px-sm-3">
+          <Glider
+            draggable
+            hasArrows
+            slidesToShow={4}
+            slidesToScroll={1}
+            responsive={[
+              { breakpoint: 0, settings: { slidesToShow: 1 } },
+              { breakpoint: 640, settings: { slidesToShow: 2 } },
+              { breakpoint: 768, settings: { slidesToShow: 3 } },
+              { breakpoint: 1024, settings: { slidesToShow: 4 } },
+            ]}
+          >
+            {freebooks.map((freebook) => (
+              <div className="mx-3" key={freebook.id}>
+                <FreebookCard
+                  key={freebook.id}
+                  title={freebook.title}
+                  imageUrl={freebook.thumbnailURL || ''}
+                  imageAlt={freebook.imageDescription}
+                  author={freebook.author}
+                  description={freebook.description}
+                  url={freebook.url}
+                />
+              </div>
+            ))}
+          </Glider>
+        </Col>
+      </div>
     </MoreableSection>
   );
 };
