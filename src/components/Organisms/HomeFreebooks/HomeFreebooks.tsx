@@ -1,15 +1,14 @@
 import FreebookCard from '@components/Molecules/FreebookCard/FreebookCard';
+import LazyMotionDomAnimation from '@lib/framer';
 import { m } from 'framer-motion';
 import { Col } from 'react-bootstrap';
 import { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { MoreableSection } from '../Section';
 import { HomeFreebooksProps } from './HomeFreebooks.types';
-import LazyMotionDomAnimation from '@lib/framer';
 
 const HomeFreebooks: HomeFreebooksProps = ({ freebooks }) => {
   return (

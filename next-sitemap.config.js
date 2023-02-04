@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: process.env.SITE_URL,
   changefreq: 'monthly',
-  priority: 0.7,
+  priority: 1,
   generateRobotsTxt: true,
   sitemapSize: 7000,
   exclude: '/generate-sitemap.xml',

@@ -1,7 +1,7 @@
 import { ProgramCard } from '@components/Molecules/ProgramCard';
 import LazyMotionDomAnimation from '@lib/framer';
 import { m } from 'framer-motion';
-import { Col, Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 import { Section } from '../Section';
 import { programs } from './Programs.types';

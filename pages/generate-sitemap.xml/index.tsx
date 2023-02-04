@@ -29,7 +29,8 @@ const getArticlesSitemaps = async () => {
     for (let article of res.data) {
       fields.push({
         loc: SITE_URL + '/artikel/' + article.slug,
-        lastmod: new Date().toISOString(),
+        lastmod: article.updatedAt,
+        priority: 0.7,
       });
     }
 
@@ -54,7 +55,8 @@ const getEventsSitemaps = async () => {
     for (let event of res.data) {
       fields.push({
         loc: SITE_URL + '/acara/' + event.slug,
-        lastmod: new Date().toISOString(),
+        lastmod: event.updatedAt,
+        priority: 0.7,
       });
     }
 
