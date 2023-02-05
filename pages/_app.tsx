@@ -1,19 +1,30 @@
-import { AppProps } from 'next/app';
+import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import Head from 'next/head';
 
 import { Layout } from '@components/Templates/Layout';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import { GoogleAnalytics, event, usePageViews } from 'nextjs-google-analytics';
 import { SSRProvider } from 'react-bootstrap';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import sal from 'sal.js';
 
 import '../styles/globals.scss';
 
 config.autoAddCss = false;
 
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  const { name, label, value, id } = metric;
+
+  event(name, {
+    category: label === 'web-vital' ? 'Web Vitals' : 'Next.js custom metric',
+    value: Math.round(name === 'CLS' ? value * 1000 : value), // values must be integers
+    label: id, // id unique to current page load
+    nonInteraction: true, // avoids affecting bounce rate.
+  });
+}
+
 function MyApp({ Component, pageProps }: AppProps) {
-  sal();
+  usePageViews();
 
   const queryClient = new QueryClient({
     defaultOptions: {
@@ -57,6 +68,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       </Head>
+      <GoogleAnalytics strategy="lazyOnload" />
       <SSRProvider>
         <QueryClientProvider client={queryClient}>
           <Layout>
