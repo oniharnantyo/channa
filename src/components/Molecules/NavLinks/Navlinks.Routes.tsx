@@ -39,7 +39,7 @@ export const getRoutes = () => {
     },
     {
       key: 'insight',
-      path: 'https://www.insightvidyasena.com',
+      path: 'https://www.insightvidyasena.com/',
       name: 'Insight',
       isDropdown: false,
       isBlankTarget: true,

@@ -62,25 +62,25 @@ const Footer = () => {
               name="Facebook"
               logo={FBLogo}
               logoAlt="logo facebook"
-              link="https://www.facebook.com/vidyasenaviharavidyaloka"
+              link="https://www.facebook.com/vidyasenaviharavidyaloka/"
             />
             <FooterSocialMedia
               name="Instagram"
               logo={IGLogo}
               logoAlt="logo instagram"
-              link="https://www.instagram.com/vidyasenavidyaloka"
+              link="https://www.instagram.com/vidyasenavidyaloka/"
             />
             <FooterSocialMedia
               name="Youtube"
               logo={YoutubeLogo}
               logoAlt="logo youtube"
-              link="https://www.youtube.com/@vidyasenaviharavidyalokayo8744"
+              link="https://www.youtube.com/@vidyasenaviharavidyalokayo8744/"
             />
             <FooterSocialMedia
               name="Whatsapp"
               logo={WALogo}
               logoAlt="logo whatsapp"
-              link="http://wa.me/+628156866543"
+              link="http://wa.me/+628156866543/"
             />
             <div style={{ width: '100%' }} className="mt-4">
               <Maps />

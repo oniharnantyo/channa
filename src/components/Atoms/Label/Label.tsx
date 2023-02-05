@@ -17,7 +17,7 @@ const Label: LabelProps = ({ icon, label, variant, size = 'sm', isBolderText, ur
     >
       {icon && <FontAwesomeIcon icon={icon} />}
       {url ? (
-        <a href={url} target="_blank" rel="noreferrer" className="text-primary">
+        <a href={url} target="_blank" rel="noreferer noopener" className="text-primary">
           {label}
         </a>
       ) : (

@@ -8,6 +8,7 @@ import { NavLinkProps } from './NavLink.types';
 const NavLink: NavLinkProps = React.forwardRef(
   ({ key, name, href, active, isBlankTarget }, ref) => {
     const target = isBlankTarget ? '_blank' : '';
+    const rel = isBlankTarget ? 'noreferer noopener' : '';
 
     return (
       <Nav.Link
@@ -16,6 +17,7 @@ const NavLink: NavLinkProps = React.forwardRef(
         href={href}
         active={active}
         target={target}
+        rel={rel}
       >
         {name}
       </Nav.Link>
