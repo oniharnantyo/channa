@@ -68,11 +68,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       </Head>
-      <GoogleAnalytics strategy="lazyOnload" />
       <SSRProvider>
         <QueryClientProvider client={queryClient}>
           <Layout>
             <Component {...pageProps} />
+            <GoogleAnalytics strategy="lazyOnload" />
           </Layout>
         </QueryClientProvider>
       </SSRProvider>

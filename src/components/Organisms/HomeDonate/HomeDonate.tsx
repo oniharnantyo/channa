@@ -26,7 +26,13 @@ const HomeDonate = () => {
           data-sal-duration={700}
           data-sal-easing="ease-in-out-quad"
         >
-          <Image src={DonateImage} height={400} width={700} objectFit="cover"></Image>
+          <Image
+            src={DonateImage}
+            height={400}
+            width={700}
+            objectFit="cover"
+            alt="dana anak asuh vidyasena"
+          ></Image>
         </div>
         <div
           className="col-md-6 my-auto py-4"

@@ -3,9 +3,7 @@ import Head from 'next/head';
 
 import { HomeProps } from './Home.types';
 
-const Hero = dynamic(() => import('../../Organisms/Hero/Hero'), {
-  ssr: false,
-});
+const Hero = dynamic(() => import('../../Organisms/Hero/Hero'));
 const LatestEvent = dynamic(() => import('../../Organisms/Events/LatestEvent/LatestEvent'), {
   ssr: false,
 });
