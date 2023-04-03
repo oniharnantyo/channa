@@ -1,4 +1,4 @@
-FROM node:14.18.0
+FROM node:16.14.0
 
 # Add Maintainer Info
 LABEL maintainer="Vidyasena Dev <oni.harnantyo97@gmail.com>"
@@ -16,10 +16,10 @@ WORKDIR /app/channa
 
 ADD . /app/channa
 
-RUN npm i -g npm@8.1.1
+RUN npm i -g pnpm
 
-RUN npm install
-RUN npm run build
+RUN pnpm install
+RUN pnpm build
 
 EXPOSE 3000
 

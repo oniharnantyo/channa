@@ -1,5 +1,8 @@
+import Link from 'next/link';
+
 import Logo from '@assets/image/vs-logo.webp';
 import LogoImage from '@components/Atoms/Image/LogoImage';
+import { StyledButton } from '@components/Atoms/StyledButton';
 import { NavLinks } from '@components/Molecules/NavLinks';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +12,8 @@ import { Container, Nav, Navbar, Stack } from 'react-bootstrap';
 import Style from './StyledNavbar.module.scss';
 
 const StyledNavbar = () => {
+  const isShowDonateRenovationButton = new Date() < new Date('2023-05-31T23:59:59+07:00');
+
   return (
     <Navbar expand="lg" fixed="top" className={clsx(Style.navbar)}>
       <Container>
@@ -29,6 +34,15 @@ const StyledNavbar = () => {
         <Navbar.Collapse id="navigationBar">
           <Nav className="ms-auto">
             <NavLinks />
+            {isShowDonateRenovationButton && (
+              <div className="d-flex ms-lg-5">
+                <Link href="/dana-renovasi" passHref>
+                  <StyledButton variant={'primary'} size={'sm'}>
+                    Dana Renovasi
+                  </StyledButton>
+                </Link>
+              </div>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
