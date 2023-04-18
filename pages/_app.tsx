@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { GoogleAnalytics, event, usePageViews } from 'nextjs-google-analytics';
 import { SSRProvider } from 'react-bootstrap';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import ViharaVidyalokaImage from '@assets/image/history/sekarang.webp';
 
 import '../styles/globals.scss';
 
@@ -42,10 +43,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           content="vidyāsenā, vidyasena, vihāra vidyāloka, vihara, vidyaloka, buddha, jogja, yogyakarta"
         />
         <meta name="author" content="Vidyāsenā Vihāra Vidyāloka" />
-        <meta
-          name="description"
-          content="Vidyāsenā merupakan organisasi mahasiswa dan pelajar Buddhis Indonesia di Vihāra Vidyāloka Yogyakarta. Vidyāsenā berarti Prajurit pengetahuan Dhamma."
-        ></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
@@ -59,7 +56,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x1twitter:description6.png"
+        />
         <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://maps.googleapis.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
@@ -67,6 +69,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="dns-prefetch" href="https://maps.gstatic.com" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <SSRProvider>
         <QueryClientProvider client={queryClient}>

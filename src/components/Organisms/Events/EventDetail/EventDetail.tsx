@@ -3,36 +3,15 @@ import Image from 'next/image';
 import { Content } from '@components/Atoms/Content';
 import { Label } from '@components/Atoms/Label';
 import { Title } from '@components/Atoms/Title';
-import { IEvent } from '@domains/event';
 import { faCalendarAlt, faClock, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
-import { getEventBySlug } from '@services/event/getEventBySlug';
 import { formatDate } from '@utils/format';
 import { tzToAbbreviation } from '@utils/tz';
-import { useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import { useQuery } from 'react-query';
 
 import { SectionNoTitle } from '../../Section';
 import { EventDetailProps } from './EventDetail.types';
 
-const EventDetail: EventDetailProps = ({ slug }) => {
-  const [event, setEvent] = useState({} as IEvent);
-
-  const {
-    data: eventData,
-    error,
-    refetch,
-    isFetching,
-  } = useQuery(['getEventBySlug', slug], () => getEventBySlug({ slug }), {
-    retry: false,
-  });
-
-  useEffect(() => {
-    if (eventData) {
-      setEvent(eventData);
-    }
-  }, [eventData]);
-
+const EventDetail: EventDetailProps = ({ event }) => {
   const date = formatDate(event.startAt, 'DD MMMM YYYY');
   const time =
     formatDate(event.startAt as Date, 'HH:mm') +

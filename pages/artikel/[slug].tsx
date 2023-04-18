@@ -1,5 +1,4 @@
 import { GetServerSideProps, NextPage } from 'next';
-import Head from 'next/head';
 
 import { ArticleDetail } from '@components/Templates/Article/Detail';
 import { IArticle } from '@domains/article';

@@ -1,13 +1,24 @@
 import { IEvent } from '@domains/event';
-import { axios } from '@lib/index';
+import { axios, axiosSSR } from '@lib/index';
 
 import { getEventBySlugProps } from './getEventBySlug.types';
 
-export const getEventBySlug = async ({ slug = '' }: getEventBySlugProps) => {
+export const getEventBySlug = async ({ slug = '', isSSR }: getEventBySlugProps) => {
   try {
-    const { data } = await axios.get(`/events/slugs/` + slug, {
+    let response;
+
+    const endpoint = `/events/slugs/` + slug;
+    const conf = {
       headers: { 'Content-Type': 'application/json' },
-    });
+    };
+
+    if (isSSR) {
+      response = await axiosSSR.get(endpoint, conf);
+    } else {
+      response = await axios.get(endpoint, conf);
+    }
+
+    const { data } = response;
 
     if (data.status == '00') {
       return data.data as IEvent;
