@@ -34,15 +34,6 @@ const StyledNavbar = () => {
         <Navbar.Collapse id="navigationBar">
           <Nav className="ms-auto">
             <NavLinks />
-            {isShowDonateRenovationButton && (
-              <div className="d-flex ms-lg-5">
-                <Link href="/dana-renovasi" passHref>
-                  <StyledButton variant={'primary'} size={'sm'}>
-                    Dana Renovasi
-                  </StyledButton>
-                </Link>
-              </div>
-            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
