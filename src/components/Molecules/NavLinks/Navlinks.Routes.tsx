@@ -19,12 +19,12 @@ export const getRoutes = () => {
         },
       ],
     },
-    {
-      key: 'acara',
-      path: '/acara',
-      name: 'Acara',
-      isDropdown: false,
-    },
+    // {
+    //   key: 'acara',
+    //   path: '/acara',
+    //   name: 'Acara',
+    //   isDropdown: false,
+    // },
     {
       key: 'artikel',
       path: '/artikel',

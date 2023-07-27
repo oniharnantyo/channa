@@ -46,7 +46,7 @@ const Home: HomeProps = ({ articles, freebooks }) => {
         />
       </Head>
       <Hero />
-      <LatestEvent />
+      {/* <LatestEvent /> */}
       <Programs />
       <Freebooks freebooks={freebooks} />
       <Donate />

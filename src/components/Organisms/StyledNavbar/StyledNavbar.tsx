@@ -12,8 +12,6 @@ import { Container, Nav, Navbar, Stack } from 'react-bootstrap';
 import Style from './StyledNavbar.module.scss';
 
 const StyledNavbar = () => {
-  const isShowDonateRenovationButton = new Date() < new Date('2023-05-31T23:59:59+07:00');
-
   return (
     <Navbar expand="lg" fixed="top" className={clsx(Style.navbar)}>
       <Container>
